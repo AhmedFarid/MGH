@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignupVC" customModule="MGH_Kitchen_Tools" customModuleProvider="target">
+            <connections>
+                <outlet property="email" destination="fq9-Vw-3Tb" id="WNF-RD-yvm"/>
+                <outlet property="fullName" destination="5od-Mz-VuT" id="pnV-VK-1Ot"/>
+                <outlet property="password" destination="d16-9F-iAM" id="yeV-dG-InR"/>
+                <outlet property="phone" destination="nEy-d5-qln" id="heQ-Tm-Aq7"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zmT-X4-R33">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8rz-H6-HuL">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="750"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MGH Logo copy" translatesAutoresizingMaskIntoConstraints="NO" id="D2l-Wb-See">
+                                    <rect key="frame" x="50" y="84" width="314" height="131"/>
+                                </imageView>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fq9-Vw-3Tb" customClass="textFieldView" customModule="MGH_Kitchen_Tools" customModuleProvider="target">
+                                    <rect key="frame" x="16" y="501.5" width="382" height="56"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="56" id="Dl8-k4-WMl"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiuscostom">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                            <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.27429027290000002" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                            <real key="value" value="0.5"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                            <size key="value" width="0.0" height="3"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="leftPaddingPointss">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rightPaddingPointss">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ivj-RK-RCP">
+                                    <rect key="frame" x="16" y="465" width="382" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d16-9F-iAM" customClass="textFieldView" customModule="MGH_Kitchen_Tools" customModuleProvider="target">
+                                    <rect key="frame" x="16" y="610" width="382" height="56"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="56" id="AIc-kM-cfM"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiuscostom">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                            <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.27429027290000002" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                            <real key="value" value="0.5"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                            <size key="value" width="0.0" height="3"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="leftPaddingPointss">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rightPaddingPointss">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kG0-LI-6KM">
+                                    <rect key="frame" x="16" y="573.5" width="382" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oBm-VE-OHa" customClass="buttonView" customModule="MGH_Kitchen_Tools" customModuleProvider="target">
+                                    <rect key="frame" x="107" y="682" width="200" height="52"/>
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="52" id="7JV-N5-IPq"/>
+                                    </constraints>
+                                    <state key="normal" title="SIGN UP">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="signUpBTNAction:" destination="-1" eventType="touchUpInside" id="x8o-Ui-nEh"/>
+                                    </connections>
+                                </button>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5od-Mz-VuT" customClass="textFieldView" customModule="MGH_Kitchen_Tools" customModuleProvider="target">
+                                    <rect key="frame" x="16" y="284" width="382" height="56"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="56" id="SOi-aI-LWQ"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiuscostom">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                            <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.27429027290000002" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                            <real key="value" value="0.5"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                            <size key="value" width="0.0" height="3"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="leftPaddingPointss">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rightPaddingPointss">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfX-LL-8lH">
+                                    <rect key="frame" x="16" y="247" width="382" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nEy-d5-qln" customClass="textFieldView" customModule="MGH_Kitchen_Tools" customModuleProvider="target">
+                                    <rect key="frame" x="16" y="393" width="382" height="56"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="56" id="1DC-xg-PG9"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiuscostom">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                            <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.27429027290000002" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                            <real key="value" value="0.5"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                            <size key="value" width="0.0" height="3"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="leftPaddingPointss">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rightPaddingPointss">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TeW-qu-B9I">
+                                    <rect key="frame" x="16" y="356" width="382" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="0.91372549020000005" green="0.92156862750000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstItem="kG0-LI-6KM" firstAttribute="top" secondItem="fq9-Vw-3Tb" secondAttribute="bottom" constant="16" id="3iy-PM-wCl"/>
+                                <constraint firstItem="nEy-d5-qln" firstAttribute="trailing" secondItem="TeW-qu-B9I" secondAttribute="trailing" id="4iy-fo-zn4"/>
+                                <constraint firstItem="hfX-LL-8lH" firstAttribute="top" secondItem="D2l-Wb-See" secondAttribute="bottom" constant="32" id="84C-hE-QYd"/>
+                                <constraint firstItem="TeW-qu-B9I" firstAttribute="trailing" secondItem="hfX-LL-8lH" secondAttribute="trailing" id="8PI-c4-qfm"/>
+                                <constraint firstItem="Ivj-RK-RCP" firstAttribute="leading" secondItem="8rz-H6-HuL" secondAttribute="leading" constant="16" id="BLT-j9-Dhn"/>
+                                <constraint firstItem="fq9-Vw-3Tb" firstAttribute="trailing" secondItem="Ivj-RK-RCP" secondAttribute="trailing" id="NJW-Jj-wgz"/>
+                                <constraint firstAttribute="bottom" secondItem="oBm-VE-OHa" secondAttribute="bottom" constant="16" id="OgO-tl-NPc"/>
+                                <constraint firstItem="TeW-qu-B9I" firstAttribute="leading" secondItem="hfX-LL-8lH" secondAttribute="leading" id="Ph3-mK-ARY"/>
+                                <constraint firstItem="d16-9F-iAM" firstAttribute="trailing" secondItem="kG0-LI-6KM" secondAttribute="trailing" id="RJa-ak-j2y"/>
+                                <constraint firstItem="oBm-VE-OHa" firstAttribute="top" secondItem="d16-9F-iAM" secondAttribute="bottom" constant="16" id="RrJ-nQ-DW1"/>
+                                <constraint firstItem="d16-9F-iAM" firstAttribute="leading" secondItem="kG0-LI-6KM" secondAttribute="leading" id="S35-uy-alL"/>
+                                <constraint firstItem="oBm-VE-OHa" firstAttribute="centerX" secondItem="8rz-H6-HuL" secondAttribute="centerX" id="TPo-HK-Xib"/>
+                                <constraint firstItem="kG0-LI-6KM" firstAttribute="trailing" secondItem="Ivj-RK-RCP" secondAttribute="trailing" id="WCP-cf-vsc"/>
+                                <constraint firstAttribute="trailing" secondItem="Ivj-RK-RCP" secondAttribute="trailing" constant="16" id="ZE3-jQ-73Q"/>
+                                <constraint firstItem="5od-Mz-VuT" firstAttribute="trailing" secondItem="hfX-LL-8lH" secondAttribute="trailing" id="dNj-Ug-ME7"/>
+                                <constraint firstItem="D2l-Wb-See" firstAttribute="top" secondItem="8rz-H6-HuL" secondAttribute="top" constant="84" id="eDh-Co-qr8"/>
+                                <constraint firstItem="hfX-LL-8lH" firstAttribute="leading" secondItem="8rz-H6-HuL" secondAttribute="leading" constant="16" id="ek2-Wu-HEH"/>
+                                <constraint firstItem="Ivj-RK-RCP" firstAttribute="top" secondItem="nEy-d5-qln" secondAttribute="bottom" constant="16" id="fMW-w3-KDf"/>
+                                <constraint firstItem="5od-Mz-VuT" firstAttribute="leading" secondItem="hfX-LL-8lH" secondAttribute="leading" id="fPe-qW-frd"/>
+                                <constraint firstItem="fq9-Vw-3Tb" firstAttribute="top" secondItem="Ivj-RK-RCP" secondAttribute="bottom" constant="16" id="jff-SI-hmh"/>
+                                <constraint firstItem="d16-9F-iAM" firstAttribute="top" secondItem="kG0-LI-6KM" secondAttribute="bottom" constant="16" id="kPC-5v-BEy"/>
+                                <constraint firstItem="nEy-d5-qln" firstAttribute="top" secondItem="TeW-qu-B9I" secondAttribute="bottom" constant="16" id="qCf-Ze-Lau"/>
+                                <constraint firstItem="fq9-Vw-3Tb" firstAttribute="leading" secondItem="Ivj-RK-RCP" secondAttribute="leading" id="qlb-4n-4VC"/>
+                                <constraint firstItem="kG0-LI-6KM" firstAttribute="leading" secondItem="Ivj-RK-RCP" secondAttribute="leading" id="rtU-rv-WSN"/>
+                                <constraint firstAttribute="trailing" secondItem="hfX-LL-8lH" secondAttribute="trailing" constant="16" id="t5S-so-HJU"/>
+                                <constraint firstItem="nEy-d5-qln" firstAttribute="leading" secondItem="TeW-qu-B9I" secondAttribute="leading" id="uZW-2B-3K6"/>
+                                <constraint firstItem="D2l-Wb-See" firstAttribute="centerX" secondItem="8rz-H6-HuL" secondAttribute="centerX" id="w4P-wS-dJ2"/>
+                                <constraint firstItem="5od-Mz-VuT" firstAttribute="top" secondItem="hfX-LL-8lH" secondAttribute="bottom" constant="16" id="xCu-CU-EZz"/>
+                                <constraint firstItem="TeW-qu-B9I" firstAttribute="top" secondItem="5od-Mz-VuT" secondAttribute="bottom" constant="16" id="yj7-G1-wjd"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="8rz-H6-HuL" firstAttribute="leading" secondItem="KjG-u4-lSm" secondAttribute="leading" id="B03-iH-vSQ"/>
+                        <constraint firstItem="8rz-H6-HuL" firstAttribute="top" secondItem="KjG-u4-lSm" secondAttribute="top" id="Nul-HY-9v0"/>
+                        <constraint firstItem="8rz-H6-HuL" firstAttribute="trailing" secondItem="KjG-u4-lSm" secondAttribute="trailing" id="hAh-QK-hKb"/>
+                        <constraint firstItem="qr1-L9-FTi" firstAttribute="width" secondItem="8rz-H6-HuL" secondAttribute="width" id="oFI-td-9tb"/>
+                        <constraint firstItem="8rz-H6-HuL" firstAttribute="bottom" secondItem="KjG-u4-lSm" secondAttribute="bottom" id="s1u-6n-VF6"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="KjG-u4-lSm"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="qr1-L9-FTi"/>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="0.91372549020000005" green="0.92156862750000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="zmT-X4-R33" secondAttribute="bottom" id="1OF-qz-CkG"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zmT-X4-R33" secondAttribute="trailing" id="3WT-PU-Hht"/>
+                <constraint firstItem="zmT-X4-R33" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="5Cf-rl-jdM"/>
+                <constraint firstItem="oBm-VE-OHa" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.483092" id="Evc-J6-Nv4"/>
+                <constraint firstItem="zmT-X4-R33" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="-44" id="OxV-ew-l1W"/>
+                <constraint firstItem="D2l-Wb-See" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.146205" id="RCH-dv-Pcs"/>
+                <constraint firstItem="D2l-Wb-See" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.758454" id="ln1-vJ-WWy"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="132" y="154"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="MGH Logo copy" width="314" height="131"/>
+    </resources>
+</document>

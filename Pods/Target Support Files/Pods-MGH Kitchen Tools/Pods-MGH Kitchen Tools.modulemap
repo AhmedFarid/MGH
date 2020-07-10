@@ -1,0 +1,6 @@
+framework module Pods_MGH_Kitchen_Tools {
+  umbrella header "Pods-MGH Kitchen Tools-umbrella.h"
+
+  export *
+  module * { export * }
+}
