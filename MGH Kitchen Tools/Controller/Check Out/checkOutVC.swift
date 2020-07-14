@@ -126,7 +126,7 @@ class checkOutVC: UIViewController,NVActivityIndicatorViewable {
         }
         
         loaderHelper()
-        checkOutApi.makeOrderApi(code: promoCodeTF.text ?? "", customer_name: fullNameTF.text ?? "", customer_phone: phoneTF.text ?? "", customer_city: cityTF.text ?? "", customer_region: regionTF.text ?? "", customer_street: streetTF.text ?? "", customer_home_number: homeNumberTF.text ?? "", customer_floor_number: floorNumTF.text ?? "", customer_address: addressTF.text ?? "", payment_method: "0"){ (error, success, message) in
+        checkOutApi.makeOrderApi(code: promoCodeTF.text ?? "", customer_name: fullNameTF.text ?? "", customer_phone: phoneTF.text ?? "", customer_city: cityTF.text ?? "", customer_region: regionTF.text ?? "", customer_street: streetTF.text ?? "", customer_home_number: homeNumberTF.text ?? "", customer_floor_number: floorNumTF.text ?? "", customer_address: addressTF.text ?? "", payment_method: "cacheOnDelivery"){ (error, success, message) in
             if success {
                 if message?.success == true {
                     self.stopAnimating()

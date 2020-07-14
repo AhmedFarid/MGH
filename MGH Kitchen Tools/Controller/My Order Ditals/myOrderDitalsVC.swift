@@ -9,7 +9,7 @@
 import UIKit
 
 class myOrderDitalsVC: UIViewController {
-
+    
     @IBOutlet weak var orderIdLabel: UILabel!
     @IBOutlet weak var orderDateLabel: UILabel!
     @IBOutlet weak var orderQuntetyLabel: UILabel!
@@ -45,14 +45,12 @@ class myOrderDitalsVC: UIViewController {
         orderIdLabel.text = "Order Id: \(singelItem?.id ?? 0)"
         orderQuntetyLabel.text = "Order Quantity: \(singelItem?.orderDetails?.count ?? 0)"
         orderTotalLabel.text = "Order Price: \(singelItem?.total ?? 0) \(singelItem?.orderDetails?.first?.currency ?? "")"
+        orderDateLabel.text = singelItem?.createdAt
         
-        if singelItem?.paymentMethod == 0 {
-            paymetMethodLabel.text = "Cash On Delivery"
-        }else {
-            paymetMethodLabel.text = "Credit Card"
-        }
+        orderStatus.text = singelItem?.status ?? ""
+        paymetMethodLabel.text = singelItem?.paymentMethod ?? ""
         
-        if singelItem?.paymentStatus == 0 {
+        if singelItem?.paymentStatus == "0" {
             paymedtStatus.text = "Not Paid"
         }else {
             paymedtStatus.text = "Paid"
@@ -60,28 +58,28 @@ class myOrderDitalsVC: UIViewController {
         
         if singelItem?.promocodeValue == 0{
             promoCodeLabel.text = "No Promo Code"
-            promoValus.text = "0 \(singelItem?.orderDetails?.first?.currency ?? "")"
+            promoValus.text = "Promo Value: 0\(singelItem?.orderDetails?.first?.currency ?? "")"
         }else {
             promoCodeLabel.text = "Promo Code: \(singelItem?.promocode ?? "")"
-        promoValus.text = "Promo Value: \(singelItem?.promocodeValue ?? 0) \(singelItem?.orderDetails?.first?.currency ?? "")"
+            promoValus.text = "Promo Value: \(singelItem?.promocodeValue ?? 0) \(singelItem?.orderDetails?.first?.currency ?? "")"
         }
         
         name.text = singelItem?.customerName ?? ""
         phone.text = singelItem?.customerPhone ?? ""
         addressLabel.text = singelItem?.customerAddress ?? ""
     }
-
-
+    
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
 
 

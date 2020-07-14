@@ -31,7 +31,19 @@ class sideMenuVC: UIViewController {
             logoutBtn.isHidden = false
         }
     }
+    @IBAction func profileBtn(_ sender: Any) {
+        let vc = profileVC(nibName: "profileVC", bundle: nil)
+        self.navigationController!.pushViewController(vc, animated: true)
+    }
     
+    @IBAction func contactUs(_ sender: Any) {
+        let vc = contactUsVC(nibName: "contactUsVC", bundle: nil)
+        self.navigationController!.pushViewController(vc, animated: true)
+    }
+    @IBAction func aboutUs(_ sender: Any) {
+        let vc = aboutUsVC(nibName: "aboutUsVC", bundle: nil)
+        self.navigationController!.pushViewController(vc, animated: true)
+    }
     @IBAction func newOffers(_ sender: Any) {
         let vc = allProductVC(nibName: "allProductVC", bundle: nil)
         vc.url = URLs.bestSelling

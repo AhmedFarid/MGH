@@ -26,11 +26,11 @@ struct productsDataArray: Codable {
     let id: Int?
     let status, featured, trending, isNew: String?
     let bestSeller, off50, onSale, hotDeal: String?
-    let hotDealPrice, expireDateHotDeal, productCode, porductSkuCode: String?
+    let expireDateHotDeal, productCode, porductSkuCode: String?
     let productSerialNumber, linkYoutube: String?
     let stock, stockLimitAlert, countSolid, numberViews: Int?
-    let numberClicks, totalRate, totalNumberReview, salePrice: Int?
-    let discount, total: Int?
+    let numberClicks, totalNumberReview, salePrice: Int?
+    let discount,total,hotDealPrice: Int?
     let totalWithCurrency: String?
     let image: String?
     let category, subcategory, brand, name: String?
@@ -38,6 +38,8 @@ struct productsDataArray: Codable {
     let productImages: [ProductImage]?
     let productInCart, productInCartQty, productInCartTotal, isProductFavoirte: Int?
     let currency: String?
+    let reviews: [Review]?
+    let totalRate: Double?
 
     enum CodingKeys: String, CodingKey {
         case id, status, featured, trending
@@ -71,6 +73,7 @@ struct productsDataArray: Codable {
         case productInCartTotal = "ProductInCartTotal"
         case isProductFavoirte = "IsProductFavoirte"
         case currency
+        case reviews
     }
 }
 
@@ -85,6 +88,34 @@ struct ProductImage: Codable {
     }
 }
 
+struct Review: Codable {
+    let comment: String?
+    let review: Int?
+    let customer: Customer?
+    let createdAt: String?
+
+    enum CodingKeys: String, CodingKey {
+        case comment, review, customer
+        case createdAt = "created_at"
+    }
+}
+
+
+struct Customer: Codable {
+    let fullName, email, phone: String?
+    let image: String?
+    let firebaseToken: String?
+    let status, gender: String?
+    let promocode: String?
+    let isGiftUsed, createdAt: String?
+
+    enum CodingKeys: String, CodingKey {
+        case fullName = "full_name"
+        case email, phone, image, firebaseToken, status, gender, promocode
+        case isGiftUsed = "is_gift_used"
+        case createdAt = "created_at"
+    }
+}
 
 struct Meta: Codable {
     let currentPage, lastPage, perPage: Int?

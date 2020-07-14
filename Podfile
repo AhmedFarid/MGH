@@ -13,6 +13,9 @@ target 'MGH Kitchen Tools' do
   pod 'SideMenu'
   pod 'Cosmos'
   pod 'Alamofire'
+  pod 'FacebookCore'
+  pod 'FacebookLogin'
+  pod 'GoogleSignIn'
   
   
 end

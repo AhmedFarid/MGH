@@ -30,7 +30,7 @@
                                 <rect key="frame" x="32" y="231" width="366" height="652.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VbD-BC-JgY">
-                                        <rect key="frame" x="0.0" y="0.0" width="54" height="59.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="54" height="54.5"/>
                                         <fontDescription key="fontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="20"/>
                                         <state key="normal" title="Home">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -40,7 +40,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="opC-Ea-LBt">
-                                        <rect key="frame" x="0.0" y="59.5" width="39" height="59"/>
+                                        <rect key="frame" x="0.0" y="54.5" width="39" height="54.5"/>
                                         <fontDescription key="fontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="20"/>
                                         <state key="normal" title="Cart">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -49,8 +49,18 @@
                                             <action selector="cartBtn:" destination="xuU-ri-PEa" eventType="touchUpInside" id="efQ-ei-SPU"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SVf-R6-Rfd">
+                                        <rect key="frame" x="0.0" y="109" width="57" height="54"/>
+                                        <fontDescription key="fontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="20"/>
+                                        <state key="normal" title="Profile">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="profileBtn:" destination="xuU-ri-PEa" eventType="touchUpInside" id="bhH-Hr-CRn"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Gf-BR-rgz">
-                                        <rect key="frame" x="0.0" y="118.5" width="94" height="59.5"/>
+                                        <rect key="frame" x="0.0" y="163" width="94" height="54.5"/>
                                         <fontDescription key="fontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="20"/>
                                         <state key="normal" title="My Orders">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -60,7 +70,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5a1-D3-KvZ">
-                                        <rect key="frame" x="0.0" y="178" width="103" height="59.5"/>
+                                        <rect key="frame" x="0.0" y="217.5" width="103" height="54.5"/>
                                         <fontDescription key="fontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="20"/>
                                         <state key="normal" title="My Wishlist">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -70,7 +80,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AUP-Oa-mno">
-                                        <rect key="frame" x="0.0" y="237.5" width="110" height="59"/>
+                                        <rect key="frame" x="0.0" y="272" width="110" height="54.5"/>
                                         <fontDescription key="fontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="20"/>
                                         <state key="normal">
                                             <string key="title">Promo code
@@ -82,7 +92,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVC-xZ-C2b">
-                                        <rect key="frame" x="0.0" y="296.5" width="91" height="59.5"/>
+                                        <rect key="frame" x="0.0" y="326.5" width="91" height="54"/>
                                         <fontDescription key="fontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="20"/>
                                         <state key="normal">
                                             <string key="title">Shop now
@@ -94,7 +104,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oU3-3l-W87">
-                                        <rect key="frame" x="0.0" y="356" width="109" height="59"/>
+                                        <rect key="frame" x="0.0" y="380.5" width="109" height="54.5"/>
                                         <fontDescription key="fontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="20"/>
                                         <state key="normal">
                                             <string key="title">All Products 
@@ -106,7 +116,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="grO-Nc-s8h">
-                                        <rect key="frame" x="0.0" y="415" width="101" height="59.5"/>
+                                        <rect key="frame" x="0.0" y="435" width="101" height="54.5"/>
                                         <fontDescription key="fontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="20"/>
                                         <state key="normal">
                                             <string key="title">New Offers
@@ -118,25 +128,31 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gIz-lQ-lcx">
-                                        <rect key="frame" x="0.0" y="474.5" width="81" height="59.5"/>
+                                        <rect key="frame" x="0.0" y="489.5" width="81" height="54.5"/>
                                         <fontDescription key="fontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="20"/>
                                         <state key="normal">
                                             <string key="title">About us
 </string>
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="aboutUs:" destination="xuU-ri-PEa" eventType="touchUpInside" id="tdX-Or-6dc"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uMu-bo-ehs">
-                                        <rect key="frame" x="0.0" y="534" width="98" height="59"/>
+                                        <rect key="frame" x="0.0" y="544" width="98" height="54"/>
                                         <fontDescription key="fontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="20"/>
                                         <state key="normal">
                                             <string key="title">Contact us 
 </string>
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="contactUs:" destination="xuU-ri-PEa" eventType="touchUpInside" id="yvZ-c3-GP3"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q5k-TF-NyY">
-                                        <rect key="frame" x="0.0" y="593" width="69" height="59.5"/>
+                                        <rect key="frame" x="0.0" y="598" width="69" height="54.5"/>
                                         <fontDescription key="fontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="20"/>
                                         <state key="normal" title="Logout ">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -169,7 +185,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="homeBtn:" destination="xuU-ri-PEa" eventType="touchUpInside" id="Zps-rP-3sY"/>
                                     <action selector="loginOrSignupBtnAction:" destination="xuU-ri-PEa" eventType="touchUpInside" id="g6y-fC-Acv"/>
                                 </connections>
                             </button>

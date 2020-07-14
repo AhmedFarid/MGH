@@ -90,7 +90,7 @@ class productDetailsVC: UIViewController, NVActivityIndicatorViewable {
                 qtnText.text = "\(singleItem?.productInCartQty ?? 0)"
                 qty = singleItem?.productInCartQty ?? 0
                 self.discountPrice.text = "\((singleItem?.salePrice ?? 0) * self.qty) \(singleItem?.currency ?? "")"
-                self.genralPrice.text = "\((singleItem?.total ?? 0) * self.qty) \(singleItem?.currency ?? "")"
+                self.genralPrice.text = "\((Int((singleItem?.total ?? 0))) * self.qty) \(singleItem?.currency ?? "")"
                 plusBTN.isHidden = true
             }else {
                 cartBtn.setImage(UIImage(named: "noCart"), for: .normal)
@@ -174,7 +174,7 @@ class productDetailsVC: UIViewController, NVActivityIndicatorViewable {
                         self.bigCartBtn.setTitle("Add Cart", for: .normal)
                         self.qty = 1
                         self.discountPrice.text = "\((self.singleItem?.salePrice ?? 0) * self.qty) \(self.singleItem?.currency ?? "")"
-                        self.genralPrice.text = "\((self.singleItem?.total ?? 0) * self.qty) \(self.singleItem?.currency ?? "")"
+                        self.genralPrice.text = "\((self.singleItem?.total  ?? 0) * self.qty) \(self.singleItem?.currency ?? "")"
                         self.qtnText.text = "1"
                         self.plusBTN.isHidden = false
                         self.showAlert(title: "Cart", message: "Removed From Cart")
@@ -192,11 +192,19 @@ class productDetailsVC: UIViewController, NVActivityIndicatorViewable {
     }
     
     
+    @IBAction func reviewsBtnAction(_ sender: Any) {
+        let vc = reviewsVC(nibName: "reviewsVC", bundle: nil)
+        vc.reviwes = singleItem?.reviews ?? []
+        vc.id = singleItem?.id ?? 0
+        let navigationController = UINavigationController(rootViewController: vc)
+        navigationController.modalPresentationStyle = .fullScreen
+        self.present(navigationController, animated: true, completion: nil)
+    }
     
     @IBAction func mainQntyBTN(_ sender: Any) {
         qty = qty - 1
         self.discountPrice.text = "\((singleItem?.salePrice ?? 0) * self.qty) \(singleItem?.currency ?? "")"
-        self.genralPrice.text = "\((singleItem?.total ?? 0) * self.qty) \(singleItem?.currency ?? "")"
+        self.genralPrice.text = "\((self.singleItem?.total ?? 0) * self.qty) \(self.singleItem?.currency ?? "")"
         self.qtnText.text = "\(qty)"
         if qty == 1 {
             minBtm.isHidden = true
@@ -208,7 +216,7 @@ class productDetailsVC: UIViewController, NVActivityIndicatorViewable {
     @IBAction func addQunttyBTN(_ sender: Any) {
         qty = qty + 1
         self.discountPrice.text = "\((singleItem?.salePrice ?? 0) * self.qty) \(singleItem?.currency ?? "")"
-        self.genralPrice.text = "\((singleItem?.total ?? 0) * self.qty) \(singleItem?.currency ?? "")"
+        self.genralPrice.text = "\((self.singleItem?.total ?? 0) * self.qty) \(self.singleItem?.currency ?? "")"
         self.qtnText.text = "\(qty)"
         if qty == 1 {
             minBtm.isHidden = true

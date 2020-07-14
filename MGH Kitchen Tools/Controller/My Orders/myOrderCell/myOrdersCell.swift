@@ -26,6 +26,8 @@ class myOrdersCell: UICollectionViewCell {
         orderIdLabel.text = "Order Id: \(products.id ?? 0)"
         orderTotalLabel.text = "Total Price: \(products.total ?? 0) \(products.orderDetails?.first?.currency ?? "")"
         orderQntyLabel.text = "Order Quantity: \(products.orderDetails?.count ?? 0)"
+        orderDateLabel.text = products.createdAt
+        orderStatusLabel.text = products.status
     }
     
 }

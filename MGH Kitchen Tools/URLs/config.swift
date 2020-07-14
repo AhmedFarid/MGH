@@ -33,5 +33,12 @@ struct URLs {
     static let makeOrder = main + "customer/makeOrder"
     static let getPromocodeDiscount = main + "customer/getPromocodeDiscount"
     static let orders = main + "customer/orders"
+    static let social_login = main + "social_login"
+    static let staticPages = main + "staticPages"
+    static let contactUs = main + "contactUs"
+    static let profile = main + "customer/profile"
+    static let editCustomerProfile = main + "customer/editCustomerProfile"
+    static let changePassword = main + "customer/changePassword"
+    static let setReview = main + "customer/setReview"
     
 }

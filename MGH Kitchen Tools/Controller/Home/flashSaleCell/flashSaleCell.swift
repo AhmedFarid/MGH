@@ -38,7 +38,7 @@ class flashSaleCell: UICollectionViewCell {
             discountPrice.isHidden = false
         }
         newPrice.text = "\(products.total ?? 0) \(products.currency ?? "")"
-        discountPrice.text = "\(products.hotDealPrice ?? "") \(products.currency ?? "")"
+        discountPrice.text = "\(products.hotDealPrice ?? 0) \(products.currency ?? "")"
         discountPrice.strikeThrough(true)
         if helperAuth.getAPIToken() == nil {
             cartBtn.isHidden = true

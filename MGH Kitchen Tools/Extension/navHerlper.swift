@@ -72,7 +72,6 @@ extension UIViewController {
         menu.presentationStyle = .menuSlideIn
         menu.menuWidth = view.frame.size.width - 50
         menu.statusBarEndAlpha = 0
-        //sideMenuDelegate
         present(menu, animated: true, completion: nil)
     }
     

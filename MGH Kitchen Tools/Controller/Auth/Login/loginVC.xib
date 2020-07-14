@@ -11,6 +11,8 @@
             <connections>
                 <outlet property="email" destination="Vag-my-tOw" id="52W-7f-Khf"/>
                 <outlet property="password" destination="TTC-Vc-aTn" id="gny-Ap-H3K"/>
+                <outlet property="signGooleBtn" destination="AeA-YS-lIQ" id="UNH-4Q-y8r"/>
+                <outlet property="signWihtAppleBTN" destination="SHy-qh-xcW" id="AvE-0f-Qhm"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -160,6 +162,9 @@
                                                 <constraint firstAttribute="height" constant="54" id="qnk-os-azY"/>
                                             </constraints>
                                             <state key="normal" image="Group 269"/>
+                                            <connections>
+                                                <action selector="googleACtion:" destination="-1" eventType="touchUpInside" id="put-Ui-rCR"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KsX-2E-UU4">
                                             <rect key="frame" x="70" y="0.0" width="54" height="54"/>
@@ -168,6 +173,9 @@
                                                 <constraint firstAttribute="width" constant="54" id="re2-Ol-fIe"/>
                                             </constraints>
                                             <state key="normal" image="Group 270"/>
+                                            <connections>
+                                                <action selector="fbLoginBTN:" destination="-1" eventType="touchUpInside" id="cZV-RM-b2Y"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SHy-qh-xcW">
                                             <rect key="frame" x="140" y="0.0" width="54" height="54"/>

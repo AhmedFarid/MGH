@@ -92,4 +92,42 @@ class authApi: NSObject {
             }
         }
     }
+    
+    class func FBLogin(full_name: String,email: String ,social_id:String, completion: @escaping (_ error: Error?,_ success: Bool, _ userData: Auth?,_ statusCode: Int?)->Void) {
+        
+        let url = URLs.social_login
+        print(url)
+        let parameters = [
+            "social_id": social_id,
+            "email": email,
+            "full_name": full_name
+            ] as [String : Any]
+        
+        
+        print(url)
+            print(parameters)
+            AF.request(url, method: .post, parameters: parameters, encoding: URLEncoding.queryString, headers: nil).responseJSON { (response) in
+                switch response.result
+                {
+                case .failure(let error):
+                    completion(error, false,nil,nil)
+                    print(error)
+                case .success:
+                    do{
+                        print(response)
+                        if response.response?.statusCode == 200 {
+                            let register = try JSONDecoder().decode(Auth.self, from: response.data!)
+                            helperAuth.saveAPIToken(token: register.accessToken ?? "")
+                            completion(nil,true,register,response.response?.statusCode)
+                        }else {
+                            completion(nil,true,nil,response.response?.statusCode)
+                        }
+                        
+                        
+                    }catch{
+                        print("error")
+                    }
+                }
+            }
+        }
 }
