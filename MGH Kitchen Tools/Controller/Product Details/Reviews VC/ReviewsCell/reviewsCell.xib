@@ -38,7 +38,7 @@
                             </label>
                         </subviews>
                     </stackView>
-                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B4t-aU-gzL" customClass="CosmosView" customModule="Cosmos">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B4t-aU-gzL" customClass="CosmosView" customModule="Cosmos">
                         <rect key="frame" x="142" y="54" width="120" height="20"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -47,6 +47,7 @@
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="image" keyPath="filledImage" value="star-1"/>
                             <userDefinedRuntimeAttribute type="image" keyPath="emptyImage" value="star"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="updateOnTouch" value="NO"/>
                         </userDefinedRuntimeAttributes>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M7e-FP-27a">

@@ -15,6 +15,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="homeVC" customModule="MGH_Kitchen_Tools" customModuleProvider="target">
             <connections>
                 <outlet property="bannerCollectionView" destination="TWz-By-Cwh" id="diQ-6Q-g4U"/>
+                <outlet property="bestSelingHight" destination="RDc-89-F7Q" id="W0y-3a-6a7"/>
                 <outlet property="bestSellingCollectionView" destination="2ew-hn-ONk" id="cVv-Kr-hc8"/>
                 <outlet property="categoryCollectionView" destination="T0h-s4-89m" id="3FC-g2-zCI"/>
                 <outlet property="flashSellCollecetion" destination="2by-hJ-Csg" id="2jo-ie-IMP"/>
@@ -33,7 +34,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b95-OS-xNV">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="1194"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="1380"/>
                             <subviews>
                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="TWz-By-Cwh">
                                     <rect key="frame" x="0.0" y="44" width="414" height="251"/>
@@ -110,12 +111,12 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="2ew-hn-ONk">
-                                    <rect key="frame" x="0.0" y="878" width="414" height="300"/>
+                                    <rect key="frame" x="0.0" y="878" width="414" height="500"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="300" id="RDc-89-F7Q"/>
+                                        <constraint firstAttribute="height" constant="500" id="RDc-89-F7Q"/>
                                     </constraints>
-                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="FbE-CP-LVu">
+                                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="FbE-CP-LVu">
                                         <size key="itemSize" width="128" height="128"/>
                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -150,7 +151,7 @@
                                 <constraint firstAttribute="trailing" secondItem="T0h-s4-89m" secondAttribute="trailing" id="2O6-da-eqv"/>
                                 <constraint firstItem="T0h-s4-89m" firstAttribute="top" secondItem="DAj-Tj-Z17" secondAttribute="bottom" id="2cw-4g-vvi"/>
                                 <constraint firstAttribute="trailing" secondItem="P8T-Sd-A4l" secondAttribute="trailing" constant="8" id="5s1-iz-gxO"/>
-                                <constraint firstAttribute="bottom" secondItem="2ew-hn-ONk" secondAttribute="bottom" constant="16" id="7bx-oX-Th1"/>
+                                <constraint firstAttribute="bottom" secondItem="2ew-hn-ONk" secondAttribute="bottom" constant="2" id="7bx-oX-Th1"/>
                                 <constraint firstItem="T0h-s4-89m" firstAttribute="top" secondItem="DAj-Tj-Z17" secondAttribute="bottom" id="8b3-uJ-tDZ"/>
                                 <constraint firstItem="vBT-Pu-fgG" firstAttribute="leading" secondItem="b95-OS-xNV" secondAttribute="leading" constant="8" id="9gP-It-UZ9"/>
                                 <constraint firstItem="DAj-Tj-Z17" firstAttribute="leading" secondItem="b95-OS-xNV" secondAttribute="leading" constant="8" id="9lr-uy-WeF"/>

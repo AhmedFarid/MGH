@@ -25,7 +25,7 @@ class profileVC: UIViewController,NVActivityIndicatorViewable {
         super.viewDidLoad()
         setUpData()
         setUpNavColore(false, "")
-        setUpNav(logo: true, menu: false, cart: true)
+        setUpNav(logo: true,  cart: true)
         
     }
     

@@ -33,7 +33,7 @@ class checkOutVC: UIViewController,NVActivityIndicatorViewable {
         super.viewDidLoad()
 
         setUpNavColore(false, "")
-        setUpNav(logo: true, menu: false, cart: false)
+        setUpNav(logo: true, cart: true)
         
         totalPrice.text = "\(self.countCart) Item / Total Cost \(self.totlaPrice) \(self.curancy)"
     }

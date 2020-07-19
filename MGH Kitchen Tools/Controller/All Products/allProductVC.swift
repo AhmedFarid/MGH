@@ -27,7 +27,7 @@ class allProductVC: UIViewController,NVActivityIndicatorViewable {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpNavColore(false, "")
-        setUpNav(logo: true, menu: false, cart: true)
+        setUpNav(logo: true,  cart: true)
         handelApiflashSale(name: name)
         searchTF.delegate = self
     }

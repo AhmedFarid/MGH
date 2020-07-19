@@ -32,8 +32,15 @@ class sideMenuVC: UIViewController {
         }
     }
     @IBAction func profileBtn(_ sender: Any) {
+        if helperAuth.getAPIToken() == nil {
+            let vc = loginVC(nibName: "loginVC", bundle: nil)
+            let navigationController = UINavigationController(rootViewController: vc)
+            navigationController.modalPresentationStyle = .fullScreen
+            self.present(navigationController, animated: true, completion: nil)
+        }else {
         let vc = profileVC(nibName: "profileVC", bundle: nil)
         self.navigationController!.pushViewController(vc, animated: true)
+        }
     }
     
     @IBAction func contactUs(_ sender: Any) {
@@ -59,23 +66,55 @@ class sideMenuVC: UIViewController {
         self.navigationController!.pushViewController(vc, animated: true)
     }
     @IBAction func promoCode(_ sender: Any) {
+        if helperAuth.getAPIToken() == nil {
+            let vc = loginVC(nibName: "loginVC", bundle: nil)
+            let navigationController = UINavigationController(rootViewController: vc)
+            navigationController.modalPresentationStyle = .fullScreen
+            self.present(navigationController, animated: true, completion: nil)
+        }else {
+        let vc = giftsVC(nibName: "giftsVC", bundle: nil)
+        vc.modalPresentationStyle = .custom
+        
+        self.present(vc,animated: true)
+        }
     }
     
     @IBAction func myWishListBTn(_ sender: Any) {
+        if helperAuth.getAPIToken() == nil {
+            let vc = loginVC(nibName: "loginVC", bundle: nil)
+            let navigationController = UINavigationController(rootViewController: vc)
+            navigationController.modalPresentationStyle = .fullScreen
+            self.present(navigationController, animated: true, completion: nil)
+        }else {
         let vc = allProductVC(nibName: "allProductVC", bundle: nil)
         vc.url = URLs.favoirtes
         self.navigationController!.pushViewController(vc, animated: true)
+        }
     }
     
     @IBAction func myOrdersBtn(_ sender: Any) {
+        if helperAuth.getAPIToken() == nil {
+            let vc = loginVC(nibName: "loginVC", bundle: nil)
+            let navigationController = UINavigationController(rootViewController: vc)
+            navigationController.modalPresentationStyle = .fullScreen
+            self.present(navigationController, animated: true, completion: nil)
+        }else {
         let vc = myOrdersVC(nibName: "myOrdersVC", bundle: nil)
         self.navigationController!.pushViewController(vc, animated: true)
+        }
     }
     
     
     @IBAction func cartBtn(_ sender: Any) {
+        if helperAuth.getAPIToken() == nil {
+            let vc = loginVC(nibName: "loginVC", bundle: nil)
+            let navigationController = UINavigationController(rootViewController: vc)
+            navigationController.modalPresentationStyle = .fullScreen
+            self.present(navigationController, animated: true, completion: nil)
+        }else {
         let vc = cartVC(nibName: "cartVC", bundle: nil)
         self.navigationController!.pushViewController(vc, animated: true)
+        }
     }
     
     

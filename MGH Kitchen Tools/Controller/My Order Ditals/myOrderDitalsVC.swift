@@ -33,7 +33,7 @@ class myOrderDitalsVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         setUpNavColore(false, "")
-        setUpNav(logo: true, menu: false, cart: true)
+        setUpNav(logo: true,  cart: true)
         setUpData()
     }
     

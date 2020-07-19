@@ -63,14 +63,14 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dy4-Lw-oAp">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dy4-Lw-oAp">
                                 <rect key="frame" x="493" y="115.5" width="42" height="42"/>
                                 <state key="normal" image="Group 238"/>
                                 <connections>
                                     <action selector="cartBtnAction:" destination="tNt-SY-505" eventType="touchUpInside" id="Sxd-6H-cAO"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rod-uq-Rb4" customClass="CosmosView" customModule="Cosmos">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rod-uq-Rb4" customClass="CosmosView" customModule="Cosmos">
                                 <rect key="frame" x="198" y="93" width="144.5" height="15"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <userDefinedRuntimeAttributes>
@@ -80,9 +80,10 @@
                                         <real key="value" value="14"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="string" keyPath="text" value="(55555)"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="updateOnTouch" value="NO"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ut5-yR-w8d">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ut5-yR-w8d">
                                 <rect key="frame" x="198" y="115.5" width="42" height="42"/>
                                 <state key="normal" image="fav"/>
                                 <connections>

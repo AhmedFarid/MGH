@@ -30,7 +30,7 @@ class allCategoursVC: UIViewController, NVActivityIndicatorViewable {
         super.viewDidLoad()
 
         setUpNavColore(false, "")
-        setUpNav(logo: true, menu: false, cart: true)
+        setUpNav(logo: true,  cart: true)
         categoryCollectionView.addSubview(refresher)
         handelApiCategory()
     }
@@ -55,6 +55,7 @@ class allCategoursVC: UIViewController, NVActivityIndicatorViewable {
                 self.last_page = categorie.data?.meta?.lastPage ?? 0
                 self.stopAnimating()
             }
+            self.stopAnimating()
         }
     }
     

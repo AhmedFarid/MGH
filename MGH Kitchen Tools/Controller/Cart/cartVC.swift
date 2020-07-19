@@ -24,16 +24,16 @@ class cartVC: UIViewController,NVActivityIndicatorViewable {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setUpNavColore(false, "")
-        setUpNav(logo: true, menu: false, cart: false)
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        setUpNavColore(false, "")
+        setUpNav(logo: true,  cart: true)
         handelApiflashSale()
     }
 
     @objc func handelApiflashSale() {
+        self.refesHcart()
         self.cartCollectionView.register(UINib.init(nibName: "cartCell", bundle: nil), forCellWithReuseIdentifier: "cell")
         cartCollectionView.delegate = self
         cartCollectionView.dataSource = self
@@ -41,6 +41,7 @@ class cartVC: UIViewController,NVActivityIndicatorViewable {
         homeApi.productsApi(url: URLs.carts, pageName: 1,category_id: 0,name: ""){ (error,success,products) in
             if let products = products{
                 self.products = products.data?.data ?? []
+                print("xx \(products)")
                 self.toalPrice = 0
                 for i in self.products {
                     self.toalPrice = self.toalPrice + (i.productInCartTotal ?? 0)
@@ -48,16 +49,17 @@ class cartVC: UIViewController,NVActivityIndicatorViewable {
                 }
                 self.cartPrice.text = "\(self.products.count) Item / Total Cost \(self.toalPrice) \(self.curancy)"
                 print(products)
-                if self.products.count == 0{
-                    self.cartCollectionView.isHidden = true
-                    self.totalView.isHidden = true
-                    self.checkOutBtn.isHidden = true
-                    self.cartCollectionView.reloadData()
-                    self.stopAnimating()
-                }
+//                if self.products.count == 0{
+//                    //self.cartCollectionView.isHidden = true
+//                    self.totalView.isHidden = true
+//                    self.checkOutBtn.isHidden = true
+//                    self.cartCollectionView.reloadData()
+//                    self.stopAnimating()
+//                }
                 self.cartCollectionView.reloadData()
                 self.stopAnimating()
             }
+            self.stopAnimating()
         }
     }
     
@@ -89,11 +91,15 @@ class cartVC: UIViewController,NVActivityIndicatorViewable {
     }
     
     @IBAction func checkOutBtn(_ sender: Any) {
+        if products.count == 0 {
+            self.showAlert(title: "Cart", message: "Cart Is Empty")
+        }else {
         let vc = checkOutVC(nibName: "checkOutVC", bundle: nil)
         vc.totlaPrice = toalPrice
         vc.curancy = curancy
         vc.countCart = products.count
         self.navigationController!.pushViewController(vc, animated: true)
+        }
     }
     
 

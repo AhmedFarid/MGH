@@ -10,7 +10,7 @@ import SideMenu
 
 extension UIViewController {
     
-    func setUpNav(logo: Bool = false ,menu: Bool = false, cart: Bool = false) {
+    func setUpNav(logo: Bool = false , cart: Bool = false) {
         switch logo {
         case true:
             let nvImageTitle = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
@@ -18,13 +18,6 @@ extension UIViewController {
             let imageName = UIImage(named: "MGH Logo copy-1")
             nvImageTitle.image = imageName
             navigationItem.titleView = nvImageTitle
-        default:
-            print("no")
-        }
-        switch menu {
-        case true:
-            let leftBarButtonItem = UIBarButtonItem.init(image: UIImage(named: "menu"), style: .done, target: self, action: #selector(sideMenu))
-            self.navigationItem.leftBarButtonItem = leftBarButtonItem
         default:
             print("no")
         }
@@ -37,22 +30,26 @@ extension UIViewController {
     }
     
     func refesHcart() {
-           let rightBarButtonItem = UIBarButtonItem.init(image: UIImage(named: "BASKET"), style: .done, target: self, action: #selector(self.showCart))
-           self.navigationItem.rightBarButtonItem = rightBarButtonItem
-           homeApi.productsApi(url: URLs.carts, pageName: 1,category_id: 0,name: ""){ (error,success,products) in
-               if products?.success == true {
+        homeApi.productsApi(url: URLs.carts, pageName: 1,category_id: 0,name: ""){ (error,success,products) in
+            if products?.success == true {
                 if products?.data?.data?.count == 0 {
-                    let rightBarButtonItem = UIBarButtonItem.init(image: UIImage(named: "BASKET"), style: .done, target: self, action: #selector(self.showCart))
-                    self.navigationItem.rightBarButtonItem = rightBarButtonItem
+                    if let tabItems = self.tabBarController?.tabBar.items {
+                        // In this case we want to modify the badge number of the third tab:
+                        let tabItem = tabItems[3]
+                        tabItem.badgeValue = nil
+                    }
                 }else {
-                   self.addBadge(count: products?.data?.data?.count ?? 0)
+                    if let tabItems = self.tabBarController?.tabBar.items {
+                        // In this case we want to modify the badge number of the third tab:
+                        let tabItem = tabItems[3]
+                        tabItem.badgeValue = "\(products?.data?.data?.count ?? 0)"
+                    }
+                    //self.addBadge(count: products?.data?.data?.count ?? 0)
                 }
-               }else {
-                    let rightBarButtonItem = UIBarButtonItem.init(image: UIImage(named: "BASKET"), style: .done, target: self, action: #selector(self.showCart))
-                    self.navigationItem.rightBarButtonItem = rightBarButtonItem
-               }
-           }
-       }
+            }else {
+            }
+        }
+    }
     
     
     func setUpNavColore(_ isTranslucent: Bool,_ title: String){
@@ -67,30 +64,7 @@ extension UIViewController {
         navigationController?.navigationBar.titleTextAttributes = textAttributes
     }
     
-    @objc func sideMenu() {
-        let menu = UIStoryboard(name: "sideMenu", bundle: nil).instantiateViewController(withIdentifier: "RightMenu") as! SideMenuNavigationController
-        menu.presentationStyle = .menuSlideIn
-        menu.menuWidth = view.frame.size.width - 50
-        menu.statusBarEndAlpha = 0
-        present(menu, animated: true, completion: nil)
-    }
-    
-    @objc func showCart() {
-        let vc = cartVC(nibName: "cartVC", bundle: nil)
-        self.navigationController!.pushViewController(vc, animated: true)
-    }
-    
-    func addBadge(count: Int) {
-        let bagButton = BadgeButton()
-        bagButton.frame = CGRect(x: 0, y: 0, width: 44, height: 44)
-        bagButton.tintColor = UIColor.white
-        bagButton.setImage(UIImage(named: "BASKET"), for: .normal)
-        bagButton.badgeEdgeInsets = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 5)
-        print("cart Count \(count)")
-        bagButton.badge = "\(count)"
-        bagButton.addTarget(self, action: #selector(self.showCart), for: UIControl.Event.touchUpInside)
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: bagButton)
-    }
+   
 }
 
 extension AppDelegate {
@@ -100,25 +74,5 @@ extension AppDelegate {
         BarButtonItemAppearance.setBackButtonTitlePositionAdjustment(UIOffset(horizontal: -200, vertical: -5), for:UIBarMetrics.default)
     }
     
-}
-
-extension  SideMenuNavigationControllerDelegate {
-
-    func sideMenuWillAppear(menu: SideMenuNavigationController, animated: Bool) {
-        print("SideMenu Appearing! (animated: \(animated))")
-//        setUpNavColore(true,"")
-    }
-
-    func sideMenuDidAppear(menu: SideMenuNavigationController, animated: Bool) {
-        print("SideMenu Appeared! (animated: \(animated))")
-    }
-
-    func sideMenuWillDisappear(menu: SideMenuNavigationController, animated: Bool) {
-        print("SideMenu Disappearing! (animated: \(animated))")
-    }
-
-    func sideMenuDidDisappear(menu: SideMenuNavigationController, animated: Bool) {
-        print("SideMenu Disappeared! (animated: \(animated))")
-    }
 }
 

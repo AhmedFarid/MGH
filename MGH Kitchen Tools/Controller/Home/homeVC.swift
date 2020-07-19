@@ -19,6 +19,7 @@ class homeVC: UIViewController,NVActivityIndicatorViewable {
     @IBOutlet weak var bestSellingCollectionView: UICollectionView!
     @IBOutlet weak var scrollview: UIScrollView!
     @IBOutlet weak var searchTF: textFieldView!
+    @IBOutlet weak var bestSelingHight: NSLayoutConstraint!
     
     var timer : Timer?
     var currentIndex = 0
@@ -36,7 +37,7 @@ class homeVC: UIViewController,NVActivityIndicatorViewable {
         scrollview.refreshControl = refreshControl
         
         setUpNavColore(false, "")
-        setUpNav(logo: true, menu: true, cart: true)
+        setUpNav(logo: true,  cart: true)
         startTimer()
         
         
@@ -75,11 +76,12 @@ class homeVC: UIViewController,NVActivityIndicatorViewable {
                 self.categoryCollectionView.reloadData()
                 self.stopAnimating()
             }
+            self.stopAnimating()
         }
     }
     
     func handelApiBestSealing() {
-        self.bestSellingCollectionView.register(UINib.init(nibName: "allProductCell", bundle: nil), forCellWithReuseIdentifier: "cell")
+        self.bestSellingCollectionView.register(UINib.init(nibName: "allProductViewCell", bundle: nil), forCellWithReuseIdentifier: "cell")
         bestSellingCollectionView.delegate = self
         bestSellingCollectionView.dataSource = self
         
@@ -89,8 +91,10 @@ class homeVC: UIViewController,NVActivityIndicatorViewable {
                 self.products = products.data?.data ?? []
                 print(products)
                 self.bestSellingCollectionView.reloadData()
+                self.bestSelingHight.constant = CGFloat(self.products.count * 185)
                 self.stopAnimating()
             }
+            self.stopAnimating()
         }
     }
     
@@ -107,6 +111,7 @@ class homeVC: UIViewController,NVActivityIndicatorViewable {
                 self.flashSellCollecetion.reloadData()
                 self.stopAnimating()
             }
+            self.stopAnimating()
         }
     }
     
@@ -213,11 +218,11 @@ extension homeVC: UICollectionViewDelegate,UICollectionViewDataSource,UICollecti
                 return flashSaleCell()
             }
         }else if collectionView == bestSellingCollectionView {
-            if let cell = bestSellingCollectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? allProductCell {
+            if let cell = bestSellingCollectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? allProductViewCell {
                 cell.configureCell(products: products[indexPath.row])
                 return cell
             }else {
-                return allProductCell()
+                return allProductViewCell()
             }
         }else {
             if let cell = categoryCollectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? CategoryCell {
@@ -235,7 +240,7 @@ extension homeVC: UICollectionViewDelegate,UICollectionViewDataSource,UICollecti
         }else if collectionView == flashSellCollecetion{
             return CGSize(width: flashSellCollecetion.frame.size.width, height: flashSellCollecetion.frame.size.height - 10)
         }else if collectionView == bestSellingCollectionView{
-            return CGSize(width: bestSellingCollectionView.frame.size.width / 1.2, height: bestSellingCollectionView.frame.size.height - 10)
+            return CGSize(width: bestSellingCollectionView.frame.size.width, height: 185)
         }else {
             return CGSize(width: categoryCollectionView.frame.size.width / 1.6, height: categoryCollectionView.frame.size.height - 10)
         }
@@ -279,9 +284,16 @@ extension homeVC: SideMenuNavigationControllerDelegate {
     
     func sideMenuWillDisappear(menu: SideMenuNavigationController, animated: Bool) {
        print("SideMenu Disappearing! (animated: \(animated))")
+        
+        
     }
     
     func sideMenuDidDisappear(menu: SideMenuNavigationController, animated: Bool) {
         print("SideMenu Disappeared! (animated: \(animated))")
+//        handelApiBanner()
+//        handelApiflashSale()
+//        handelApiCategory()
+//        handelApiBestSealing()
+//        refesHcart()
     }
 }

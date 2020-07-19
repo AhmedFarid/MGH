@@ -20,7 +20,7 @@ class writeRewiewVC: UIViewController,NVActivityIndicatorViewable {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpNavColore(false, "")
-        setUpNav(logo: true, menu: false, cart: true)
+        setUpNav(logo: true,  cart: true)
         // Do any additional setup after loading the view.
     }
 

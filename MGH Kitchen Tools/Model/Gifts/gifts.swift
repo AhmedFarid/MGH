@@ -7,3 +7,20 @@
 //
 
 import Foundation
+
+
+struct gifts: Codable {
+    let success: Bool?
+    let data: [giftsData]?
+    let message: String?
+}
+
+struct giftsData: Codable {
+    let id: Int?
+    let type, title, giftValue: String?
+
+    enum CodingKeys: String, CodingKey {
+        case id, type, title
+        case giftValue = "gift_value"
+    }
+}

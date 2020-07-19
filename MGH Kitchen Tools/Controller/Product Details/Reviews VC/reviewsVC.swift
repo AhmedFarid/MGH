@@ -9,7 +9,7 @@
 import UIKit
 
 class reviewsVC: UIViewController {
-
+    
     @IBOutlet weak var reviewTabelVIew: UITableView!
     
     var reviwes = [Review]()
@@ -25,7 +25,7 @@ class reviewsVC: UIViewController {
         reviewTabelVIew.rowHeight = UITableView.automaticDimension
         reviewTabelVIew.estimatedRowHeight = UITableView.automaticDimension
         setUpNavColore(false, "")
-        setUpNav(logo: true, menu: false, cart: true)
+        setUpNav(logo: true, cart: true)
         let leftBarButtonItem = UIBarButtonItem.init(image: UIImage(named: "Group 37"), style: .done, target: self, action: #selector(dismmView))
         self.navigationItem.leftBarButtonItem = leftBarButtonItem
         
@@ -34,16 +34,22 @@ class reviewsVC: UIViewController {
     @objc func dismmView() {
         self.dismiss(animated: true, completion: nil)
     }
-
+    
     @IBAction func leaveReviewsBtnAction(_ sender: Any) {
-        let vc =  writeRewiewVC(nibName: "writeRewiewVC", bundle: nil)
-        vc.productId = id
-        self.navigationController!.pushViewController(vc, animated: true)
-       
+        if helperAuth.getAPIToken() == nil {
+            let vc = loginVC(nibName: "loginVC", bundle: nil)
+            let navigationController = UINavigationController(rootViewController: vc)
+            navigationController.modalPresentationStyle = .fullScreen
+            self.present(navigationController, animated: true, completion: nil)
+        }else{
+            let vc =  writeRewiewVC(nibName: "writeRewiewVC", bundle: nil)
+            vc.productId = id
+            self.navigationController!.pushViewController(vc, animated: true)
+        }
     }
     
     
-
+    
 }
 
 

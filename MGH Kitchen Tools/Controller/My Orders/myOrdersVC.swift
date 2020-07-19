@@ -19,7 +19,7 @@ class myOrdersVC: UIViewController,NVActivityIndicatorViewable {
         super.viewDidLoad()
         
         setUpNavColore(false, "")
-        setUpNav(logo: true, menu: false, cart: false)
+        setUpNav(logo: true,  cart: true)
         handelApiflashSale()
        
     }

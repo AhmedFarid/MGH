@@ -20,7 +20,7 @@ class contactUsVC: UIViewController,NVActivityIndicatorViewable {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpNavColore(false, "")
-        setUpNav(logo: true, menu: false, cart: true)
+        setUpNav(logo: true, cart: true)
 
     }
     

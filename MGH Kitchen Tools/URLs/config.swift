@@ -40,5 +40,7 @@ struct URLs {
     static let editCustomerProfile = main + "customer/editCustomerProfile"
     static let changePassword = main + "customer/changePassword"
     static let setReview = main + "customer/setReview"
+    static let gifts = main + "customer/gifts"
+    static let getGift = main + "customer/getGift"
     
 }

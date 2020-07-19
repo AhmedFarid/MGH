@@ -12,18 +12,58 @@ import UIKit
 class helperAuth: NSObject {
     
     class func restartApp(){
-        guard let window = UIApplication.shared.keyWindow else {return}
-        if getAPIToken() == nil {
-            let navigationController = UINavigationController(rootViewController: homeVC())
-            window.rootViewController = navigationController
-            window.makeKeyAndVisible()
-        }else {
-            let navigationController = UINavigationController(rootViewController: homeVC())
-            window.rootViewController = navigationController
-            window.makeKeyAndVisible()
+    guard let window = UIApplication.shared.keyWindow else {return}
+    if getAPIToken() == nil {
+        let tabBarController = UITabBarController()
+        let homeTabVC = homeVC(nibName: "homeVC",bundle: nil)
+        let newOffersTabVC = newOffersVC(nibName:"newOffersVC",bundle: nil)
+        let categorusTabVC = allCategoursVC(nibName:"allCategoursVC",bundle: nil)
+        let cartTabVC = cartVC(nibName:"cartVC",bundle: nil)
+        let myAcoutnTabVC = myAccountVC(nibName: "myAccountVC",bundle: nil)
+        
+        homeTabVC.tabBarItem = UITabBarItem(title: "Home", image: UIImage(named: "Group 397"), selectedImage: UIImage(named: "Group 398"))
+        newOffersTabVC.tabBarItem = UITabBarItem(title: "New Offers",image:UIImage(named: "Group 393") ,selectedImage: UIImage(named: "Group 394"))
+        categorusTabVC.tabBarItem = UITabBarItem(title: "Categories",image: UIImage(named: "Group 395"),selectedImage: UIImage(named: "Group 396"))
+        cartTabVC.tabBarItem = UITabBarItem(title: "Cart",image:UIImage(named: "Group 388") ,selectedImage: UIImage(named: "Group 390"))
+        myAcoutnTabVC.tabBarItem = UITabBarItem(title: "My Account",image:UIImage(named: "Group 392") ,selectedImage: UIImage(named: "Group 391"))
+        let controllers = [homeTabVC,categorusTabVC,newOffersTabVC,cartTabVC,myAcoutnTabVC].map {
+            UINavigationController(rootViewController: $0)
+            
         }
-        UIView.transition(with: window, duration: 0.0, options: .transitionFlipFromTop, animations: nil, completion: nil)
+        tabBarController.tabBar.tintColor = #colorLiteral(red: 0, green: 0, blue: 0.5019607843, alpha: 1)
+        tabBarController.tabBar.barTintColor = #colorLiteral(red: 0.9137254902, green: 0.9215686275, blue: 0.9333333333, alpha: 1)
+        tabBarController.viewControllers = controllers
+        
+        window.rootViewController = tabBarController
+        window.makeKeyAndVisible()
+
+    }else {
+        let tabBarController = UITabBarController()
+        let homeTabVC = homeVC(nibName: "homeVC",bundle: nil)
+        let newOffersTabVC = newOffersVC(nibName:"newOffersVC",bundle: nil)
+        let categorusTabVC = allCategoursVC(nibName:"allCategoursVC",bundle: nil)
+        let cartTabVC = cartVC(nibName:"cartVC",bundle: nil)
+        let myAcoutnTabVC = myAccountVC(nibName: "myAccountVC",bundle: nil)
+        
+        homeTabVC.tabBarItem = UITabBarItem(title: "Home", image: UIImage(named: "Group 397"), selectedImage: UIImage(named: "Group 398"))
+        newOffersTabVC.tabBarItem = UITabBarItem(title: "New Offers",image:UIImage(named: "Group 393") ,selectedImage: UIImage(named: "Group 394"))
+        categorusTabVC.tabBarItem = UITabBarItem(title: "Categories",image: UIImage(named: "Group 395"),selectedImage: UIImage(named: "Group 396"))
+        cartTabVC.tabBarItem = UITabBarItem(title: "Cart",image:UIImage(named: "Group 388") ,selectedImage: UIImage(named: "Group 390"))
+        myAcoutnTabVC.tabBarItem = UITabBarItem(title: "My Account",image:UIImage(named: "Group 392") ,selectedImage: UIImage(named: "Group 391"))
+        let controllers = [homeTabVC,categorusTabVC,newOffersTabVC,cartTabVC,myAcoutnTabVC].map {
+            UINavigationController(rootViewController: $0)
+            
+        }
+        tabBarController.tabBar.tintColor = #colorLiteral(red: 0, green: 0, blue: 0.5019607843, alpha: 1)
+        tabBarController.tabBar.barTintColor = #colorLiteral(red: 0.9137254902, green: 0.9215686275, blue: 0.9333333333, alpha: 1)
+        tabBarController.viewControllers = controllers
+        
+        window.rootViewController = tabBarController
+        window.makeKeyAndVisible()
     }
+    UIView.transition(with: window, duration: 0.0, options: .transitionFlipFromTop, animations: nil, completion: nil)
+}
+
     
     class func dleteAPIToken() {
         let def = UserDefaults.standard
