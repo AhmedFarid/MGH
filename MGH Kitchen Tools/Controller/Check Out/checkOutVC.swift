@@ -82,7 +82,7 @@ class checkOutVC: UIViewController,NVActivityIndicatorViewable {
         cartApi.getTaxes { (error, success, message) in
             if success {
                 self.tex = message?.data ?? 0
-                self.totalPrice.text = "\(self.countCart) Item / Total Cost \(self.totlaPrice) \(self.curancy) \n Taxes \(self.tex) \(self.curancy) \n Sub Total \(self.totlaPrice + self.tex)"
+                self.totalPrice.text = "\(self.countCart) Item / Sub Total \(self.totlaPrice) \(self.curancy) \n Taxes \(self.tex) \(self.curancy) \n Total Cost \(self.totlaPrice + self.tex) \(self.curancy)"
             }
         }
     }
@@ -96,9 +96,9 @@ class checkOutVC: UIViewController,NVActivityIndicatorViewable {
                     self.showAlert(title: "Promo Code", message: "You have Discount \(message?.data?.discount ?? 0) \(self.curancy)")
                     self.promo = message?.data?.discount ?? 0
                     if self.delveryTotal == 0 {
-                        self.totalPrice.text = "\(self.countCart) Item / Total Cost \(self.totlaPrice) \(self.curancy) \nYou have promo \(self.promo) \(self.curancy) Total Cost With Promo \(self.totlaPrice - self.promo + self.delveryTotal) \n Taxes \(self.tex) \(self.curancy) \n Sub Total \(self.totlaPrice - self.promo + self.delveryTotal + self.tex) \(self.curancy)"
+                        self.totalPrice.text = "\(self.countCart) Item / Sub Total \(self.totlaPrice) \(self.curancy) \nYou have promo \(self.promo) \(self.curancy) \n Taxes \(self.tex) \(self.curancy) \n Total Cost \(self.totlaPrice - self.promo + self.delveryTotal + self.tex) \(self.curancy)"
                     }else {
-                        self.totalPrice.text = "\(self.countCart) Item / Total Cost \(self.totlaPrice) \(self.curancy) \n \(self.delvertyTypes) Delivery fees \(self.delveryTotal) \nYou have promo \(self.promo) \(self.curancy) Total Cost With Promo \(self.totlaPrice - self.promo + self.delveryTotal) \n Taxes \(self.tex) \(self.curancy) \n Sub Total \(self.totlaPrice - self.promo + self.delveryTotal + self.tex) \(self.curancy)"
+                        self.totalPrice.text = "\(self.countCart) Item / Sub Total \(self.totlaPrice) \(self.curancy) \n \(self.delvertyTypes) Delivery fees \(self.delveryTotal) \nYou have promo \(self.promo) \(self.curancy) \n Taxes \(self.tex) \(self.curancy) \n Total Cost \(self.totlaPrice - self.promo + self.delveryTotal + self.tex) \(self.curancy)"
                     }
                     self.stopAnimating()
                 }else {
@@ -245,9 +245,9 @@ extension checkOutVC: UIPickerViewDataSource, UIPickerViewDelegate{
             self.delveryTotal = x[row].price ?? 0
             self.delvertyTypes = x[row].vlaue ?? ""
             if self.promo == 0 {
-                self.totalPrice.text = "\(self.countCart) Item / Total Cost \(self.totlaPrice) \(self.curancy) \n \(x[row].vlaue ?? "") Delivery fees \(self.delveryTotal) \n Taxes \(self.tex) \(self.curancy) \n Sub Total \(self.totlaPrice - self.promo + self.delveryTotal + self.tex) \(self.curancy)"
+                self.totalPrice.text = "\(self.countCart) Item / Sub Total \(self.totlaPrice) \(self.curancy) \n \(x[row].vlaue ?? "") Delivery fees \(self.delveryTotal) \n Taxes \(self.tex) \(self.curancy) \n Total Cost \(self.totlaPrice - self.promo + self.delveryTotal + self.tex) \(self.curancy)"
             }else {
-                self.totalPrice.text = "\(self.countCart) Item / Total Cost \(self.totlaPrice) \(self.curancy) \n \(x[row].vlaue ?? "") Delivery fees \(self.delveryTotal) \nYou have promo \(self.promo) \(self.curancy) Total Cost With Promo \(self.totlaPrice - self.promo + self.delveryTotal) \n Taxes \(self.tex) \(self.curancy) \n Sub Total \(self.totlaPrice - self.promo + self.delveryTotal + self.tex) \(self.curancy)"
+                self.totalPrice.text = "\(self.countCart) Item / Sub Total \(self.totlaPrice) \(self.curancy) \n \(x[row].vlaue ?? "") Delivery fees \(self.delveryTotal) \nYou have promo \(self.promo) \(self.curancy) \n Taxes \(self.tex) \(self.curancy) \n Total Cost \(self.totlaPrice - self.promo + self.delveryTotal + self.tex) \(self.curancy)"
             }
             
         }

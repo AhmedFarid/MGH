@@ -54,15 +54,15 @@ class checkoutDetiealsVC: UIViewController,NVActivityIndicatorViewable {
     
     func setupData() {
         typeTF.text = type
-        addressTF.text = "Address \(address)"
-        floorNumberTF.text = "Floor Number \(floorNumber)"
-        homeNumberTF.text = "Home Number \(homeNumber)"
-        streetTF.text = "Street \(street)"
-        regionTF.text = "Region \(region)"
-        deliveryTF.text = "Delivery Type \(delivery_type) delivery"
-        cityTF.text = "City Name \(cityName)"
-        phoneTF.text = "Phoen \(phone)"
-        fullNameTF.text = "Full Name \(fullName)"
+        addressTF.text = "\(address)"
+        floorNumberTF.text = "\(floorNumber)"
+        homeNumberTF.text = "\(homeNumber)"
+        streetTF.text = "\(street)"
+        regionTF.text = "\(region)"
+        deliveryTF.text = "\(delivery_type) delivery"
+        cityTF.text = "\(cityName)"
+        phoneTF.text = "\(phone)"
+        fullNameTF.text = "\(fullName)"
     }
 
     

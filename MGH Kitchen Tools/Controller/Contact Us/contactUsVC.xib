@@ -25,13 +25,10 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nVg-pf-0FR">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="750.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="535.5"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MGH Logo copy" translatesAutoresizingMaskIntoConstraints="NO" id="d4n-b7-qeD">
-                                    <rect key="frame" x="73" y="84" width="268" height="131"/>
-                                </imageView>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ERd-tD-CjR" customClass="textFieldView" customModule="MGH_Kitchen_Tools" customModuleProvider="target">
-                                    <rect key="frame" x="16" y="501.5" width="382" height="56"/>
+                                    <rect key="frame" x="16" y="286.5" width="382" height="56"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="56" id="YZr-9v-hVk"/>
@@ -60,13 +57,13 @@
                                     </userDefinedRuntimeAttributes>
                                 </textField>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ghs-WZ-3Di">
-                                    <rect key="frame" x="16" y="465" width="382" height="20.5"/>
+                                    <rect key="frame" x="16" y="250" width="382" height="20.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eQl-6l-woQ" customClass="textFieldView" customModule="MGH_Kitchen_Tools" customModuleProvider="target">
-                                    <rect key="frame" x="16" y="610.5" width="382" height="56"/>
+                                    <rect key="frame" x="16" y="395.5" width="382" height="56"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="56" id="g4c-up-Omx"/>
@@ -95,13 +92,13 @@
                                     </userDefinedRuntimeAttributes>
                                 </textField>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XBl-wm-db2">
-                                    <rect key="frame" x="16" y="573.5" width="382" height="21"/>
+                                    <rect key="frame" x="16" y="358.5" width="382" height="21"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gB6-uq-aTV" customClass="buttonView" customModule="MGH_Kitchen_Tools" customModuleProvider="target">
-                                    <rect key="frame" x="96.5" y="682.5" width="221" height="52"/>
+                                    <rect key="frame" x="96.5" y="467.5" width="221" height="52"/>
                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="52" id="4vw-wF-wIW"/>
@@ -119,7 +116,7 @@
                                     </connections>
                                 </button>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G2e-Ii-oud" customClass="textFieldView" customModule="MGH_Kitchen_Tools" customModuleProvider="target">
-                                    <rect key="frame" x="16" y="284" width="382" height="56"/>
+                                    <rect key="frame" x="16" y="69" width="382" height="56"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="56" id="Isk-Mo-X8S"/>
@@ -148,13 +145,13 @@
                                     </userDefinedRuntimeAttributes>
                                 </textField>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f7c-id-fKN">
-                                    <rect key="frame" x="16" y="247" width="382" height="21"/>
+                                    <rect key="frame" x="16" y="32" width="382" height="21"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TMH-pn-JAi" customClass="textFieldView" customModule="MGH_Kitchen_Tools" customModuleProvider="target">
-                                    <rect key="frame" x="16" y="393" width="382" height="56"/>
+                                    <rect key="frame" x="16" y="178" width="382" height="56"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="56" id="g2h-lX-P11"/>
@@ -183,7 +180,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </textField>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qf7-Qe-4rr">
-                                    <rect key="frame" x="16" y="356" width="382" height="21"/>
+                                    <rect key="frame" x="16" y="141" width="382" height="21"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -197,13 +194,12 @@
                                 <constraint firstAttribute="bottom" secondItem="gB6-uq-aTV" secondAttribute="bottom" constant="16" id="34h-lz-dfC"/>
                                 <constraint firstItem="gB6-uq-aTV" firstAttribute="top" secondItem="eQl-6l-woQ" secondAttribute="bottom" constant="16" id="4Mf-gF-WVD"/>
                                 <constraint firstItem="ERd-tD-CjR" firstAttribute="top" secondItem="Ghs-WZ-3Di" secondAttribute="bottom" constant="16" id="87o-x8-a9V"/>
+                                <constraint firstItem="f7c-id-fKN" firstAttribute="top" secondItem="nVg-pf-0FR" secondAttribute="top" constant="32" id="90N-8T-3XK"/>
                                 <constraint firstItem="eQl-6l-woQ" firstAttribute="trailing" secondItem="XBl-wm-db2" secondAttribute="trailing" id="CVS-oF-ad4"/>
-                                <constraint firstItem="d4n-b7-qeD" firstAttribute="top" secondItem="nVg-pf-0FR" secondAttribute="top" constant="84" id="ERA-ZG-PWw"/>
                                 <constraint firstItem="G2e-Ii-oud" firstAttribute="trailing" secondItem="f7c-id-fKN" secondAttribute="trailing" id="Gmh-ya-2hk"/>
                                 <constraint firstItem="ERd-tD-CjR" firstAttribute="trailing" secondItem="Ghs-WZ-3Di" secondAttribute="trailing" id="LnG-Jl-XWg"/>
                                 <constraint firstItem="ERd-tD-CjR" firstAttribute="leading" secondItem="Ghs-WZ-3Di" secondAttribute="leading" id="MJu-YO-kCj"/>
                                 <constraint firstAttribute="trailing" secondItem="f7c-id-fKN" secondAttribute="trailing" constant="16" id="OMX-z4-NPP"/>
-                                <constraint firstItem="f7c-id-fKN" firstAttribute="top" secondItem="d4n-b7-qeD" secondAttribute="bottom" constant="32" id="Ojg-7y-wTR"/>
                                 <constraint firstItem="Qf7-Qe-4rr" firstAttribute="trailing" secondItem="f7c-id-fKN" secondAttribute="trailing" id="PLI-zY-3lF"/>
                                 <constraint firstItem="eQl-6l-woQ" firstAttribute="leading" secondItem="XBl-wm-db2" secondAttribute="leading" id="Sh7-oT-iwF"/>
                                 <constraint firstItem="Ghs-WZ-3Di" firstAttribute="leading" secondItem="nVg-pf-0FR" secondAttribute="leading" constant="16" id="UWh-Yr-enG"/>
@@ -214,7 +210,6 @@
                                 <constraint firstItem="f7c-id-fKN" firstAttribute="leading" secondItem="nVg-pf-0FR" secondAttribute="leading" constant="16" id="bIp-o7-j6N"/>
                                 <constraint firstItem="G2e-Ii-oud" firstAttribute="top" secondItem="f7c-id-fKN" secondAttribute="bottom" constant="16" id="cYz-0V-HIo"/>
                                 <constraint firstItem="G2e-Ii-oud" firstAttribute="leading" secondItem="f7c-id-fKN" secondAttribute="leading" id="cdQ-No-GeX"/>
-                                <constraint firstItem="d4n-b7-qeD" firstAttribute="centerX" secondItem="nVg-pf-0FR" secondAttribute="centerX" id="dHQ-am-rKu"/>
                                 <constraint firstItem="TMH-pn-JAi" firstAttribute="trailing" secondItem="Qf7-Qe-4rr" secondAttribute="trailing" id="ebU-iQ-7Uu"/>
                                 <constraint firstItem="TMH-pn-JAi" firstAttribute="top" secondItem="Qf7-Qe-4rr" secondAttribute="bottom" constant="16" id="jXU-sL-UHu"/>
                                 <constraint firstItem="Ghs-WZ-3Di" firstAttribute="top" secondItem="TMH-pn-JAi" secondAttribute="bottom" constant="16" id="mRj-B2-n4F"/>
@@ -239,7 +234,6 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1HC-iu-XWe" secondAttribute="trailing" id="0qG-7p-qQe"/>
                 <constraint firstItem="1HC-iu-XWe" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="35j-Ox-sUy"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="1HC-iu-XWe" secondAttribute="bottom" id="48O-Pe-sea"/>
-                <constraint firstItem="d4n-b7-qeD" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.647343" id="7gL-jW-HBk"/>
                 <constraint firstItem="gB6-uq-aTV" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.533816" id="kCT-Ob-c0q"/>
                 <constraint firstItem="1HC-iu-XWe" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="qlO-qA-QsB"/>
             </constraints>
@@ -247,7 +241,4 @@
             <point key="canvasLocation" x="131.8840579710145" y="153.34821428571428"/>
         </view>
     </objects>
-    <resources>
-        <image name="MGH Logo copy" width="314" height="131"/>
-    </resources>
 </document>

@@ -121,7 +121,7 @@ class homeVC: UIViewController,NVActivityIndicatorViewable {
                 self.products = products.data?.data ?? []
                 print(products)
                 self.bestSellingCollectionView.reloadData()
-                self.bestSelingHight.constant = CGFloat(self.products.count * 185)
+                self.bestSelingHight.constant = CGFloat(self.products.count * 198)
                 self.stopAnimating()
             }
             self.stopAnimating()
@@ -270,7 +270,7 @@ extension homeVC: UICollectionViewDelegate,UICollectionViewDataSource,UICollecti
         }else if collectionView == flashSellCollecetion{
             return CGSize(width: flashSellCollecetion.frame.size.width, height: flashSellCollecetion.frame.size.height - 10)
         }else if collectionView == bestSellingCollectionView{
-            return CGSize(width: bestSellingCollectionView.frame.size.width, height: 185)
+            return CGSize(width: bestSellingCollectionView.frame.size.width, height: 198)
         }else {
             return CGSize(width: categoryCollectionView.frame.size.width / 1.6, height: categoryCollectionView.frame.size.height - 10)
         }

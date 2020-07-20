@@ -6,6 +6,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Cairo-Regular.ttf">
+            <string>Cairo-Regular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="giftsVC" customModule="MGH_Kitchen_Tools" customModuleProvider="target">
             <connections>
@@ -32,8 +37,8 @@
                                 <action selector="closseBtn:" destination="-1" eventType="touchUpInside" id="kRS-bh-NUG"/>
                             </connections>
                         </button>
-                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="pzx-SS-5gG">
-                            <rect key="frame" x="8" y="38" width="382" height="413"/>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="pzx-SS-5gG">
+                            <rect key="frame" x="8" y="78" width="382" height="373"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="KZb-HL-igf">
                                 <size key="itemSize" width="128" height="128"/>
@@ -42,14 +47,23 @@
                                 <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </collectionViewFlowLayout>
                         </collectionView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Your Gift Card" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Otq-8g-YJf">
+                            <rect key="frame" x="8" y="38" width="382" height="32"/>
+                            <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
                         <constraint firstItem="hFe-PR-tvr" firstAttribute="leading" secondItem="nNn-wj-jr2" secondAttribute="leading" constant="8" id="62q-wg-eO7"/>
+                        <constraint firstItem="Otq-8g-YJf" firstAttribute="leading" secondItem="nNn-wj-jr2" secondAttribute="leading" constant="8" id="6ps-cw-MJ2"/>
                         <constraint firstItem="pzx-SS-5gG" firstAttribute="leading" secondItem="nNn-wj-jr2" secondAttribute="leading" constant="8" id="DtJ-Be-b2i"/>
                         <constraint firstAttribute="trailing" secondItem="pzx-SS-5gG" secondAttribute="trailing" constant="8" id="H0q-h5-RXg"/>
+                        <constraint firstAttribute="trailing" secondItem="Otq-8g-YJf" secondAttribute="trailing" constant="8" id="HMj-Ir-aFZ"/>
                         <constraint firstAttribute="bottom" secondItem="pzx-SS-5gG" secondAttribute="bottom" constant="8" id="ICj-DR-XrE"/>
-                        <constraint firstItem="pzx-SS-5gG" firstAttribute="top" secondItem="hFe-PR-tvr" secondAttribute="bottom" constant="8" id="dmK-p0-TGP"/>
+                        <constraint firstItem="Otq-8g-YJf" firstAttribute="top" secondItem="hFe-PR-tvr" secondAttribute="bottom" constant="8" id="gNM-rb-V0Y"/>
+                        <constraint firstItem="pzx-SS-5gG" firstAttribute="top" secondItem="Otq-8g-YJf" secondAttribute="bottom" constant="8" id="p1q-do-JVm"/>
                         <constraint firstItem="hFe-PR-tvr" firstAttribute="top" secondItem="nNn-wj-jr2" secondAttribute="top" constant="8" id="vyi-65-Doe"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>

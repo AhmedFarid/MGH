@@ -11,10 +11,10 @@ import Alamofire
 
 class cartApi: NSObject {
     
-    class func cartOption(url: String,product_id: String,qty:String,completion: @escaping(_ error: Error?,_ success: Bool,_ cart: Messages?)-> Void){
+    class func cartOption(url: String,product_id: String,qty:String,completion: @escaping(_ error: Error?,_ success: Bool,_ cart: Messages?,_ ErroMesage: sotkeMessage?,_ x: String?)-> Void){
         
         guard let user_token = helperAuth.getAPIToken() else {
-            completion(nil, false,nil)
+            completion(nil, false,nil,nil,nil)
             return
         }
         
@@ -35,19 +35,30 @@ class cartApi: NSObject {
             switch response.result
             {
             case .failure(let error):
-                completion(error, false,nil)
+                completion(error, false,nil,nil,nil)
                 print(error)
             case .success:
                 do{
                     print(response)
                     let cart = try JSONDecoder().decode(Messages.self, from: response.data!)
                     if cart.success == true {
-                        completion(nil,true,cart)
+                        completion(nil,true,cart,nil,nil)
                     }else {
-                        completion(nil,true,cart)
+                        completion(nil,true,cart,nil,nil)
                     }
                 }catch{
                     print("error")
+                }
+                do {
+                    print(response)
+                    let errorCode = try JSONDecoder().decode(sotkeMessage.self, from: response.data!)
+                    if errorCode.success == true {
+                        completion(nil,true,nil,errorCode,nil)
+                    }else {
+                        completion(nil,true,nil,errorCode,nil)
+                    }
+                }catch {
+                    print("error2")
                 }
             }
         }

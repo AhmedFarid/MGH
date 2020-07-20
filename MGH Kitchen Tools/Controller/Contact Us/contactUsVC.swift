@@ -30,6 +30,10 @@ class contactUsVC: UIViewController,NVActivityIndicatorViewable {
         aboutUsApi.contactUsApi(name: FullnameTF.text ?? "", email: emailTF.text ?? "", phone: phoneTF.text ?? "", message: messageTF.text ?? "") { (error, success, messge) in
             if success {
                 self.showAlert(title: "Contact Us", message: "send success")
+                self.FullnameTF.text = ""
+                self.phoneTF.text = ""
+                self.messageTF.text = ""
+                self.emailTF.text = ""
                 self.stopAnimating()
             }
             self.stopAnimating()

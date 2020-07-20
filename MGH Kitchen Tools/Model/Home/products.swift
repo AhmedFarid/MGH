@@ -24,23 +24,25 @@ struct productsData: Codable {
 
 struct productsDataArray: Codable {
     let id: Int?
-    let status, featured, trending, isNew: String?
-    let bestSeller, off50, onSale, hotDeal: String?
-    let expireDateHotDeal, productCode, porductSkuCode: String?
-    let productSerialNumber, linkYoutube: String?
+    let status: String?
+    let featured, trending, isNew, bestSeller: Bool?
+    let off50, onSale, hotDeal: Bool?
+    let hotDealPrice: Int?
+    let expireDateHotDeal, productCode, porductSkuCode, productSerialNumber: String?
+    let linkYoutube: String?
     let stock, stockLimitAlert, countSolid, numberViews: Int?
-    let numberClicks, totalNumberReview, salePrice: Int?
-    let discount,total,hotDealPrice: Int?
+    let numberClicks, totalNumberReview: Int?
+    let reviews: [Review]?
+    let salePrice, discount, total: Int?
     let totalWithCurrency: String?
     let image: String?
-    let category, subcategory, brand, name: String?
-    let shortDescription, datumDescription: String?
+    let category, subcategory, brand, createdBy: String?
+    let updatedBy, name, shortDescription, datumDescription: String?
     let productImages: [ProductImage]?
     let productInCart, productInCartQty, productInCartTotal, isProductFavoirte: Int?
     let currency: String?
-    let reviews: [Review]?
     let totalRate: Double?
-
+    
     enum CodingKeys: String, CodingKey {
         case id, status, featured, trending
         case isNew = "is_new"
@@ -61,10 +63,14 @@ struct productsDataArray: Codable {
         case numberClicks = "number_clicks"
         case totalRate = "total_rate"
         case totalNumberReview = "total_number_review"
+        case reviews
         case salePrice = "sale_price"
         case discount, total
         case totalWithCurrency = "total_with_currency"
-        case image, category, subcategory, brand, name
+        case image, category, subcategory, brand
+        case createdBy = "created_by"
+        case updatedBy = "updated_by"
+        case name
         case shortDescription = "short_description"
         case datumDescription = "description"
         case productImages
@@ -73,18 +79,17 @@ struct productsDataArray: Codable {
         case productInCartTotal = "ProductInCartTotal"
         case isProductFavoirte = "IsProductFavoirte"
         case currency
-        case reviews
     }
 }
 
 struct ProductImage: Codable {
     let id: Int?
     let image: String?
-    let productID: Int?
-
+    let productid: Int?
+    
     enum CodingKeys: String, CodingKey {
         case id, image
-        case productID = "product_id"
+        case productid = "product_id"
     }
 }
 
@@ -93,7 +98,7 @@ struct Review: Codable {
     let review: Int?
     let customer: Customer?
     let createdAt: String?
-
+    
     enum CodingKeys: String, CodingKey {
         case comment, review, customer
         case createdAt = "created_at"
@@ -104,15 +109,16 @@ struct Review: Codable {
 struct Customer: Codable {
     let fullName, email, phone: String?
     let image: String?
-    let firebaseToken: String?
-    let status, gender: String?
-    let promocode: String?
-    let isGiftUsed, createdAt: String?
-
+    let firebaseToken, status, gender, promocode: String?
+    let isGiftUsed: String?
+    let giftid: Int?
+    let createdAt: String?
+    
     enum CodingKeys: String, CodingKey {
         case fullName = "full_name"
         case email, phone, image, firebaseToken, status, gender, promocode
         case isGiftUsed = "is_gift_used"
+        case giftid = "gift_id"
         case createdAt = "created_at"
     }
 }
@@ -121,7 +127,7 @@ struct Meta: Codable {
     let currentPage, lastPage, perPage: Int?
     let hasMorePages: Bool?
     let total: Int?
-
+    
     enum CodingKeys: String, CodingKey {
         case currentPage = "current_page"
         case lastPage = "last_page"

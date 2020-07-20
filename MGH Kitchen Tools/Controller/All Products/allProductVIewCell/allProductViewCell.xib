@@ -40,14 +40,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Neoflam Korean made Neoflam Korean made Neoflam Korean made Neoflam Korean made" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GnM-0O-q2u">
-                                <rect key="frame" x="198" y="40" width="337" height="21"/>
-                                <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="11"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Neoflam Korean made Neoflam Korean made Neoflam Korean made Neoflam Korean made" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GnM-0O-q2u">
+                                <rect key="frame" x="198" y="40" width="337" height="37.5"/>
+                                <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="10"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="ufk-zs-N9b">
-                                <rect key="frame" x="198" y="61" width="99" height="32"/>
+                                <rect key="frame" x="198" y="77.5" width="99" height="32"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$65.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="enk-Ii-9e6">
                                         <rect key="frame" x="0.0" y="0.0" width="51.5" height="32"/>
@@ -64,14 +64,14 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dy4-Lw-oAp">
-                                <rect key="frame" x="493" y="115.5" width="42" height="42"/>
+                                <rect key="frame" x="493" y="132" width="42" height="42"/>
                                 <state key="normal" image="Group 238"/>
                                 <connections>
                                     <action selector="cartBtnAction:" destination="tNt-SY-505" eventType="touchUpInside" id="Sxd-6H-cAO"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rod-uq-Rb4" customClass="CosmosView" customModule="Cosmos">
-                                <rect key="frame" x="198" y="93" width="144.5" height="15"/>
+                                <rect key="frame" x="198" y="109.5" width="144.5" height="15"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="image" keyPath="filledImage" value="star-1"/>
@@ -84,7 +84,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ut5-yR-w8d">
-                                <rect key="frame" x="198" y="115.5" width="42" height="42"/>
+                                <rect key="frame" x="198" y="132" width="42" height="42"/>
                                 <state key="normal" image="fav"/>
                                 <connections>
                                     <action selector="favBtnAction:" destination="tNt-SY-505" eventType="touchUpInside" id="KGP-Ac-ne6"/>

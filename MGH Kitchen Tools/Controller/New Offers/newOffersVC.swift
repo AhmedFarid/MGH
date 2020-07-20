@@ -112,7 +112,7 @@ extension newOffersVC: UICollectionViewDelegate,UICollectionViewDataSource,UICol
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize{
         
         
-        return CGSize(width: allProductCollectionView.frame.size.width, height: 185)
+        return CGSize(width: allProductCollectionView.frame.size.width, height: 198)
         
     }
     

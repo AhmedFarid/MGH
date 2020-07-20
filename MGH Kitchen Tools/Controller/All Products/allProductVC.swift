@@ -28,8 +28,12 @@ class allProductVC: UIViewController,NVActivityIndicatorViewable {
         super.viewDidLoad()
         setUpNavColore(false, "")
         setUpNav(logo: true,  cart: true)
-        handelApiflashSale(name: name)
+        //handelApiflashSale(name: name)
         searchTF.delegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        handelApiflashSale(name: name)
     }
     
     func SetupSearch() {
@@ -111,7 +115,7 @@ extension allProductVC: UICollectionViewDelegate,UICollectionViewDataSource,UICo
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize{
         
         
-        return CGSize(width: allProductCollectionView.frame.size.width, height: 185)
+        return CGSize(width: allProductCollectionView.frame.size.width, height: 198)
         
     }
     

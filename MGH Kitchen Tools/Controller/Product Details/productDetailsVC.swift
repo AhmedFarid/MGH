@@ -63,8 +63,8 @@ class productDetailsVC: UIViewController, NVActivityIndicatorViewable {
         productName.text = singleItem?.name
         rateProduct.rating = Double(singleItem?.totalRate ?? 0)
         rateProduct.text = "\(singleItem?.totalNumberReview ?? 0)"
-        smallDescText.text = singleItem?.shortDescription
-        bigDescText.text = singleItem?.datumDescription
+        smallDescText.text = singleItem?.shortDescription?.html2String
+        bigDescText.text = singleItem?.datumDescription?.html2String
         genralPrice.text = "\(singleItem?.total ?? 0) \(singleItem?.currency ?? "")"
         discountPrice.text = "\(singleItem?.salePrice ?? 0) \(singleItem?.currency ?? "")"
         discountPrice.strikeThrough(true)
@@ -140,9 +140,11 @@ class productDetailsVC: UIViewController, NVActivityIndicatorViewable {
                     if url == URLs.addFavorite {
                         self.isFav = 1
                         self.favBtn.setImage(UIImage(named: "fav"), for: .normal)
+                        self.showAlert(title: "Favorite", message: "Added To Favorite")
                     }else if url == URLs.removeFavorite {
                         self.isFav = 0
                         self.favBtn.setImage(UIImage(named: "noFav"), for: .normal)
+                        self.showAlert(title: "Favorite", message: "Remove From Favorite")
                     }
                     self.stopAnimating()
                 }else {
@@ -158,7 +160,7 @@ class productDetailsVC: UIViewController, NVActivityIndicatorViewable {
     
     func cart(url: String) {
         loaderHelper()
-        cartApi.cartOption(url: url, product_id: "\(singleItem?.id ?? 0)", qty: "\(qty)") { (error, success, message) in
+        cartApi.cartOption(url: url, product_id: "\(singleItem?.id ?? 0)", qty: "\(qty)") { (error, success, message,errorStoke,x) in
             if success {
                 if message?.success == true {
                     if url == URLs.addToCart {
@@ -181,9 +183,17 @@ class productDetailsVC: UIViewController, NVActivityIndicatorViewable {
                     }
                     self.stopAnimating()
                 }else {
-                    self.showAlert(title: "Cart", message: "")
+                    self.showAlert(title: "Cart", message: "Out Of Stock")
                     self.stopAnimating()
                 }
+            }else {
+                self.showAlert(title: "Cart", message: "Check your network")
+                self.stopAnimating()
+            }
+            
+            if errorStoke?.success == false {
+                self.showAlert(title: "stock", message: "Out Of Stock")
+                self.stopAnimating()
             }else {
                 self.showAlert(title: "Cart", message: "Check your network")
                 self.stopAnimating()

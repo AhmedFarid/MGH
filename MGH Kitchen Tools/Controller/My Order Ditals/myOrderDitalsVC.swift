@@ -23,6 +23,7 @@ class myOrderDitalsVC: UIViewController {
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var orderStatus: UILabel!
     @IBOutlet weak var procutesCollectionView: UICollectionView!
+    @IBOutlet weak var hightConst: NSLayoutConstraint!
     
     var singelItem: myOrdersData?
     var products = [productsDataArray]()
@@ -34,8 +35,11 @@ class myOrderDitalsVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         setUpNavColore(false, "")
         setUpNav(logo: true,  cart: true)
+        self.hightConst.constant = CGFloat(self.products.count * 208)
         setUpData()
     }
+    
+    
     
     func setUpData() {
         self.procutesCollectionView.register(UINib.init(nibName: "allProductViewCell", bundle: nil), forCellWithReuseIdentifier: "cell")
@@ -112,7 +116,7 @@ extension myOrderDitalsVC: UICollectionViewDelegate,UICollectionViewDataSource,U
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize{
         
         
-        return CGSize(width: procutesCollectionView.frame.size.width, height: 185)
+        return CGSize(width: procutesCollectionView.frame.size.width, height: 198)
         
     }
 }

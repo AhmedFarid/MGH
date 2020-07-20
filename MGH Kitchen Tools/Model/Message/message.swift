@@ -38,3 +38,19 @@ struct promCodeSucces: Codable {
 struct DataPromCodeSucces: Codable {
     let discount: Int?
 }
+
+
+
+struct sotkeMessage: Codable {
+    let success: Bool?
+    let message: String?
+    let data: sotkeMessageData?
+}
+
+struct sotkeMessageData: Codable {
+    let productid: [String]?
+
+    enum CodingKeys: String, CodingKey {
+        case productid = "product_id"
+    }
+}

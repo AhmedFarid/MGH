@@ -66,12 +66,12 @@ class cartVC: UIViewController,NVActivityIndicatorViewable {
     
     func cart(url: String,product_id: Int,qty: Int) {
         loaderHelper()
-        cartApi.cartOption(url: url, product_id: "\(product_id)", qty: "\(qty)") { (error, success, message) in
-            if success {
+        cartApi.cartOption(url: url, product_id: "\(product_id)", qty: "\(qty)") { (error, success, message,errorStoke,x)  in
+            if success == true {
                 if message?.success == true {
                     if url == URLs.addToCart {
                         self.handelApiflashSale()
-                        self.showAlert(title: "Cart", message: "")
+                        self.showAlert(title: "Cart", message: "Update Cart Success")
                     }else if url == URLs.removeFromCart {
                         self.handelApiflashSale()
                         self.showAlert(title: "Cart", message: "Removed From Cart")
@@ -80,7 +80,12 @@ class cartVC: UIViewController,NVActivityIndicatorViewable {
                     self.stopAnimating()
                 }else {
                     self.handelApiflashSale()
-                    self.showAlert(title: "Cart", message: "")
+                    self.showAlert(title: "Cart", message: "Out Of Stock")
+                    self.stopAnimating()
+                }
+                
+                if errorStoke?.success == false {
+                    self.showAlert(title: "stock", message: "Out Of Stock")
                     self.stopAnimating()
                 }
             }else {
@@ -137,11 +142,13 @@ extension cartVC: UICollectionViewDelegate,UICollectionViewDataSource,UICollecti
             
             cell.add = {
                 self.cart(url: URLs.addToCart, product_id: cartIndex.id ?? 0, qty: (cartIndex.productInCartQty ?? 0) + 1)
+                //self.showAlert(title: "Cart", message: "Plus Cart Success")
                 
             }
             
             cell.min = {
                 self.cart(url: URLs.addToCart, product_id: cartIndex.id ?? 0, qty: (cartIndex.productInCartQty ?? 0) - 1)
+                //self.showAlert(title: "Cart", message: "Minus Cart Success")
                 
             }
             

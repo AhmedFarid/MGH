@@ -28,11 +28,11 @@ class cartCollectionCell: UICollectionViewCell {
     }
     
     func configureCell(products: productsDataArray){
-        newPrice.text = "\(products.total ?? 0) \(products.currency ?? "")"
+        newPrice.text = "Unit Price: \(products.total ?? 0) \(products.currency ?? "")"
         nameProduct.text = products.name
         shortDec.text = products.shortDescription
         qtn.text = "\(products.productInCartQty ?? 0)"
-        totelCartPrice.text = "\(products.productInCartTotal ?? 0) \(products.currency ?? "")"
+        totelCartPrice.text = "Total Price: \(products.productInCartTotal ?? 0) \(products.currency ?? "")"
         let urlWithoutEncoding = (products.image)
         let encodedLink = urlWithoutEncoding?.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)
         let encodedURL = NSURL(string: encodedLink!)! as URL
