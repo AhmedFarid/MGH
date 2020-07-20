@@ -43,5 +43,6 @@ struct URLs {
     static let gifts = main + "customer/gifts"
     static let getGift = main + "customer/getGift"
     static let deliveries = main + "deliveries"
+    static let getOrderTaxes = main + "customer/getOrderTaxes"
     
 }

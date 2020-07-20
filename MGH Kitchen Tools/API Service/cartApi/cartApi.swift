@@ -52,5 +52,43 @@ class cartApi: NSObject {
             }
         }
     }
+    
+    class func getTaxes(completion: @escaping(_ error: Error?,_ success: Bool,_ cart: texs?)-> Void){
+        
+        guard let user_token = helperAuth.getAPIToken() else {
+            completion(nil, false,nil)
+            return
+        }
+        
+        
+        let headers: HTTPHeaders = [
+            "Authorization": "Bearer \(user_token)",
+            "Content-Type": "application/json"
+        ]
+        
+        let url = URLs.getOrderTaxes
+        print(url)
+        
+        AF.request(url, method: .post, parameters: nil, encoding: URLEncoding.queryString, headers: headers).responseJSON{ (response) in
+            switch response.result
+            {
+            case .failure(let error):
+                completion(error, false,nil)
+                print(error)
+            case .success:
+                do{
+                    print(response)
+                    let cart = try JSONDecoder().decode(texs.self, from: response.data!)
+                    if cart.success == true {
+                        completion(nil,true,cart)
+                    }else {
+                        completion(nil,true,cart)
+                    }
+                }catch{
+                    print("error")
+                }
+            }
+        }
+    }
 }
 

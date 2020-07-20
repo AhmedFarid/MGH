@@ -39,3 +39,10 @@ struct deliveryPrices: Codable {
     let price: Int?
     let vlaue: String?
 }
+
+
+struct texs: Codable {
+    let success: Bool?
+    let data: Int?
+    let message: String?
+}

@@ -43,7 +43,7 @@ class giftsVC: UIViewController {
         giftsApi.getGift(gift_id: gift_id) { (error, success, message) in
             if success == true {
                 if message?.success == true {
-                let alert = UIAlertController(title: "Gift", message: "You are get Gift \(giftValue)", preferredStyle: .alert)
+                let alert = UIAlertController(title: "Congratulations", message: "You are get Gift \(giftValue)", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction) in
                     self.dismiss(animated: true, completion: nil)
                 }))
