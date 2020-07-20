@@ -19,6 +19,13 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 377-2" translatesAutoresizingMaskIntoConstraints="NO" id="cdH-MN-GjL">
                         <rect key="frame" x="8" y="8" width="192" height="189"/>
                     </imageView>
+                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cDC-sW-RRC">
+                        <rect key="frame" x="92" y="68" width="42" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </view>
             <constraints>
@@ -29,6 +36,10 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="208" height="205"/>
+            <connections>
+                <outlet property="iamge" destination="cdH-MN-GjL" id="KDV-ZU-26Y"/>
+                <outlet property="idGift" destination="cDC-sW-RRC" id="pzZ-8k-3AD"/>
+            </connections>
             <point key="canvasLocation" x="201.44927536231884" y="205.24553571428569"/>
         </collectionViewCell>
     </objects>

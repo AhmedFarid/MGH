@@ -10,9 +10,20 @@ import UIKit
 
 class giftCell: UICollectionViewCell {
 
+    @IBOutlet weak var iamge: UIImageView!
+    @IBOutlet weak var idGift: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
+    
+    
+    func configureCell(products: giftsData){
+        idGift.text = "\(products.id ?? 0)"
+       
+    }
+    
+    
+    
 
 }

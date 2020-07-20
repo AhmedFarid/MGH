@@ -11,7 +11,7 @@ import Alamofire
 
 class checkOutApi: NSObject {
     
-    class func makeOrderApi(code:String,customer_name: String,customer_phone: String,customer_city: String,customer_region: String,customer_street: String,customer_home_number: String,customer_floor_number: String,customer_address: String,payment_method: String,completion: @escaping(_ error: Error?,_ success: Bool,_ fav: Messages?)-> Void){
+    class func makeOrderApi(delivery_type:String,city_id: String,gift_id: String,code:String,customer_name: String,customer_phone: String,customer_city: String,customer_region: String,customer_street: String,customer_home_number: String,customer_floor_number: String,customer_address: String,payment_method: String,completion: @escaping(_ error: Error?,_ success: Bool,_ fav: Messages?)-> Void){
         
         guard let user_token = helperAuth.getAPIToken() else {
             completion(nil, false,nil)
@@ -30,7 +30,10 @@ class checkOutApi: NSObject {
             "customer_floor_number": customer_floor_number,
             "customer_address": customer_address,
             "payment_method": payment_method,
-            "code": code
+            "code": code,
+            "gift_id": gift_id,
+            "city_id": city_id,
+            "delivery_type": delivery_type
         ]
         
         let headers: HTTPHeaders = [
@@ -111,6 +114,33 @@ class checkOutApi: NSObject {
                     }
                 }catch {
                     print("error2")
+                }
+            }
+        }
+    }
+    
+    class func getDeliveries(completion: @escaping(_ error: Error?,_ success: Bool,_ cart: deliveries?)-> Void){
+        
+        let url = URLs.deliveries
+        print(url)
+        
+        AF.request(url, method: .post, parameters: nil, encoding: URLEncoding.queryString, headers: nil).responseJSON{ (response) in
+            switch response.result
+            {
+            case .failure(let error):
+                completion(error, false,nil)
+                print(error)
+            case .success:
+                do{
+                    print(response)
+                    let cart = try JSONDecoder().decode(deliveries.self, from: response.data!)
+                    if cart.success == true {
+                        completion(nil,true,cart)
+                    }else {
+                        completion(nil,true,cart)
+                    }
+                }catch{
+                    print("error")
                 }
             }
         }

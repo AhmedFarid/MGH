@@ -98,6 +98,7 @@ class cartVC: UIViewController,NVActivityIndicatorViewable {
         vc.totlaPrice = toalPrice
         vc.curancy = curancy
         vc.countCart = products.count
+        vc.products = products
         self.navigationController!.pushViewController(vc, animated: true)
         }
     }

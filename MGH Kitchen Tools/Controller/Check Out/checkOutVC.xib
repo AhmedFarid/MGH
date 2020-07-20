@@ -16,6 +16,7 @@
             <connections>
                 <outlet property="addressTF" destination="5GN-8L-6Px" id="BVg-nQ-N5g"/>
                 <outlet property="cityTF" destination="UBB-ak-BOC" id="6IJ-SJ-pCP"/>
+                <outlet property="delviryType" destination="P87-3i-c9j" id="BJZ-6b-Bra"/>
                 <outlet property="floorNumTF" destination="Kty-cg-0mf" id="D3Y-tu-O1X"/>
                 <outlet property="fullNameTF" destination="wvC-jY-N8s" id="Taf-Y1-yIV"/>
                 <outlet property="homeNumberTF" destination="U56-DA-hX0" id="4ES-3h-Clu"/>
@@ -36,7 +37,7 @@
                     <rect key="frame" x="0.0" y="116" width="414" height="746"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jqK-Uq-UrC">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="969"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="1061.5"/>
                             <subviews>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wvC-jY-N8s" customClass="textFieldView" customModule="MGH_Kitchen_Tools" customModuleProvider="target">
                                     <rect key="frame" x="16" y="178" width="382" height="56"/>
@@ -128,7 +129,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbd-4B-Hft" customClass="buttonView" customModule="MGH_Kitchen_Tools" customModuleProvider="target">
-                                    <rect key="frame" x="58.5" y="901" width="297" height="52"/>
+                                    <rect key="frame" x="58.5" y="993.5" width="297" height="52"/>
                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="52" id="a7a-YV-s0O"/>
@@ -181,7 +182,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Region" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vPe-tk-lQq" customClass="textFieldView" customModule="MGH_Kitchen_Tools" customModuleProvider="target">
-                                    <rect key="frame" x="16" y="503.5" width="382" height="56"/>
+                                    <rect key="frame" x="16" y="596" width="382" height="56"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="56" id="wLR-5i-uiF"/>
@@ -210,13 +211,13 @@
                                     </userDefinedRuntimeAttributes>
                                 </textField>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Region" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kuo-iC-kZC">
-                                    <rect key="frame" x="16" y="467" width="382" height="20.5"/>
+                                    <rect key="frame" x="16" y="559.5" width="382" height="20.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Street" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Hc-5C-Zs3" customClass="textFieldView" customModule="MGH_Kitchen_Tools" customModuleProvider="target">
-                                    <rect key="frame" x="16" y="612" width="382" height="56"/>
+                                    <rect key="frame" x="16" y="704.5" width="382" height="56"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="56" id="rhO-YO-QM4"/>
@@ -245,13 +246,13 @@
                                     </userDefinedRuntimeAttributes>
                                 </textField>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Street" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="in3-pa-LW9">
-                                    <rect key="frame" x="16" y="575.5" width="382" height="20.5"/>
+                                    <rect key="frame" x="16" y="668" width="382" height="20.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="rGj-ke-rU9">
-                                    <rect key="frame" x="16" y="684" width="382" height="92.5"/>
+                                    <rect key="frame" x="16" y="776.5" width="382" height="92.5"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ckn-72-CAX">
                                             <rect key="frame" x="0.0" y="0.0" width="183" height="92.5"/>
@@ -336,7 +337,7 @@
                                     </subviews>
                                 </stackView>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5GN-8L-6Px" customClass="textFieldView" customModule="MGH_Kitchen_Tools" customModuleProvider="target">
-                                    <rect key="frame" x="16" y="829" width="382" height="56"/>
+                                    <rect key="frame" x="16" y="921.5" width="382" height="56"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="56" id="W5x-iz-TFV"/>
@@ -365,7 +366,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </textField>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VWh-ib-0Sw">
-                                    <rect key="frame" x="16" y="792.5" width="382" height="20.5"/>
+                                    <rect key="frame" x="16" y="885" width="382" height="20.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -412,22 +413,61 @@
                                         <constraint firstAttribute="height" constant="1" id="46R-CR-oen"/>
                                     </constraints>
                                 </view>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Delivery Type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P87-3i-c9j" customClass="textFieldView" customModule="MGH_Kitchen_Tools" customModuleProvider="target">
+                                    <rect key="frame" x="16" y="495.5" width="382" height="56"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="56" id="uYL-yt-x8e"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiuscostom">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                            <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.27429027290000002" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                            <real key="value" value="0.5"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                            <size key="value" width="0.0" height="3"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="leftPaddingPointss">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rightPaddingPointss">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delivery Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OJP-CL-YB7">
+                                    <rect key="frame" x="16" y="459" width="382" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                             </subviews>
                             <color key="backgroundColor" red="0.91372549020000005" green="0.92156862750000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstItem="kuo-iC-kZC" firstAttribute="leading" secondItem="Knm-dX-Q41" secondAttribute="leading" id="0DC-lG-mhM"/>
+                                <constraint firstItem="P87-3i-c9j" firstAttribute="top" secondItem="OJP-CL-YB7" secondAttribute="bottom" constant="16" id="19b-L2-8hC"/>
                                 <constraint firstItem="in3-pa-LW9" firstAttribute="leading" secondItem="Knm-dX-Q41" secondAttribute="leading" id="4UB-7u-mKN"/>
                                 <constraint firstItem="gbd-4B-Hft" firstAttribute="top" secondItem="5GN-8L-6Px" secondAttribute="bottom" constant="16" id="6L1-aL-nQq"/>
                                 <constraint firstItem="wvC-jY-N8s" firstAttribute="trailing" secondItem="Knm-dX-Q41" secondAttribute="trailing" id="6u9-N0-3du"/>
                                 <constraint firstItem="80B-y6-Pbq" firstAttribute="top" secondItem="pdC-Ad-541" secondAttribute="bottom" constant="16" id="6v0-jQ-J1E"/>
                                 <constraint firstItem="N80-xZ-tMe" firstAttribute="top" secondItem="6br-ej-bZo" secondAttribute="bottom" constant="16" id="7q4-qO-Zam"/>
                                 <constraint firstItem="5GN-8L-6Px" firstAttribute="leading" secondItem="VWh-ib-0Sw" secondAttribute="leading" id="7ug-jF-V9l"/>
+                                <constraint firstItem="OJP-CL-YB7" firstAttribute="top" secondItem="UBB-ak-BOC" secondAttribute="bottom" constant="8" id="88P-GK-UFw"/>
                                 <constraint firstItem="0Hc-5C-Zs3" firstAttribute="leading" secondItem="in3-pa-LW9" secondAttribute="leading" id="ACO-HT-4jc"/>
                                 <constraint firstItem="oc8-GB-huM" firstAttribute="leading" secondItem="80B-y6-Pbq" secondAttribute="trailing" constant="8" id="B4j-oG-To1"/>
                                 <constraint firstItem="p0R-Yf-V7Y" firstAttribute="top" secondItem="wvC-jY-N8s" secondAttribute="bottom" constant="16" id="CSX-Rh-dyu"/>
                                 <constraint firstItem="rGj-ke-rU9" firstAttribute="leading" secondItem="Knm-dX-Q41" secondAttribute="leading" id="D0b-mL-njq"/>
+                                <constraint firstItem="P87-3i-c9j" firstAttribute="leading" secondItem="OJP-CL-YB7" secondAttribute="leading" id="E1p-Ja-37S"/>
                                 <constraint firstItem="UBB-ak-BOC" firstAttribute="leading" secondItem="N80-xZ-tMe" secondAttribute="leading" id="Gd6-wT-vC4"/>
                                 <constraint firstItem="0Hc-5C-Zs3" firstAttribute="trailing" secondItem="in3-pa-LW9" secondAttribute="trailing" id="GfK-KD-q8P"/>
+                                <constraint firstItem="OJP-CL-YB7" firstAttribute="trailing" secondItem="Knm-dX-Q41" secondAttribute="trailing" id="HJd-7s-wTR"/>
                                 <constraint firstItem="WmS-h6-oFj" firstAttribute="leading" secondItem="pdC-Ad-541" secondAttribute="leading" id="IUp-mI-1u4"/>
                                 <constraint firstAttribute="trailing" secondItem="Knm-dX-Q41" secondAttribute="trailing" constant="16" id="Iet-ly-Eh0"/>
                                 <constraint firstItem="wvC-jY-N8s" firstAttribute="leading" secondItem="Knm-dX-Q41" secondAttribute="leading" id="KXR-ug-lSA"/>
@@ -435,7 +475,7 @@
                                 <constraint firstItem="in3-pa-LW9" firstAttribute="trailing" secondItem="Knm-dX-Q41" secondAttribute="trailing" id="O25-4e-LD7"/>
                                 <constraint firstItem="rGj-ke-rU9" firstAttribute="trailing" secondItem="Knm-dX-Q41" secondAttribute="trailing" id="PJC-o7-uKg"/>
                                 <constraint firstItem="rGj-ke-rU9" firstAttribute="top" secondItem="0Hc-5C-Zs3" secondAttribute="bottom" constant="16" id="QLa-CJ-Z5p"/>
-                                <constraint firstItem="kuo-iC-kZC" firstAttribute="top" secondItem="UBB-ak-BOC" secondAttribute="bottom" constant="16" id="Tla-by-nOS"/>
+                                <constraint firstItem="P87-3i-c9j" firstAttribute="trailing" secondItem="OJP-CL-YB7" secondAttribute="trailing" id="RmX-d2-JMf"/>
                                 <constraint firstItem="6br-ej-bZo" firstAttribute="trailing" secondItem="p0R-Yf-V7Y" secondAttribute="trailing" id="Vd8-M8-2FX"/>
                                 <constraint firstItem="gbd-4B-Hft" firstAttribute="centerX" secondItem="jqK-Uq-UrC" secondAttribute="centerX" id="WJo-n5-cum"/>
                                 <constraint firstItem="pdC-Ad-541" firstAttribute="top" secondItem="jqK-Uq-UrC" secondAttribute="top" constant="16" id="XFw-1L-a90"/>
@@ -453,6 +493,8 @@
                                 <constraint firstItem="vPe-tk-lQq" firstAttribute="trailing" secondItem="kuo-iC-kZC" secondAttribute="trailing" id="kB2-X9-vUw"/>
                                 <constraint firstItem="VWh-ib-0Sw" firstAttribute="trailing" secondItem="Knm-dX-Q41" secondAttribute="trailing" id="kR6-yY-1ho"/>
                                 <constraint firstItem="Knm-dX-Q41" firstAttribute="top" secondItem="WmS-h6-oFj" secondAttribute="bottom" constant="16" id="kUK-SP-Z9D"/>
+                                <constraint firstItem="kuo-iC-kZC" firstAttribute="top" secondItem="P87-3i-c9j" secondAttribute="bottom" constant="8" id="lvA-gp-ANJ"/>
+                                <constraint firstItem="OJP-CL-YB7" firstAttribute="leading" secondItem="Knm-dX-Q41" secondAttribute="leading" id="mfP-tP-ohY"/>
                                 <constraint firstItem="p0R-Yf-V7Y" firstAttribute="leading" secondItem="Knm-dX-Q41" secondAttribute="leading" id="mo7-tV-bV5"/>
                                 <constraint firstItem="Knm-dX-Q41" firstAttribute="leading" secondItem="jqK-Uq-UrC" secondAttribute="leading" constant="16" id="mvw-zP-SMc"/>
                                 <constraint firstItem="vPe-tk-lQq" firstAttribute="top" secondItem="kuo-iC-kZC" secondAttribute="bottom" constant="16" id="nQJ-cc-AVe"/>

@@ -12,23 +12,52 @@ class giftsVC: UIViewController {
     
     @IBOutlet weak var giftsCollecionView: UICollectionView!
     
+    var giftsArry = [giftsData]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         giftsCollecionView.register(UINib(nibName: "giftCell", bundle: nil), forCellWithReuseIdentifier: "cell")
         giftsCollecionView.delegate = self
         giftsCollecionView.dataSource = self
+        
+        giftsGet()
     }
     
     @IBAction func closseBtn(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    func giftsGet() {
+        //loaderHelper()
+        giftsApi.giftslApi{ (error,success,giftsArry) in
+            if let giftsArry = giftsArry{
+                self.giftsArry = giftsArry.data ?? []
+                print(giftsArry)
+                self.giftsCollecionView.reloadData()
+            }
+        }
+    }
+    
+    func GetGiftForUse(gift_id: String,giftValue:String) {
+        giftsApi.getGift(gift_id: gift_id) { (error, success, message) in
+            if success == true {
+                if message?.success == true {
+                let alert = UIAlertController(title: "Gift", message: "You are get Gift \(giftValue)", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction) in
+                    self.dismiss(animated: true, completion: nil)
+                }))
+                    self.present(alert, animated: true, completion: nil)
+                }
+            }
+        }
     }
 }
 
 
 extension giftsVC: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        GetGiftForUse(gift_id: "\(giftsArry[indexPath.row].id ?? 0)", giftValue: "\(giftsArry[indexPath.row].giftValue ?? "")")
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -36,12 +65,12 @@ extension giftsVC: UICollectionViewDelegate,UICollectionViewDataSource,UICollect
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
+        return giftsArry.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = giftsCollecionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? giftCell {
-            //cell.configureCell(images: categorie[indexPath.row])
+          cell.configureCell(products: giftsArry[indexPath.row])
             return cell
         }else {
             return giftCell()
@@ -49,15 +78,7 @@ extension giftsVC: UICollectionViewDelegate,UICollectionViewDataSource,UICollect
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize{
-        
-//        let screenWidth =
-//
-//        var width = (screenWidth - 10)/3
-//
-//        width = width < 100 ? 130 : width
-        
         return CGSize.init(width: collectionView.bounds.width/3.0, height: collectionView.bounds.width/3.0)
-        
         
     }
     

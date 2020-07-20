@@ -32,8 +32,7 @@ class writeRewiewVC: UIViewController,NVActivityIndicatorViewable {
                 self.stopAnimating()
                 let alert = UIAlertController(title: "Rewiew", message: "Your Rewiew Is Success", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction) in
-                    let vc = homeVC(nibName: "homeVC", bundle: nil)
-                    self.navigationController!.pushViewController(vc, animated: true)
+                    helperAuth.restartApp()
                 }))
                 self.present(alert, animated: true, completion: nil)
             }

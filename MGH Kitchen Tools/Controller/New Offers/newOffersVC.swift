@@ -57,6 +57,7 @@ class newOffersVC: UIViewController,NVActivityIndicatorViewable {
                 self.last_page = products.data?.meta?.lastPage ?? 0
                 self.stopAnimating()
             }
+            self.stopAnimating()
         }
     }
     

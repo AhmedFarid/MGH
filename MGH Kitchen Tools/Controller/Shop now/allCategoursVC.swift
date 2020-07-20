@@ -77,6 +77,7 @@ class allCategoursVC: UIViewController, NVActivityIndicatorViewable {
                 self.last_page = categorie.data?.meta?.lastPage ?? 0
             }
         }
+        
     }
 
 }

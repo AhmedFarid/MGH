@@ -40,7 +40,7 @@ class homeVC: UIViewController,NVActivityIndicatorViewable {
         setUpNav(logo: true,  cart: true)
         startTimer()
         
-        
+        giftsGet()
         self.searchTF.delegate = self
     }
     
@@ -58,6 +58,36 @@ class homeVC: UIViewController,NVActivityIndicatorViewable {
         handelApiCategory()
         handelApiBestSealing()
         refreshControl.endRefreshing()
+    }
+    
+    func giftsGet() {
+        loaderHelper()
+        giftsApi.giftslApi{ (error,success,giftsArry) in
+            if let giftsArry = giftsArry{
+                if giftsArry.success == true {
+                    if helperAuth.getAPIToken() == nil {
+                        //                        let vc = loginVC(nibName: "loginVC", bundle: nil)
+                        //                        let navigationController = UINavigationController(rootViewController: vc)
+                        //                        navigationController.modalPresentationStyle = .fullScreen
+                        //                        self.present(navigationController, animated: true, completion: nil)
+                    }else {
+//                        let vc = giftsVC(nibName: "giftsVC", bundle: nil)
+//                        vc.modalPresentationStyle = .fullScreen
+//
+//                        self.present(vc,animated: true)
+                        let vc = giftsVC(nibName: "giftsVC", bundle: nil)
+                        let navigationController = UINavigationController(rootViewController: vc)
+                        navigationController.modalPresentationStyle = .overFullScreen
+                        self.present(navigationController, animated: true, completion: nil)
+                    }
+                }else{
+                    
+                }
+                
+                self.stopAnimating()
+            }
+            self.startAnimating()
+        }
     }
     
     
