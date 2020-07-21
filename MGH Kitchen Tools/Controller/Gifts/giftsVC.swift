@@ -39,11 +39,11 @@ class giftsVC: UIViewController {
         }
     }
     
-    func GetGiftForUse(gift_id: String,giftValue:String) {
+    func GetGiftForUse(gift_id: String,giftValue:String,giftType: String) {
         giftsApi.getGift(gift_id: gift_id) { (error, success, message) in
             if success == true {
                 if message?.success == true {
-                let alert = UIAlertController(title: "Congratulations", message: "You are get Gift \(giftValue)", preferredStyle: .alert)
+                let alert = UIAlertController(title: "Congratulations", message: "You are get Gift \(giftType) \(giftValue)", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction) in
                     self.dismiss(animated: true, completion: nil)
                 }))
@@ -57,7 +57,7 @@ class giftsVC: UIViewController {
 
 extension giftsVC: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        GetGiftForUse(gift_id: "\(giftsArry[indexPath.row].id ?? 0)", giftValue: "\(giftsArry[indexPath.row].giftValue ?? "")")
+        GetGiftForUse(gift_id: "\(giftsArry[indexPath.row].id ?? 0)", giftValue: "\(giftsArry[indexPath.row].giftValue ?? "")", giftType: giftsArry[indexPath.row].type ?? "")
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
