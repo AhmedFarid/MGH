@@ -158,6 +158,7 @@ class productDetailsVC: UIViewController, NVActivityIndicatorViewable {
         }
     }
     
+    
     func cart(url: String) {
         loaderHelper()
         cartApi.cartOption(url: url, product_id: "\(singleItem?.id ?? 0)", qty: "\(qty)") { (error, success, message,errorStoke,x) in

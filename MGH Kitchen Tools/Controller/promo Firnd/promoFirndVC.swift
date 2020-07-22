@@ -11,6 +11,7 @@ import UIKit
 class promoFirndVC: UIViewController {
 
     @IBOutlet weak var promoText: UILabel!
+    @IBOutlet weak var promoCodeText: UILabel!
     
     var Promo = ""
     
@@ -18,9 +19,13 @@ class promoFirndVC: UIViewController {
         super.viewDidLoad()
         setUpNavColore(false, "")
         setUpNav(logo: true, cart: true)
-        promoText.text = "Your Promo code Is \(Promo)"
+        promoCodeText.text = "\(Promo)"
     }
-
+    @IBAction func copyPromo(_ sender: Any) {
+        UIPasteboard.general.string = Promo
+        showAlert(title: "Promo", message: "Promo Code Copy")
+    }
+    
     @IBAction func shareBtn(_ sender: Any) {
         let textToShare = [ Promo ]
         let activityViewController = UIActivityViewController(activityItems: textToShare, applicationActivities: nil)

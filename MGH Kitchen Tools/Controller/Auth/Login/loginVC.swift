@@ -132,17 +132,17 @@ class loginVC: UIViewController, NVActivityIndicatorViewable {
                 if (error == nil) {
                     let faceDic = result as! [String: AnyObject]
                     print(faceDic)
-                    let email = faceDic["email"] as! String
-                    print(email)
-                    let id = faceDic["id"] as! String
-                    print(id)
-                    let fname = faceDic["first_name"] as! String
-                    print(fname)
-                    let lname = faceDic["last_name"] as! String
-                    print(lname)
+                    let email = faceDic["email"] as? String
+                    print(email ?? "")
+                    let id = faceDic["id"] as? String
+                    print(id ?? "")
+                    let fname = faceDic["first_name"] as? String
+                    print(fname ?? "")
+                    let lname = faceDic["last_name"] as? String
+                    print(lname ?? "")
                     if id != "" {
                         
-                        self.scailLogin(full_name: "\(fname) \(lname)", email: email, social_id: id)
+                        self.scailLogin(full_name: "\(fname ?? "") \(lname ?? "")", email: email ?? "\(id ?? "")@facebook.com", social_id: id ?? "")
                         
                     }
                 }

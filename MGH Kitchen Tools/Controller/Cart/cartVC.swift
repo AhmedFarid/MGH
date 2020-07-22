@@ -10,7 +10,7 @@ import UIKit
 import NVActivityIndicatorView
 
 class cartVC: UIViewController,NVActivityIndicatorViewable {
-
+    
     @IBOutlet weak var cartCollectionView: UICollectionView!
     @IBOutlet weak var cartPrice: UILabel!
     @IBOutlet weak var checkOutBtn: buttonView!
@@ -23,7 +23,7 @@ class cartVC: UIViewController,NVActivityIndicatorViewable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -31,7 +31,7 @@ class cartVC: UIViewController,NVActivityIndicatorViewable {
         setUpNav(logo: true,  cart: true)
         handelApiflashSale()
     }
-
+    
     @objc func handelApiflashSale() {
         self.refesHcart()
         self.cartCollectionView.register(UINib.init(nibName: "cartCell", bundle: nil), forCellWithReuseIdentifier: "cell")
@@ -41,6 +41,7 @@ class cartVC: UIViewController,NVActivityIndicatorViewable {
         homeApi.productsApi(url: URLs.carts, pageName: 1,category_id: 0,name: ""){ (error,success,products) in
             if let products = products{
                 self.products = products.data?.data ?? []
+                
                 print("xx \(products)")
                 self.toalPrice = 0
                 for i in self.products {
@@ -50,14 +51,21 @@ class cartVC: UIViewController,NVActivityIndicatorViewable {
                 self.cartPrice.text = "\(self.products.count) Item / Total Cost \(self.toalPrice) \(self.curancy)"
                 print(products)
 //                if self.products.count == 0{
-//                    //self.cartCollectionView.isHidden = true
-//                    self.totalView.isHidden = true
-//                    self.checkOutBtn.isHidden = true
-//                    self.cartCollectionView.reloadData()
+//                    let imgView = UIImageView(image: UIImage(named: "Group 437"))
+//                    imgView.contentMode = UIView.ContentMode.scaleAspectFit
+//                    imgView.layer.frame = CGRect(x: self.cartCollectionView.frame.midX, y: self.cartCollectionView.frame.midY, width: self.cartCollectionView.frame.width/2, height: self.cartCollectionView.frame.width/2)
+//                    let tableViewBackgroundView = UIView()
+//                    tableViewBackgroundView.addSubview(imgView)
+//                    self.cartCollectionView.backgroundView = tableViewBackgroundView
+//
+//                }else {
+//                    self.cartCollectionView.backgroundView = nil
 //                    self.stopAnimating()
 //                }
                 self.cartCollectionView.reloadData()
                 self.stopAnimating()
+            }else {
+                
             }
             self.stopAnimating()
         }
@@ -99,16 +107,16 @@ class cartVC: UIViewController,NVActivityIndicatorViewable {
         if products.count == 0 {
             self.showAlert(title: "Cart", message: "Cart Is Empty")
         }else {
-        let vc = checkOutVC(nibName: "checkOutVC", bundle: nil)
-        vc.totlaPrice = toalPrice
-        vc.curancy = curancy
-        vc.countCart = products.count
-        vc.products = products
-        self.navigationController!.pushViewController(vc, animated: true)
+            let vc = checkOutVC(nibName: "checkOutVC", bundle: nil)
+            vc.totlaPrice = toalPrice
+            vc.curancy = curancy
+            vc.countCart = products.count
+            vc.products = products
+            self.navigationController!.pushViewController(vc, animated: true)
         }
     }
     
-
+    
 }
 
 
@@ -126,7 +134,6 @@ extension cartVC: UICollectionViewDelegate,UICollectionViewDataSource,UICollecti
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return products.count
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -170,4 +177,26 @@ extension cartVC: UICollectionViewDelegate,UICollectionViewDataSource,UICollecti
     
     
     
+}
+
+
+extension Date {
+
+    func offsetFrom(date: Date) -> String {
+
+        let dayHourMinuteSecond: Set<Calendar.Component> = [.day, .hour, .minute, .second]
+        let difference = NSCalendar.current.dateComponents(dayHourMinuteSecond, from: date, to: self)
+
+        let seconds = "\(difference.second ?? 0)s"
+        let minutes = "\(difference.minute ?? 0)m" + " " + seconds
+        let hours = "\(difference.hour ?? 0)h" + " " + minutes
+        let days = "\(difference.day ?? 0)d" + " " + hours
+
+        if let day = difference.day, day          > 0 { return days }
+        if let hour = difference.hour, hour       > 0 { return hours }
+        if let minute = difference.minute, minute > 0 { return minutes }
+        if let second = difference.second, second > 0 { return seconds }
+        return ""
+    }
+
 }

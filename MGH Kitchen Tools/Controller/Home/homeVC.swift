@@ -193,6 +193,64 @@ class homeVC: UIViewController,NVActivityIndicatorViewable {
         self.navigationController!.pushViewController(vc, animated: true)
     }
     
+    func cart(url: String,id: String) {
+        loaderHelper()
+        cartApi.cartOption(url: url, product_id: id, qty: "\(1)") { (error, success, message,errorStoke,x) in
+            if success {
+                if message?.success == true {
+                    if url == URLs.addToCart {
+                        self.handelApiflashSale()
+                        self.handelApiBestSealing()
+                        self.showAlert(title: "Cart", message: "Added To Cart")
+                    }else if url == URLs.removeFromCart {
+                        self.handelApiflashSale()
+                        self.handelApiBestSealing()
+                        self.showAlert(title: "Cart", message: "Removed From Cart")
+                    }
+                    self.stopAnimating()
+                }else {
+                    self.showAlert(title: "Cart", message: "Out Of Stock")
+                    self.stopAnimating()
+                }
+            }else {
+                self.showAlert(title: "Cart", message: "Check your network")
+                self.stopAnimating()
+            }
+            
+            if errorStoke?.success == false {
+                self.showAlert(title: "stock", message: "Out Of Stock")
+                self.stopAnimating()
+            }else {
+                self.showAlert(title: "Cart", message: "Check your network")
+                self.stopAnimating()
+            }
+        }
+    }
+    
+    
+    func fav(url: String,id: String) {
+        loaderHelper()
+        favoriteApi.favoriteOption(url: url, product_id: id) { (error, success, message) in
+            if success {
+                if message?.success == true {
+                    if url == URLs.addFavorite {
+                        self.handelApiBestSealing()
+                        self.showAlert(title: "Favorite", message: "Added To Favorite")
+                    }else if url == URLs.removeFavorite {
+                        self.handelApiBestSealing()
+                        self.showAlert(title: "Favorite", message: "Remove From Favorite")
+                    }
+                    self.stopAnimating()
+                }else {
+                    self.showAlert(title: "Favorite", message: "")
+                    self.stopAnimating()
+                }
+            }else {
+                self.showAlert(title: "Favorite", message: "Check your network")
+                self.stopAnimating()
+            }
+        }
+    }
 }
 
 
@@ -243,6 +301,15 @@ extension homeVC: UICollectionViewDelegate,UICollectionViewDataSource,UICollecti
         }else if collectionView == flashSellCollecetion {
             if let cell = flashSellCollecetion.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? flashSaleCell {
                 cell.configureCell(products: hotDeal[indexPath.row])
+                cell.add = {
+                    if self.hotDeal[indexPath.row].productInCart == 1 {
+                        self.cart(url: URLs.removeFromCart, id: "\(self.hotDeal[indexPath.row].id ?? 0)")
+                        self.refesHcart()
+                    }else if self.hotDeal[indexPath.row].productInCart == 0 {
+                        self.cart(url: URLs.addToCart, id: "\(self.hotDeal[indexPath.row].id ?? 0)")
+                        self.refesHcart()
+                    }
+                }
                 return cell
             }else {
                 return flashSaleCell()
@@ -250,6 +317,24 @@ extension homeVC: UICollectionViewDelegate,UICollectionViewDataSource,UICollecti
         }else if collectionView == bestSellingCollectionView {
             if let cell = bestSellingCollectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? allProductViewCell {
                 cell.configureCell(products: products[indexPath.row])
+                cell.addCart = {
+                    if self.products[indexPath.row].productInCart == 1 {
+                        self.cart(url: URLs.removeFromCart, id: "\(self.products[indexPath.row].id ?? 0)")
+                        self.refesHcart()
+                    }else if self.products[indexPath.row].productInCart == 0 {
+                        self.cart(url: URLs.addToCart, id: "\(self.products[indexPath.row].id ?? 0)")
+                        self.refesHcart()
+                    }
+                }
+                
+                cell.addFav = {
+                    if self.products[indexPath.row].isProductFavoirte == 1 {
+                        self.fav(url: URLs.removeFavorite, id: "\(self.products[indexPath.row].id ?? 0)")
+                    }else if self.products[indexPath.row].isProductFavoirte == 0 {
+                        self.fav(url: URLs.addFavorite,id: "\(self.products[indexPath.row].id ?? 0)")
+                    }
+                    
+                }
                 return cell
             }else {
                 return allProductViewCell()

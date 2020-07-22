@@ -94,9 +94,10 @@
                                 <state key="normal" image="Group 238"/>
                                 <connections>
                                     <action selector="cartBTNAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="PY3-pF-TC0"/>
+                                    <action selector="cartBtnAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="70D-H7-saS"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pB7-fB-HH6" customClass="CosmosView" customModule="Cosmos">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pB7-fB-HH6" customClass="CosmosView" customModule="Cosmos">
                                 <rect key="frame" x="198" y="124.5" width="144.5" height="25"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
@@ -116,7 +117,7 @@
                                 <rect key="frame" x="198" y="157.5" width="50" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 Days" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VF1-uo-h60">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="45"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -126,6 +127,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="13c-a0-BON"/>
                                     <constraint firstAttribute="height" constant="50" id="1da-KD-zGh"/>
+                                    <constraint firstAttribute="bottom" secondItem="VF1-uo-h60" secondAttribute="bottom" id="FXP-0A-DVX"/>
                                     <constraint firstAttribute="trailing" secondItem="VF1-uo-h60" secondAttribute="trailing" id="Foo-dT-rZT"/>
                                     <constraint firstItem="VF1-uo-h60" firstAttribute="leading" secondItem="1ea-pF-NKH" secondAttribute="leading" id="Kfb-IO-Q3o"/>
                                     <constraint firstItem="VF1-uo-h60" firstAttribute="top" secondItem="1ea-pF-NKH" secondAttribute="top" id="LpP-NR-yHj"/>
@@ -260,8 +262,11 @@
             <size key="customSize" width="559" height="231"/>
             <connections>
                 <outlet property="cartBtn" destination="gxJ-ER-N1I" id="y6G-mF-WxE"/>
+                <outlet property="dayesLB" destination="VF1-uo-h60" id="QnD-Z6-8Vr"/>
                 <outlet property="discountPrcent" destination="ugH-hh-3lB" id="2SH-gc-yxW"/>
                 <outlet property="discountPrice" destination="LZx-tV-IZg" id="kf4-Rc-iwt"/>
+                <outlet property="hrLB" destination="2ds-k8-Gbw" id="xeL-nS-iO8"/>
+                <outlet property="minLb" destination="1fe-vc-dXq" id="bFt-bJ-bzl"/>
                 <outlet property="nameProduct" destination="NS3-nK-OfO" id="6gV-8s-1YL"/>
                 <outlet property="newPrice" destination="6Jd-MF-Rdj" id="g6n-au-xlt"/>
                 <outlet property="productImage" destination="iiU-Ch-tda" id="vXH-EX-E7F"/>

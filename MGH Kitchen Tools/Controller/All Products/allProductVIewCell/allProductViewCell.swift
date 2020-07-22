@@ -20,7 +20,9 @@ class allProductViewCell: UICollectionViewCell {
         @IBOutlet weak var nameProduct: UILabel!
         @IBOutlet weak var shortDec: UILabel!
     
-        
+        var addFav: (()->())?
+    var addCart: (()->())?
+    
         override func awakeFromNib() {
             super.awakeFromNib()
         }
@@ -68,9 +70,11 @@ class allProductViewCell: UICollectionViewCell {
         
         
         @IBAction func cartBtnAction(_ sender: Any) {
+            addCart?()
         }
         
         @IBAction func favBtnAction(_ sender: Any) {
+            addFav?()
         }
     }
 

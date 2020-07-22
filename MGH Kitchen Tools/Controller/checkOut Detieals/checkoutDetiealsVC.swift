@@ -80,7 +80,7 @@ class checkoutDetiealsVC: UIViewController,NVActivityIndicatorViewable {
                     if success {
                         if message?.success == true {
                             self.stopAnimating()
-                            let alert = UIAlertController(title: "Order", message: "Your Order Is Success", preferredStyle: .alert)
+                            let alert = UIAlertController(title: "Order", message: "Thanks For Your Order", preferredStyle: .alert)
                             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction) in
                                 helperAuth.restartApp()
                             }))

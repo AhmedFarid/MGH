@@ -39,6 +39,7 @@ class checkOutVC: UIViewController,NVActivityIndicatorViewable {
     var type = ""
     var delvertyTypes = ""
     var tex = 0
+    var promoNext = ""
     
     let cityPicker = UIPickerView()
     let delviryTypePicker = UIPickerView()
@@ -93,6 +94,7 @@ class checkOutVC: UIViewController,NVActivityIndicatorViewable {
         checkOutApi.getPromocode(code: promoCodeTF.text ?? "") { (error, success, message,errorCode) in
             if success {
                 if message?.success == true {
+                    self.promoNext = self.promoCodeTF.text ?? ""
                     self.showAlert(title: "Promo Code", message: "You have Discount \(message?.data?.discount ?? 0) \(self.curancy)")
                     self.promo = message?.data?.discount ?? 0
                     if self.delveryTotal == 0 {
@@ -185,7 +187,7 @@ class checkOutVC: UIViewController,NVActivityIndicatorViewable {
         vc.cityId = "\(cityId)"
         vc.phone = phones
         vc.fullName = name
-        vc.promoCode = promoCodeTF.text ?? ""
+        vc.promoCode = promoNext
         vc.giftId = ""
         vc.delivery_type = delvertyTypes
         vc.cityName = citys

@@ -29,7 +29,6 @@ class giftsVC: UIViewController {
     }
     
     func giftsGet() {
-        //loaderHelper()
         giftsApi.giftslApi{ (error,success,giftsArry) in
             if let giftsArry = giftsArry{
                 self.giftsArry = giftsArry.data ?? []
