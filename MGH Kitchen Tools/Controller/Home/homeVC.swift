@@ -61,7 +61,7 @@ class homeVC: UIViewController,NVActivityIndicatorViewable {
     }
     
     func giftsGet() {
-        loaderHelper()
+        
         giftsApi.giftslApi{ (error,success,giftsArry) in
             if let giftsArry = giftsArry{
                 if giftsArry.success == true {
