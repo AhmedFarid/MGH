@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="imageCells" customModule="MGH_Kitchen_Tools" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="359" height="736"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="359" height="736"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QG8-Hw-hed">
+                        <rect key="frame" x="0.0" y="0.0" width="359" height="736"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4OL-Ue-xXZ">
+                                <rect key="frame" x="0.0" y="0.0" width="359" height="736"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4OL-Ue-xXZ" firstAttribute="leading" secondItem="OMC-LR-S1c" secondAttribute="leading" id="NuX-f0-9ok"/>
+                            <constraint firstAttribute="bottom" secondItem="4OL-Ue-xXZ" secondAttribute="bottom" id="URp-je-R6W"/>
+                            <constraint firstItem="4OL-Ue-xXZ" firstAttribute="centerX" secondItem="QG8-Hw-hed" secondAttribute="centerX" id="YDv-12-2hD"/>
+                            <constraint firstItem="4OL-Ue-xXZ" firstAttribute="centerY" secondItem="QG8-Hw-hed" secondAttribute="centerY" id="mUx-ER-YqU"/>
+                            <constraint firstItem="4OL-Ue-xXZ" firstAttribute="top" secondItem="OMC-LR-S1c" secondAttribute="top" id="qTD-zp-YRb"/>
+                            <constraint firstAttribute="trailing" secondItem="4OL-Ue-xXZ" secondAttribute="trailing" id="rsB-xe-tcu"/>
+                        </constraints>
+                        <viewLayoutGuide key="contentLayoutGuide" id="OMC-LR-S1c"/>
+                        <viewLayoutGuide key="frameLayoutGuide" id="FVO-sk-04L"/>
+                    </scrollView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="QG8-Hw-hed" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="OaK-7p-7MM"/>
+                <constraint firstAttribute="bottom" secondItem="QG8-Hw-hed" secondAttribute="bottom" id="aoj-v3-5uQ"/>
+                <constraint firstItem="QG8-Hw-hed" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="iOC-W2-cYL"/>
+                <constraint firstAttribute="trailing" secondItem="QG8-Hw-hed" secondAttribute="trailing" id="jeB-io-3QY"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="359" height="736"/>
+            <connections>
+                <outlet property="productImage" destination="4OL-Ue-xXZ" id="xHZ-98-I6m"/>
+                <outlet property="scroll" destination="QG8-Hw-hed" id="Lo6-nn-q4T"/>
+            </connections>
+            <point key="canvasLocation" x="355.79710144927537" y="114.50892857142857"/>
+        </collectionViewCell>
+    </objects>
+</document>

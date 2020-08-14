@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Cairo-Regular.ttf">
+            <string>Cairo-Regular</string>
+        </array>
+        <array key="Ubuntu-Medium.ttf">
+            <string>Ubuntu-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Side MenuVC-->
+        <scene sceneID="Orf-7Y-hHZ">
+            <objects>
+                <viewController id="xuU-ri-PEa" customClass="sideMenuVC" customModule="MGH_Kitchen_Tools" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WpE-8Z-FtE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MGH Logo copy" translatesAutoresizingMaskIntoConstraints="NO" id="kZd-zC-vD5">
+                                <rect key="frame" x="48" y="44" width="318" height="131"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="rZj-TW-70a">
+                                <rect key="frame" x="32" y="231" width="366" height="652.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VbD-BC-JgY">
+                                        <rect key="frame" x="0.0" y="0.0" width="54" height="54.5"/>
+                                        <fontDescription key="fontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="20"/>
+                                        <state key="normal" title="Home">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="homeBtn:" destination="xuU-ri-PEa" eventType="touchUpInside" id="HMW-wE-c7a"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="opC-Ea-LBt">
+                                        <rect key="frame" x="0.0" y="54.5" width="39" height="54.5"/>
+                                        <fontDescription key="fontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="20"/>
+                                        <state key="normal" title="Cart">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cartBtn:" destination="xuU-ri-PEa" eventType="touchUpInside" id="efQ-ei-SPU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SVf-R6-Rfd">
+                                        <rect key="frame" x="0.0" y="109" width="57" height="54"/>
+                                        <fontDescription key="fontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="20"/>
+                                        <state key="normal" title="Profile">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="profileBtn:" destination="xuU-ri-PEa" eventType="touchUpInside" id="bhH-Hr-CRn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Gf-BR-rgz">
+                                        <rect key="frame" x="0.0" y="163" width="94" height="54.5"/>
+                                        <fontDescription key="fontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="20"/>
+                                        <state key="normal" title="My Orders">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="myOrdersBtn:" destination="xuU-ri-PEa" eventType="touchUpInside" id="Olr-Tc-kw4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5a1-D3-KvZ">
+                                        <rect key="frame" x="0.0" y="217.5" width="103" height="54.5"/>
+                                        <fontDescription key="fontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="20"/>
+                                        <state key="normal" title="My Wishlist">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="myWishListBTn:" destination="xuU-ri-PEa" eventType="touchUpInside" id="gqm-vo-Mwn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AUP-Oa-mno">
+                                        <rect key="frame" x="0.0" y="272" width="110" height="54.5"/>
+                                        <fontDescription key="fontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="20"/>
+                                        <state key="normal">
+                                            <string key="title">Promo code
+</string>
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="promoCode:" destination="xuU-ri-PEa" eventType="touchUpInside" id="kso-nF-a2X"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVC-xZ-C2b">
+                                        <rect key="frame" x="0.0" y="326.5" width="91" height="54"/>
+                                        <fontDescription key="fontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="20"/>
+                                        <state key="normal">
+                                            <string key="title">Shop now
+</string>
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="shopNow:" destination="xuU-ri-PEa" eventType="touchUpInside" id="S7T-Jb-gXl"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oU3-3l-W87">
+                                        <rect key="frame" x="0.0" y="380.5" width="109" height="54.5"/>
+                                        <fontDescription key="fontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="20"/>
+                                        <state key="normal">
+                                            <string key="title">All Products 
+</string>
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="allProducts:" destination="xuU-ri-PEa" eventType="touchUpInside" id="TFw-Da-41b"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="grO-Nc-s8h">
+                                        <rect key="frame" x="0.0" y="435" width="101" height="54.5"/>
+                                        <fontDescription key="fontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="20"/>
+                                        <state key="normal">
+                                            <string key="title">New Offers
+</string>
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="newOffers:" destination="xuU-ri-PEa" eventType="touchUpInside" id="jWh-bo-mD9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gIz-lQ-lcx">
+                                        <rect key="frame" x="0.0" y="489.5" width="81" height="54.5"/>
+                                        <fontDescription key="fontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="20"/>
+                                        <state key="normal">
+                                            <string key="title">About us
+</string>
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="aboutUs:" destination="xuU-ri-PEa" eventType="touchUpInside" id="tdX-Or-6dc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uMu-bo-ehs">
+                                        <rect key="frame" x="0.0" y="544" width="98" height="54"/>
+                                        <fontDescription key="fontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="20"/>
+                                        <state key="normal">
+                                            <string key="title">Contact us 
+</string>
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="contactUs:" destination="xuU-ri-PEa" eventType="touchUpInside" id="yvZ-c3-GP3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q5k-TF-NyY">
+                                        <rect key="frame" x="0.0" y="598" width="69" height="54.5"/>
+                                        <fontDescription key="fontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="20"/>
+                                        <state key="normal" title="Logout ">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="logoutBtnAction:" destination="xuU-ri-PEa" eventType="touchUpInside" id="MIp-AL-SDG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XgE-Ab-caR" customClass="buttonView" customModule="MGH_Kitchen_Tools" customModuleProvider="target">
+                                <rect key="frame" x="93.5" y="183" width="227" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="oke-HV-Hgk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="14"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="  Login/Sign up" image="user (2)">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.20000000000000001"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0" green="0.0" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="11"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginOrSignupBtnAction:" destination="xuU-ri-PEa" eventType="touchUpInside" id="g6y-fC-Acv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.9137254901960784" green="0.92156862745098034" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="XgE-Ab-caR" firstAttribute="top" secondItem="kZd-zC-vD5" secondAttribute="bottom" constant="8" id="4N8-fQ-nqS"/>
+                            <constraint firstItem="XgE-Ab-caR" firstAttribute="width" secondItem="WpE-8Z-FtE" secondAttribute="width" multiplier="0.548309" id="9KO-Jh-aTn"/>
+                            <constraint firstItem="XgE-Ab-caR" firstAttribute="centerX" secondItem="WpE-8Z-FtE" secondAttribute="centerX" id="Kbp-xm-4EN"/>
+                            <constraint firstAttribute="bottom" secondItem="rZj-TW-70a" secondAttribute="bottom" constant="12.5" id="VZK-t6-W1u"/>
+                            <constraint firstItem="kZd-zC-vD5" firstAttribute="centerX" secondItem="WpE-8Z-FtE" secondAttribute="centerX" id="ViI-Ty-mpd"/>
+                            <constraint firstItem="rZj-TW-70a" firstAttribute="top" secondItem="XgE-Ab-caR" secondAttribute="bottom" constant="8" id="ZAj-YR-g5w"/>
+                            <constraint firstItem="Vqe-hN-ICK" firstAttribute="trailing" secondItem="rZj-TW-70a" secondAttribute="trailing" constant="16" id="bWY-HI-pQg"/>
+                            <constraint firstItem="kZd-zC-vD5" firstAttribute="width" secondItem="WpE-8Z-FtE" secondAttribute="width" multiplier="0.768116" id="mET-sq-hBG"/>
+                            <constraint firstItem="rZj-TW-70a" firstAttribute="leading" secondItem="Vqe-hN-ICK" secondAttribute="leading" constant="32" id="rmh-zs-jcO"/>
+                            <constraint firstItem="kZd-zC-vD5" firstAttribute="top" secondItem="Vqe-hN-ICK" secondAttribute="top" constant="-44" id="tov-SH-fIg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Vqe-hN-ICK"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7RO-6q-8Ye"/>
+                    <connections>
+                        <outlet property="loginOrSignupBtn" destination="XgE-Ab-caR" id="Ukg-jc-A0u"/>
+                        <outlet property="logoutBtn" destination="q5k-TF-NyY" id="ez5-ut-bSl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="irY-iW-FBk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1069.5652173913045" y="154.6875"/>
+        </scene>
+        <!--Side Menu Navigation Controller-->
+        <scene sceneID="UMS-VJ-eYr">
+            <objects>
+                <navigationController storyboardIdentifier="RightMenu" automaticallyAdjustsScrollViewInsets="NO" id="WDW-Kn-5Fv" customClass="SideMenuNavigationController" customModule="SideMenu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cst-AO-xKs">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="leftSide" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <segue destination="xuU-ri-PEa" kind="relationship" relationship="rootViewController" id="zXy-mG-WY1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="47B-Os-Szp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="160.86956521739131" y="160.71428571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="MGH Logo copy" width="314" height="131"/>
+        <image name="user (2)" width="35.5" height="35.5"/>
+    </resources>
+</document>
