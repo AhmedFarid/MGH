@@ -1,0 +1,27 @@
+/* Class = "UITextField"; placeholder = "Full Name"; ObjectID = "5od-Mz-VuT"; */
+"5od-Mz-VuT.placeholder" = "الاسم الكامل";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "d16-9F-iAM"; */
+"d16-9F-iAM.placeholder" = "كلمه السر";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "fq9-Vw-3Tb"; */
+"fq9-Vw-3Tb.placeholder" = "البريد الإلكتروني";
+
+/* Class = "UILabel"; text = "Full Name"; ObjectID = "hfX-LL-8lH"; */
+"hfX-LL-8lH.text" = "الاسم الكامل";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "Ivj-RK-RCP"; */
+"Ivj-RK-RCP.text" = "البريد الإلكتروني";
+
+/* Class = "UILabel"; text = "Password"; ObjectID = "kG0-LI-6KM"; */
+"kG0-LI-6KM.text" = "كلمه السر";
+
+/* Class = "UITextField"; placeholder = "Phone"; ObjectID = "nEy-d5-qln"; */
+"nEy-d5-qln.placeholder" = "هاتف";
+
+/* Class = "UIButton"; normalTitle = "SIGN UP"; ObjectID = "oBm-VE-OHa"; */
+"oBm-VE-OHa.normalTitle" = "سجل";
+
+/* Class = "UILabel"; text = "Phone"; ObjectID = "TeW-qu-B9I"; */
+"TeW-qu-B9I.text" = "هاتف";
+

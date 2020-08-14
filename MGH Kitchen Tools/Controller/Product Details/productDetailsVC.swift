@@ -44,7 +44,7 @@ class productDetailsVC: UIViewController, NVActivityIndicatorViewable {
         setUpNavColore(false, "")
         setUpNav(logo: true,  cart: true)
         
-        startTimer()
+//        startTimer()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -86,7 +86,7 @@ class productDetailsVC: UIViewController, NVActivityIndicatorViewable {
             favBtn.isHidden = false
             if singleItem?.productInCart == 1 {
                 cartBtn.setImage(UIImage(named: "cart"), for: .normal)
-                bigCartBtn.setTitle("Remove from cart", for: .normal)
+                bigCartBtn.setTitle(NSLocalizedString("Remove from cart", comment: "profuct list lang"), for: .normal)
                 qtnText.text = "\(singleItem?.productInCartQty ?? 0)"
                 qty = singleItem?.productInCartQty ?? 0
                 self.discountPrice.text = "\((singleItem?.salePrice ?? 0) * self.qty) \(singleItem?.currency ?? "")"
@@ -94,7 +94,7 @@ class productDetailsVC: UIViewController, NVActivityIndicatorViewable {
                 plusBTN.isHidden = true
             }else {
                 cartBtn.setImage(UIImage(named: "noCart"), for: .normal)
-                bigCartBtn.setTitle("Add Cart", for: .normal)
+                bigCartBtn.setTitle(NSLocalizedString("Add Cart", comment: "profuct list lang"), for: .normal)
                 plusBTN.isHidden = false
             }
             if singleItem?.isProductFavoirte == 1 {
@@ -167,14 +167,14 @@ class productDetailsVC: UIViewController, NVActivityIndicatorViewable {
                     if url == URLs.addToCart {
                         self.isCart = 1
                         self.cartBtn.setImage(UIImage(named: "cart"), for: .normal)
-                        self.bigCartBtn.setTitle("Remove from cart", for: .normal)
+                        self.bigCartBtn.setTitle(NSLocalizedString("Remove from cart", comment: "profuct list lang"), for: .normal)
                         self.plusBTN.isHidden = true
                         self.minBtm.isHidden = true
                         self.showAlert(title: "Cart", message: "Added To Cart")
                     }else if url == URLs.removeFromCart {
                         self.isCart = 0
                         self.cartBtn.setImage(UIImage(named: "noCart"), for: .normal)
-                        self.bigCartBtn.setTitle("Add Cart", for: .normal)
+                        self.bigCartBtn.setTitle(NSLocalizedString("Add Cart", comment: "profuct list lang"), for: .normal)
                         self.qty = 1
                         self.discountPrice.text = "\((self.singleItem?.salePrice ?? 0) * self.qty) \(self.singleItem?.currency ?? "")"
                         self.genralPrice.text = "\((self.singleItem?.total  ?? 0) * self.qty) \(self.singleItem?.currency ?? "")"

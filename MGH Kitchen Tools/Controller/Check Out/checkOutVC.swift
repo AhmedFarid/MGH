@@ -8,6 +8,7 @@
 
 import UIKit
 import NVActivityIndicatorView
+import MOLH
 
 class checkOutVC: UIViewController,NVActivityIndicatorViewable {
     
@@ -25,6 +26,7 @@ class checkOutVC: UIViewController,NVActivityIndicatorViewable {
     @IBOutlet weak var floorNumTF: textFieldView!
     @IBOutlet weak var delviryType: textFieldView!
     @IBOutlet weak var addressTF: textFieldView!
+    @IBOutlet weak var paymentMethodeTF: textFieldView!
     
     var totlaPrice = 0
     var countCart = 0
@@ -40,9 +42,14 @@ class checkOutVC: UIViewController,NVActivityIndicatorViewable {
     var delvertyTypes = ""
     var tex = 0
     var promoNext = ""
+    var paymetType = ""
+    var deliveryType = ""
+    
+    var paymentMethods = [NSLocalizedString("Cache On Delivery", comment: "profuct list lang"),NSLocalizedString("Pay Online", comment: "profuct list lang")]
     
     let cityPicker = UIPickerView()
     let delviryTypePicker = UIPickerView()
+    let paymentMethodPicker = UIPickerView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,6 +60,7 @@ class checkOutVC: UIViewController,NVActivityIndicatorViewable {
         
         cityPikerFunc()
         getText()
+        paymentMethodPickerFunc()
     }
     
     func cityPikerFunc() {
@@ -79,11 +87,22 @@ class checkOutVC: UIViewController,NVActivityIndicatorViewable {
         self.delviryTypePicker.reloadAllComponents()
     }
     
+    func paymentMethodPickerFunc() {
+        paymentMethodPicker.delegate = self
+        paymentMethodPicker.dataSource = self
+        paymentMethodeTF.inputView = paymentMethodPicker
+        self.paymentMethodPicker.reloadAllComponents()
+    }
+    
     func getText() {
         cartApi.getTaxes { (error, success, message) in
             if success {
                 self.tex = message?.data ?? 0
-                self.totalPrice.text = "\(self.countCart) Item / Sub Total \(self.totlaPrice) \(self.curancy) \n Taxes \(self.tex) \(self.curancy) \n Total Cost \(self.totlaPrice + self.tex) \(self.curancy)"
+                let item = NSLocalizedString("Item", comment: "profuct list lang")
+                let subTotal = NSLocalizedString("Sub Total", comment: "profuct list lang")
+                let taxes = NSLocalizedString("Taxes", comment: "profuct list lang")
+                let totalCost = NSLocalizedString("Total Cost", comment: "profuct list lang")
+                self.totalPrice.text = "\(self.countCart) \(item) / \(subTotal) \(self.totlaPrice) \(self.curancy) \n \(taxes) \(self.tex) \(self.curancy) \n \(totalCost) \(self.totlaPrice + self.tex) \(self.curancy)"
             }
         }
     }
@@ -98,9 +117,20 @@ class checkOutVC: UIViewController,NVActivityIndicatorViewable {
                     self.showAlert(title: "Promo Code", message: "You have Discount \(message?.data?.discount ?? 0) \(self.curancy)")
                     self.promo = message?.data?.discount ?? 0
                     if self.delveryTotal == 0 {
-                        self.totalPrice.text = "\(self.countCart) Item / Sub Total \(self.totlaPrice) \(self.curancy) \nYou have promo \(self.promo) \(self.curancy) \n Taxes \(self.tex) \(self.curancy) \n Total Cost \(self.totlaPrice - self.promo + self.delveryTotal + self.tex) \(self.curancy)"
+                        let item = NSLocalizedString("Item", comment: "profuct list lang")
+                        let subTotal = NSLocalizedString("Sub Total", comment: "profuct list lang")
+                        let taxes = NSLocalizedString("Taxes", comment: "profuct list lang")
+                        let totalCost = NSLocalizedString("Total Cost", comment: "profuct list lang")
+                        let youHavePromo = NSLocalizedString("You have promo", comment: "profuct list lang")
+                        self.totalPrice.text = "\(self.countCart) \(item) / \(subTotal) \(self.totlaPrice) \(self.curancy) \n\(youHavePromo) \(self.promo) \(self.curancy) \n \(taxes) \(self.tex) \(self.curancy) \n \(totalCost) \(self.totlaPrice - self.promo + self.delveryTotal + self.tex) \(self.curancy)"
                     }else {
-                        self.totalPrice.text = "\(self.countCart) Item / Sub Total \(self.totlaPrice) \(self.curancy) \n \(self.delvertyTypes) Delivery fees \(self.delveryTotal) \nYou have promo \(self.promo) \(self.curancy) \n Taxes \(self.tex) \(self.curancy) \n Total Cost \(self.totlaPrice - self.promo + self.delveryTotal + self.tex) \(self.curancy)"
+                        let item = NSLocalizedString("Item", comment: "profuct list lang")
+                        let subTotal = NSLocalizedString("Sub Total", comment: "profuct list lang")
+                        let taxes = NSLocalizedString("Taxes", comment: "profuct list lang")
+                        let totalCost = NSLocalizedString("Total Cost", comment: "profuct list lang")
+                        let youHavePromo = NSLocalizedString("You have promo", comment: "profuct list lang")
+                        let deliveryFees = NSLocalizedString("Delivery fees", comment: "profuct list lang")
+                        self.totalPrice.text = "\(self.countCart) \(item) / \(subTotal) \(self.totlaPrice) \(self.curancy) \n \(self.delvertyTypes) \(deliveryFees) \(self.delveryTotal) \n\(youHavePromo) \(self.promo) \(self.curancy) \n \(taxes) \(self.tex) \(self.curancy) \n \(totalCost) \(self.totlaPrice - self.promo + self.delveryTotal + self.tex) \(self.curancy)"
                     }
                     self.stopAnimating()
                 }else {
@@ -176,6 +206,14 @@ class checkOutVC: UIViewController,NVActivityIndicatorViewable {
             return
         }
         
+        guard let paymentMethode = paymentMethodeTF.text, !paymentMethode.isEmpty else {
+            let messages = NSLocalizedString("enter your payment methode", comment: "hhhh")
+            let title = NSLocalizedString("order", comment: "hhhh")
+            self.showAlert(title: title, message: messages)
+            return
+        }
+        
+        
         let vc = checkoutDetiealsVC(nibName: "checkoutDetiealsVC", bundle: nil)
         vc.products = products
         vc.address = addres
@@ -191,6 +229,8 @@ class checkOutVC: UIViewController,NVActivityIndicatorViewable {
         vc.giftId = ""
         vc.delivery_type = delvertyTypes
         vc.cityName = citys
+        vc.payemtType = paymetType
+        vc.deliveryTypes = deliveryType
         self.navigationController!.pushViewController(vc, animated: true)
         
 
@@ -217,6 +257,8 @@ extension checkOutVC: UIPickerViewDataSource, UIPickerViewDelegate{
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if pickerView == cityPicker {
             return delviers.count
+        }else if pickerView == paymentMethodPicker {
+            return paymentMethods.count
         }else {
             return x.count
         }
@@ -226,6 +268,8 @@ extension checkOutVC: UIPickerViewDataSource, UIPickerViewDelegate{
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if pickerView == cityPicker {
             return delviers[row].city?.name
+        }else if pickerView == paymentMethodPicker {
+            return paymentMethods[row]
         }else {
             return "\(x[row].vlaue ?? "") \(x[row].price ?? 0) \(curancy)"
         }
@@ -237,19 +281,49 @@ extension checkOutVC: UIPickerViewDataSource, UIPickerViewDelegate{
             x = []
             cityTF.text = delviers[row].city?.name
             cityId = delviers[row].city?.id ?? 0
-            x.append(deliveryPrices(price: delviers[row].fastPrice ?? 0, vlaue: "Fast Price"))
-            x.append(deliveryPrices(price: delviers[row].slowPrice ?? 0, vlaue: "Slow Price"))
+            x.append(deliveryPrices(price: delviers[row].fastPrice ?? 0, vlaue: NSLocalizedString("Fast Price", comment: "profuct list lang")))
+            x.append(deliveryPrices(price: delviers[row].slowPrice ?? 0, vlaue: NSLocalizedString("Slow Price", comment: "profuct list lang")))
             print(x)
             delviryType.text = ""
             delviryTypePikerFunc()
+        }else if pickerView == paymentMethodPicker {
+            paymentMethodeTF.text = paymentMethods[row]
+            if paymentMethods[row] == "Cache On Delivery" || paymentMethods[row] == "الدفع عند الاستلام"{
+                
+                self.paymetType = "cacheOnDelivery"
+            }else {
+                
+                self.paymetType = "payOnline"
+            }
         }else {
             delviryType.text = "\(x[row].vlaue ?? "") \(x[row].price ?? 0) \(curancy)"
             self.delveryTotal = x[row].price ?? 0
             self.delvertyTypes = x[row].vlaue ?? ""
-            if self.promo == 0 {
-                self.totalPrice.text = "\(self.countCart) Item / Sub Total \(self.totlaPrice) \(self.curancy) \n \(x[row].vlaue ?? "") Delivery fees \(self.delveryTotal) \n Taxes \(self.tex) \(self.curancy) \n Total Cost \(self.totlaPrice - self.promo + self.delveryTotal + self.tex) \(self.curancy)"
+            self.deliveryType = x[row].vlaue ?? ""
+            if x[row].vlaue == "توصيل سريع" {
+                if MOLHLanguage.currentAppleLanguage() == "ar" {
+                self.delvertyTypes = "Fast Price"
+                }
             }else {
-                self.totalPrice.text = "\(self.countCart) Item / Sub Total \(self.totlaPrice) \(self.curancy) \n \(x[row].vlaue ?? "") Delivery fees \(self.delveryTotal) \nYou have promo \(self.promo) \(self.curancy) \n Taxes \(self.tex) \(self.curancy) \n Total Cost \(self.totlaPrice - self.promo + self.delveryTotal + self.tex) \(self.curancy)"
+                if MOLHLanguage.currentAppleLanguage() == "ar" {
+                self.delvertyTypes = "Slow Price"
+                }
+            }
+            if self.promo == 0 {
+                let item = NSLocalizedString("Item", comment: "profuct list lang")
+                let subTotal = NSLocalizedString("Sub Total", comment: "profuct list lang")
+                let taxes = NSLocalizedString("Taxes", comment: "profuct list lang")
+                let totalCost = NSLocalizedString("Total Cost", comment: "profuct list lang")
+                let deliveryFees = NSLocalizedString("Delivery fees", comment: "profuct list lang")
+                self.totalPrice.text = "\(self.countCart) \(item) / \(subTotal) \(self.totlaPrice) \(self.curancy) \n \(x[row].vlaue ?? "") \(deliveryFees) \(self.delveryTotal) \n \(taxes) \(self.tex) \(self.curancy) \n \(totalCost) \(self.totlaPrice - self.promo + self.delveryTotal + self.tex) \(self.curancy)"
+            }else {
+                let item = NSLocalizedString("Item", comment: "profuct list lang")
+                let subTotal = NSLocalizedString("Sub Total", comment: "profuct list lang")
+                let taxes = NSLocalizedString("Taxes", comment: "profuct list lang")
+                let totalCost = NSLocalizedString("Total Cost", comment: "profuct list lang")
+                let deliveryFees = NSLocalizedString("Delivery fees", comment: "profuct list lang")
+                let youHavePromo = NSLocalizedString("You have promo", comment: "profuct list lang")
+                self.totalPrice.text = "\(self.countCart) \(item) / \(subTotal) \(self.totlaPrice) \(self.curancy) \n \(x[row].vlaue ?? "") \(deliveryFees) \(self.delveryTotal) \n\(youHavePromo) \(self.promo) \(self.curancy) \n \(taxes) \(self.tex) \(self.curancy) \n \(totalCost) \(self.totlaPrice - self.promo + self.delveryTotal + self.tex) \(self.curancy)"
             }
             
         }

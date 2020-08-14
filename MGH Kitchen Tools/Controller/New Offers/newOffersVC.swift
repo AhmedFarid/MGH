@@ -13,11 +13,12 @@ class newOffersVC: UIViewController,NVActivityIndicatorViewable {
     
     @IBOutlet weak var searchTF: textFieldView!
     @IBOutlet weak var allProductCollectionView: UICollectionView!
+    @IBOutlet weak var hightSearchTF: NSLayoutConstraint!
     
     var singleItme: dataCategoriesArray?
     var products = [productsDataArray]()
     var name = ""
-    var url = URLs.bestSelling
+    var url = URLs.offers
     
     var isLoading: Bool = false
     var current_page = 1
@@ -26,15 +27,28 @@ class newOffersVC: UIViewController,NVActivityIndicatorViewable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpNavColore(false, "")
-        setUpNav(logo: true,  cart: true)
-        handelApiflashSale(name: name)
+       setUpNavColore(false, "")
+       setUpNav(logo: true,  cart: true)
         searchTF.delegate = self
+        SetupSearch()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+               handelApiflashSale(name: name)
+               
     }
     
     func SetupSearch() {
         if url == URLs.favoirtes {
             searchTF.isHidden = true
+        }else if url == URLs.bestSelling {
+            searchTF.isHidden = true
+            hightSearchTF.constant = 0
+        }else if url == URLs.offers {
+            searchTF.isHidden = true
+            hightSearchTF.constant = 0
+            
         }else {
             searchTF.isHidden = false
         }

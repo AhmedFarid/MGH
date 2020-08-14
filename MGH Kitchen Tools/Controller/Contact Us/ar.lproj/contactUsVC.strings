@@ -1,0 +1,27 @@
+/* Class = "UITextField"; placeholder = "Message"; ObjectID = "eQl-6l-woQ"; */
+"eQl-6l-woQ.placeholder" = "رسالة";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "ERd-tD-CjR"; */
+"ERd-tD-CjR.placeholder" = "البريد الإلكتروني";
+
+/* Class = "UILabel"; text = "Full Name"; ObjectID = "f7c-id-fKN"; */
+"f7c-id-fKN.text" = "الاسم الكامل";
+
+/* Class = "UITextField"; placeholder = "Full Name"; ObjectID = "G2e-Ii-oud"; */
+"G2e-Ii-oud.placeholder" = "الاسم الكامل";
+
+/* Class = "UIButton"; normalTitle = "Send"; ObjectID = "gB6-uq-aTV"; */
+"gB6-uq-aTV.normalTitle" = "إرسال";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "Ghs-WZ-3Di"; */
+"Ghs-WZ-3Di.text" = "البريد الإلكتروني";
+
+/* Class = "UILabel"; text = "Phone"; ObjectID = "Qf7-Qe-4rr"; */
+"Qf7-Qe-4rr.text" = "هاتف";
+
+/* Class = "UITextField"; placeholder = "Phone"; ObjectID = "TMH-pn-JAi"; */
+"TMH-pn-JAi.placeholder" = "هاتف";
+
+/* Class = "UILabel"; text = "Message"; ObjectID = "XBl-wm-db2"; */
+"XBl-wm-db2.text" = "رسالة";
+

@@ -22,9 +22,9 @@ class cartCells: UITableViewCell {
 
     func configureCell(products: productsDataArray){
         productName.text = products.name
-        qtnLB.text = "Quantity \(products.productInCartQty ?? 0)"
-        totalPirce.text = "Total Price \(products.productInCartTotal ?? 0) \(products.currency ?? "")"
-        unitProduct.text = "Price \(products.total ?? 0) \(products.currency ?? "")"
+        qtnLB.text = "\(NSLocalizedString("Quantity", comment: "profuct list lang")) \(products.productInCartQty ?? 0)"
+        totalPirce.text = "\(NSLocalizedString("Total Price", comment: "profuct list lang")) \(products.productInCartTotal ?? 0) \(products.currency ?? "")"
+        unitProduct.text = "\(NSLocalizedString("Price", comment: "profuct list lang")) \(products.total ?? 0) \(products.currency ?? "")"
     }
     
 }

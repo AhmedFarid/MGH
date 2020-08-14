@@ -1,0 +1,39 @@
+/* Class = "UILabel"; text = "Name"; ObjectID = "2mu-UM-7r4"; */
+"2mu-UM-7r4.text" = "اسم";
+
+/* Class = "UILabel"; text = "Products"; ObjectID = "5hK-QE-hQv"; */
+"5hK-QE-hQv.text" = "منتجات";
+
+/* Class = "UILabel"; text = "Payment Status"; ObjectID = "5uB-tt-aLm"; */
+"5uB-tt-aLm.text" = "حالة السداد";
+
+/* Class = "UILabel"; text = "Order Date"; ObjectID = "dCc-Tj-D5j"; */
+"dCc-Tj-D5j.text" = "تاريخ الطلب";
+
+/* Class = "UILabel"; text = "Order Status"; ObjectID = "DGF-Wt-VEL"; */
+"DGF-Wt-VEL.text" = "حالة الطلب";
+
+/* Class = "UILabel"; text = "Promo Value"; ObjectID = "EVB-96-OBz"; */
+"EVB-96-OBz.text" = "قيمه البرمو";
+
+/* Class = "UILabel"; text = "Order Total"; ObjectID = "GCB-pO-3nC"; */
+"GCB-pO-3nC.text" = "الطلب الكلي";
+
+/* Class = "UILabel"; text = "Promo Code"; ObjectID = "HeW-Ww-Qvu"; */
+"HeW-Ww-Qvu.text" = "برمو كود";
+
+/* Class = "UILabel"; text = "Order Id"; ObjectID = "iDv-k9-utC"; */
+"iDv-k9-utC.text" = "رقم الطلب";
+
+/* Class = "UILabel"; text = "Payment Method"; ObjectID = "QRr-Pq-Cfg"; */
+"QRr-Pq-Cfg.text" = "طريقة الدفع او السداد";
+
+/* Class = "UILabel"; text = "phone"; ObjectID = "vvU-aK-nce"; */
+"vvU-aK-nce.text" = "هاتف";
+
+/* Class = "UILabel"; text = "Order Quntaty"; ObjectID = "wI2-2D-vWQ"; */
+"wI2-2D-vWQ.text" = "كمية الطلب";
+
+/* Class = "UILabel"; text = "Address"; ObjectID = "XAD-kM-WUX"; */
+"XAD-kM-WUX.text" = "عنوان";
+

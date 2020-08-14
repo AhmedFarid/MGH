@@ -1,0 +1,27 @@
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "6iI-Ol-ABY"; */
+"6iI-Ol-ABY.placeholder" = "البريد الإلكتروني";
+
+/* Class = "UILabel"; text = "Phone"; ObjectID = "7h4-5W-GlW"; */
+"7h4-5W-GlW.text" = "هاتف";
+
+/* Class = "UISegmentedControl"; 7lk-Fv-qAi.segmentTitles[0] = "Profile"; ObjectID = "7lk-Fv-qAi"; */
+"7lk-Fv-qAi.segmentTitles[0]" = "الملف الشخصي";
+
+/* Class = "UISegmentedControl"; 7lk-Fv-qAi.segmentTitles[1] = "Password"; ObjectID = "7lk-Fv-qAi"; */
+"7lk-Fv-qAi.segmentTitles[1]" = "كلمه السر";
+
+/* Class = "UIButton"; normalTitle = "Edit"; ObjectID = "D01-8W-XNZ"; */
+"D01-8W-XNZ.normalTitle" = "تعديل";
+
+/* Class = "UITextField"; placeholder = "Full Name"; ObjectID = "laE-FP-xzW"; */
+"laE-FP-xzW.placeholder" = "الاسم الكامل";
+
+/* Class = "UITextField"; placeholder = "Phone"; ObjectID = "ngu-ec-ZVk"; */
+"ngu-ec-ZVk.placeholder" = "هاتف";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "oZc-lu-ZDE"; */
+"oZc-lu-ZDE.text" = "البريد الإلكتروني";
+
+/* Class = "UILabel"; text = "Full Name"; ObjectID = "RoD-uw-VgC"; */
+"RoD-uw-VgC.text" = "الاسم الكامل";
+

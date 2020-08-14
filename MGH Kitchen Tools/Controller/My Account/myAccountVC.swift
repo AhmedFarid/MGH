@@ -8,6 +8,7 @@
 
 import UIKit
 import NVActivityIndicatorView
+import MOLH
 
 class myAccountVC: UIViewController,NVActivityIndicatorViewable {
     
@@ -42,22 +43,22 @@ class myAccountVC: UIViewController,NVActivityIndicatorViewable {
         if helperAuth.getAPIToken() == nil {
             self.ordersStack.isHidden = true
             self.wishLsitStack.isHidden = true
-            self.profileLabel.text = "Login"
+            self.profileLabel.text = NSLocalizedString("Login", comment: "profuct list lang")
             self.promoStack.isHidden = true
             self.lgoOutBtn.isHidden = true
-            self.topTitleLabel.text = "Ahlan! Nice to meet you"
-            self.secondeTitleLabel.text = "The region's favourite online marketplace"
+            self.topTitleLabel.text = NSLocalizedString("Ahlan! Nice to meet you", comment: "profuct list lang")
+            self.secondeTitleLabel.text = NSLocalizedString("The region's favourite online marketplace", comment: "profuct list lang")
         }else {
            self.ordersStack.isHidden = false
            self.wishLsitStack.isHidden = false
-           self.profileLabel.text = "Profile"
+            self.profileLabel.text = NSLocalizedString("Profile", comment: "profuct list lang")
            self.promoStack.isHidden = false
             self.lgoOutBtn.isHidden = false
             
             loaderHelper()
             profileApi.getProfileApi { (error, success, profile) in
                 if success {
-                    self.topTitleLabel.text = "Ahlan \(profile?.data?.fullName ?? "")"
+                    self.topTitleLabel.text = "\(NSLocalizedString("Ahlan", comment: "profuct list lang")) \(profile?.data?.fullName ?? "")"
                     self.secondeTitleLabel.text = "\(profile?.data?.email ?? "")"
                     self.promo = profile?.data?.promocode ?? ""
                     self.stopAnimating()
@@ -128,6 +129,20 @@ class myAccountVC: UIViewController,NVActivityIndicatorViewable {
     }
     
     @IBAction func langUageBtn(_ sender: Any) {
+        let selectLanguage = NSLocalizedString("Select Language", comment: "profuct list lang")
+               let alert = UIAlertController(title: selectLanguage, message: "", preferredStyle: UIAlertController.Style.actionSheet)
+                      alert.addAction(UIAlertAction(title: "English", style: .destructive, handler: { (action: UIAlertAction) in
+                          MOLH.setLanguageTo("en")
+                       URLs.mainLang = "en"
+                          helperAuth.restartApp()
+                      }))
+                      alert.addAction(UIAlertAction(title: "عربى", style: .destructive, handler: { (action: UIAlertAction) in
+                          MOLH.setLanguageTo("ar")
+                       URLs.mainLang = "ar"
+                          helperAuth.restartApp()
+                      }))
+                      alert.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel, handler: nil))
+                      self.present(alert, animated: true, completion: nil)
     }
     
     @IBAction func logOutBtnAction(_ sender: Any) {

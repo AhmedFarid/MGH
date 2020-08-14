@@ -1,0 +1,30 @@
+/* Class = "UIButton"; normalTitle = "logout"; ObjectID = "2MX-rY-4oR"; */
+"2MX-rY-4oR.normalTitle" = "تسجيل خروج";
+
+/* Class = "UIButton"; normalTitle = "About Us"; ObjectID = "9Rt-SP-u0N"; */
+"9Rt-SP-u0N.normalTitle" = "معلومات عنا";
+
+/* Class = "UILabel"; text = "Setting"; ObjectID = "CAX-0O-eTt"; */
+"CAX-0O-eTt.text" = "ضبط";
+
+/* Class = "UILabel"; text = "Orders"; ObjectID = "fA2-Xe-UaH"; */
+"fA2-Xe-UaH.text" = "طالبات";
+
+/* Class = "UILabel"; text = "Wishlist"; ObjectID = "ggC-0j-fgy"; */
+"ggC-0j-fgy.text" = "قائمة المفضلة";
+
+/* Class = "UILabel"; text = "Promo"; ObjectID = "Gt8-OB-dEy"; */
+"Gt8-OB-dEy.text" = "برمو";
+
+/* Class = "UIButton"; normalTitle = "Contact Us"; ObjectID = "iA9-Zk-bCb"; */
+"iA9-Zk-bCb.normalTitle" = "اتصل بنا";
+
+/* Class = "UILabel"; text = "Profile"; ObjectID = "Nbk-gr-oKL"; */
+"Nbk-gr-oKL.text" = "الملف الشخصي";
+
+/* Class = "UILabel"; text = "Reach Out To Us"; ObjectID = "UO6-fl-P3K"; */
+"UO6-fl-P3K.text" = "تواصل معنا";
+
+/* Class = "UIButton"; normalTitle = "Language"; ObjectID = "zP7-Zl-I9s"; */
+"zP7-Zl-I9s.normalTitle" = "لغة";
+

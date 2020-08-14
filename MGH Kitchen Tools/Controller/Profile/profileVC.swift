@@ -91,13 +91,13 @@ class profileVC: UIViewController,NVActivityIndicatorViewable {
             phoneTF.text = ""
             emailTF.text = ""
             
-            fullNameLabel.text = "Full Name"
-            phoneLabel.text = "Phone"
-            emailLabel.text = "Email"
+            fullNameLabel.text = NSLocalizedString("Full Name", comment: "profuct list lang")
+            phoneLabel.text = NSLocalizedString("Phone", comment: "profuct list lang")
+            emailLabel.text = NSLocalizedString("Email", comment: "profuct list lang")
             
-            fullName.placeholder = "Full Name"
-            phoneTF.placeholder = "Phone"
-            emailTF.placeholder = "Email"
+            fullName.placeholder = NSLocalizedString("Full Name", comment: "profuct list lang")
+            phoneTF.placeholder = NSLocalizedString("Phone", comment: "profuct list lang")
+            emailTF.placeholder = NSLocalizedString("Email", comment: "profuct list lang")
             
             fullName.isSecureTextEntry = false
             phoneTF.isSecureTextEntry = false
@@ -109,13 +109,13 @@ class profileVC: UIViewController,NVActivityIndicatorViewable {
             
             setUpData()
         case 1:
-            fullNameLabel.text = "Old Pssword"
-            phoneLabel.text = "New Password"
-            emailLabel.text = "Password Confirmation"
+            fullNameLabel.text = NSLocalizedString("Old Pssword", comment: "profuct list lang")
+            phoneLabel.text = NSLocalizedString("New Password", comment: "profuct list lang")
+            emailLabel.text = NSLocalizedString("Password Confirmation", comment: "profuct list lang")
             
-            fullName.placeholder = "Old Pssword"
-            phoneTF.placeholder = "New Password"
-            emailTF.placeholder = "Password Confirmation"
+            fullName.placeholder = NSLocalizedString("Old Pssword", comment: "profuct list lang")
+            phoneTF.placeholder = NSLocalizedString("New Password", comment: "profuct list lang")
+            emailTF.placeholder = NSLocalizedString("Password Confirmation", comment: "profuct list lang")
             
             fullName.isSecureTextEntry = true
             phoneTF.isSecureTextEntry = true

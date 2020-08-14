@@ -13,6 +13,7 @@ class allProductVC: UIViewController,NVActivityIndicatorViewable {
     
     @IBOutlet weak var searchTF: textFieldView!
     @IBOutlet weak var allProductCollectionView: UICollectionView!
+    @IBOutlet weak var hightSearchTF: NSLayoutConstraint!
     
     var singleItme: dataCategoriesArray?
     var products = [productsDataArray]()
@@ -30,6 +31,7 @@ class allProductVC: UIViewController,NVActivityIndicatorViewable {
         setUpNav(logo: true,  cart: true)
         //handelApiflashSale(name: name)
         searchTF.delegate = self
+        SetupSearch()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,6 +41,10 @@ class allProductVC: UIViewController,NVActivityIndicatorViewable {
     func SetupSearch() {
         if url == URLs.favoirtes {
             searchTF.isHidden = true
+            hightSearchTF.constant = 0
+        }else if url == URLs.bestSelling {
+            searchTF.isHidden = true
+            hightSearchTF.constant = 0
         }else {
             searchTF.isHidden = false
         }

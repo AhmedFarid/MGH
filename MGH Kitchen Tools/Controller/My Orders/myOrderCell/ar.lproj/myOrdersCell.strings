@@ -1,0 +1,15 @@
+/* Class = "UILabel"; text = "Date"; ObjectID = "DA9-Y9-nKJ"; */
+"DA9-Y9-nKJ.text" = "تاريخ";
+
+/* Class = "UILabel"; text = "Order Status"; ObjectID = "gm0-Nq-KNe"; */
+"gm0-Nq-KNe.text" = "حالة الطلب";
+
+/* Class = "UILabel"; text = "Order Total"; ObjectID = "m1l-7L-x2c"; */
+"m1l-7L-x2c.text" = "الطلب الكلي";
+
+/* Class = "UILabel"; text = "Order Id"; ObjectID = "m8Q-11-K09"; */
+"m8Q-11-K09.text" = "رقم الطلب";
+
+/* Class = "UILabel"; text = "Date"; ObjectID = "PIb-lY-F92"; */
+"PIb-lY-F92.text" = "تاريخ";
+

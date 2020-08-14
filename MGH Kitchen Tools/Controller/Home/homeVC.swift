@@ -9,6 +9,7 @@
 import UIKit
 import NVActivityIndicatorView
 import SideMenu
+import MOLH
 
 class homeVC: UIViewController,NVActivityIndicatorViewable {
     
@@ -20,6 +21,8 @@ class homeVC: UIViewController,NVActivityIndicatorViewable {
     @IBOutlet weak var scrollview: UIScrollView!
     @IBOutlet weak var searchTF: textFieldView!
     @IBOutlet weak var bestSelingHight: NSLayoutConstraint!
+    @IBOutlet weak var flashLb: UILabel!
+    @IBOutlet weak var flashHight: NSLayoutConstraint!
     
     var timer : Timer?
     var currentIndex = 0
@@ -38,7 +41,7 @@ class homeVC: UIViewController,NVActivityIndicatorViewable {
         
         setUpNavColore(false, "")
         setUpNav(logo: true,  cart: true)
-        startTimer()
+        
         
         giftsGet()
         self.searchTF.delegate = self
@@ -61,7 +64,6 @@ class homeVC: UIViewController,NVActivityIndicatorViewable {
     }
     
     func giftsGet() {
-        
         giftsApi.giftslApi{ (error,success,giftsArry) in
             if let giftsArry = giftsArry{
                 if giftsArry.success == true {
@@ -83,10 +85,7 @@ class homeVC: UIViewController,NVActivityIndicatorViewable {
                 }else{
                     
                 }
-                
-                self.stopAnimating()
             }
-            self.startAnimating()
         }
     }
     
@@ -103,6 +102,10 @@ class homeVC: UIViewController,NVActivityIndicatorViewable {
             if let categorie = categorie{
                 self.categorie = categorie.data?.data ?? []
                 print(categorie)
+                if MOLHLanguage.currentAppleLanguage() == "ar"{
+                    self.categorie.reverse()
+                    
+                }
                 self.categoryCollectionView.reloadData()
                 self.stopAnimating()
             }
@@ -135,16 +138,30 @@ class homeVC: UIViewController,NVActivityIndicatorViewable {
         
         loaderHelper()
         homeApi.productsApi(url: URLs.hotDeal, pageName: 1,category_id: 0,name: ""){ (error,success,hotDeal) in
-            if let hotDeal = hotDeal{
-                self.hotDeal = hotDeal.data?.data ?? []
-                print(hotDeal)
-                self.flashSellCollecetion.reloadData()
+            if hotDeal?.success == true {
+                if let hotDeal = hotDeal{
+                    self.hotDeal = hotDeal.data?.data ?? []
+                    print(hotDeal)
+                    if self.hotDeal.count != 0 {
+                        self.flashHight.constant = CGFloat(210)
+                        self.flashLb.isHidden = false
+                    }else {
+                        self.flashHight.constant = CGFloat(1)
+                        self.flashLb.isHidden = true
+                    }
+                    
+                    if MOLHLanguage.currentAppleLanguage() == "ar"{
+                        self.hotDeal.reverse()
+                        
+                    }
+                    self.flashSellCollecetion.reloadData()
+                    self.stopAnimating()
+                }
+            }else {
                 self.stopAnimating()
             }
-            self.stopAnimating()
         }
     }
-    
     func handelApiBanner() {
         self.bannerCollectionView.register(UINib.init(nibName: "bannerCell", bundle: nil), forCellWithReuseIdentifier: "cell")
         bannerCollectionView.delegate = self
@@ -154,8 +171,10 @@ class homeVC: UIViewController,NVActivityIndicatorViewable {
             if let slider = slider{
                 self.slider = slider.data ?? []
                 print(slider)
+                self.bannerCollectionView.semanticContentAttribute = .forceLeftToRight
                 self.pageControlBanner.numberOfPages = self.slider.count
                 self.pageControlBanner.currentPage = 0
+                self.startTimer()
                 self.bannerCollectionView.reloadData()
             }
         }
@@ -310,6 +329,12 @@ extension homeVC: UICollectionViewDelegate,UICollectionViewDataSource,UICollecti
                         self.refesHcart()
                     }
                 }
+                if MOLHLanguage.currentAppleLanguage() == "ar"{
+                    collectionView.transform = CGAffineTransform(scaleX:-1,y: 1);
+                    cell.transform = CGAffineTransform(scaleX:-1,y: 1);
+                    
+                }
+                
                 return cell
             }else {
                 return flashSaleCell()
@@ -335,6 +360,7 @@ extension homeVC: UICollectionViewDelegate,UICollectionViewDataSource,UICollecti
                     }
                     
                 }
+                
                 return cell
             }else {
                 return allProductViewCell()
@@ -342,6 +368,11 @@ extension homeVC: UICollectionViewDelegate,UICollectionViewDataSource,UICollecti
         }else {
             if let cell = categoryCollectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? CategoryCell {
                 cell.configureCell(images: categorie[indexPath.row])
+                if MOLHLanguage.currentAppleLanguage() == "ar"{
+                    collectionView.transform = CGAffineTransform(scaleX:-1,y: 1);
+                    cell.transform = CGAffineTransform(scaleX:-1,y: 1);
+                    
+                }
                 return cell
             }else {
                 return CategoryCell()
@@ -383,6 +414,7 @@ extension homeVC: UITextFieldDelegate {
     func performAction() {
         let vc = allProductVC(nibName: "allProductVC", bundle: nil)
         vc.name = searchTF.text ?? ""
+        vc.url = URLs.searchProduct
         self.navigationController!.pushViewController(vc, animated: true)
     }
 }
@@ -412,3 +444,5 @@ extension homeVC: SideMenuNavigationControllerDelegate {
 //        refesHcart()
     }
 }
+
+

@@ -14,7 +14,7 @@ struct URLs {
     static let main = "https://mgh4kt.com/api/"
     static let mainImage = "https://alforno.co.il"
     
-    static let mainLang = "en"
+    static var mainLang = NSLocalizedString("en", comment: "profuct list lang")
     
     static let signupCustomer = main + "signupCustomer"
     static let login = main + "login"
@@ -44,5 +44,7 @@ struct URLs {
     static let getGift = main + "customer/getGift"
     static let deliveries = main + "deliveries"
     static let getOrderTaxes = main + "customer/getOrderTaxes"
+    static let paymentMob = main + "customer/payment_mob"
+    static let offers = main + "offers"
     
 }

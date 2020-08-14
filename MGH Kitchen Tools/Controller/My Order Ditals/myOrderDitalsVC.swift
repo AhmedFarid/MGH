@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MOLH
 
 class myOrderDitalsVC: UIViewController {
     
@@ -46,26 +47,53 @@ class myOrderDitalsVC: UIViewController {
         procutesCollectionView.delegate = self
         procutesCollectionView.dataSource = self
         
-        orderIdLabel.text = "Order Id: \(singelItem?.id ?? 0)"
-        orderQuntetyLabel.text = "Order Quantity: \(singelItem?.orderDetails?.count ?? 0)"
-        orderTotalLabel.text = "Order Price: \(singelItem?.total ?? 0) \(singelItem?.orderDetails?.first?.currency ?? "")"
+        orderIdLabel.text = "\(NSLocalizedString("Order Id:", comment: "profuct list lang")) \(singelItem?.id ?? 0)"
+        orderQuntetyLabel.text = "\(NSLocalizedString("Order Quantity:", comment: "profuct list lang")) \(singelItem?.orderDetails?.count ?? 0)"
+        orderTotalLabel.text = "\(NSLocalizedString("Order Price:", comment: "profuct list lang")) \(singelItem?.total ?? 0) \(singelItem?.orderDetails?.first?.currency ?? "")"
         orderDateLabel.text = singelItem?.createdAt
         
         orderStatus.text = singelItem?.status ?? ""
+        
+        if singelItem?.status == "pendding"{
+                   if MOLHLanguage.currentAppleLanguage() == "ar" {
+                       orderStatus.text = "قيد الانتظار"
+                   }
+               }else if singelItem?.status == "inShipment" {
+                   if MOLHLanguage.currentAppleLanguage() == "ar" {
+                       orderStatus.text = "في الطريق"
+                   }
+               }else if singelItem?.status == "onDelivery" {
+                   if MOLHLanguage.currentAppleLanguage() == "ar" {
+                       orderStatus.text = "قيد التحضير"
+                   }
+               }else if singelItem?.status == "completed" {
+                   if MOLHLanguage.currentAppleLanguage() == "ar" {
+                       orderStatus.text = "تم التواصل"
+                   }
+               }else if singelItem?.status == "canceled" {
+                   if MOLHLanguage.currentAppleLanguage() == "ar" {
+                       orderStatus.text = "ألغيت"
+                   }
+               }else if singelItem?.status == "paymentDone" {
+                   if MOLHLanguage.currentAppleLanguage() == "ar" {
+                       orderStatus.text = "تم الدفع"
+                   }
+               }
+        
         paymetMethodLabel.text = singelItem?.paymentMethod ?? ""
         
         if singelItem?.paymentStatus == "0" {
-            paymedtStatus.text = "Not Paid"
+            paymedtStatus.text = NSLocalizedString("Not Paid", comment: "profuct list lang")
         }else {
-            paymedtStatus.text = "Paid"
+            paymedtStatus.text = NSLocalizedString("Paid", comment: "profuct list lang")
         }
         
         if singelItem?.promocodeValue == 0{
-            promoCodeLabel.text = "No Promo Code"
-            promoValus.text = "Promo Value: 0\(singelItem?.orderDetails?.first?.currency ?? "")"
+            promoCodeLabel.text = NSLocalizedString("No Promo Code", comment: "profuct list lang")
+            promoValus.text = "\(NSLocalizedString("Promo Value: 0", comment: "profuct list lang")) \(singelItem?.orderDetails?.first?.currency ?? "")"
         }else {
-            promoCodeLabel.text = "Promo Code: \(singelItem?.promocode ?? "")"
-            promoValus.text = "Promo Value: \(singelItem?.promocodeValue ?? 0) \(singelItem?.orderDetails?.first?.currency ?? "")"
+            promoCodeLabel.text = "\(NSLocalizedString("Promo Code:", comment: "profuct list lang")) \(singelItem?.promocode ?? "")"
+            promoValus.text = "\(NSLocalizedString("Promo Value:", comment: "profuct list lang")) \(singelItem?.promocodeValue ?? 0) \(singelItem?.orderDetails?.first?.currency ?? "")"
         }
         
         name.text = singelItem?.customerName ?? ""

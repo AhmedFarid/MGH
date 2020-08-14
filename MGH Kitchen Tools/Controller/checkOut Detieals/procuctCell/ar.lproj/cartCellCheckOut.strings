@@ -1,0 +1,12 @@
+/* Class = "UILabel"; text = "Unit Product"; ObjectID = "gKJ-v7-Xxm"; */
+"gKJ-v7-Xxm.text" = "منتج الوحدة";
+
+/* Class = "UILabel"; text = "Total Price"; ObjectID = "MhT-se-coX"; */
+"MhT-se-coX.text" = "السعر الكلي";
+
+/* Class = "UILabel"; text = "Qtn"; ObjectID = "oHO-h9-olh"; */
+"oHO-h9-olh.text" = "الكمية";
+
+/* Class = "UILabel"; text = "product"; ObjectID = "oM8-mf-32O"; */
+"oM8-mf-32O.text" = "المنتج";
+

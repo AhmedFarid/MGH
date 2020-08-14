@@ -1,0 +1,68 @@
+/* Class = "UITextField"; placeholder = "Street"; ObjectID = "0Hc-5C-Zs3"; */
+"0Hc-5C-Zs3.placeholder" = "شارع";
+
+/* Class = "UITextField"; placeholder = "Address"; ObjectID = "5GN-8L-6Px"; */
+"5GN-8L-6Px.placeholder" = "عنوان";
+
+/* Class = "UITextField"; placeholder = "Phone"; ObjectID = "6br-ej-bZo"; */
+"6br-ej-bZo.placeholder" = "هاتف";
+
+/* Class = "UITextField"; placeholder = "Have Promo Code?"; ObjectID = "80B-y6-Pbq"; */
+"80B-y6-Pbq.placeholder" = "هل لديك برمو كود؟";
+
+/* Class = "UIButton"; normalTitle = "Check Out"; ObjectID = "gbd-4B-Hft"; */
+"gbd-4B-Hft.normalTitle" = "الدفع";
+
+/* Class = "UILabel"; text = "Street"; ObjectID = "in3-pa-LW9"; */
+"in3-pa-LW9.text" = "شارع";
+
+/* Class = "UILabel"; text = "Full Name"; ObjectID = "Knm-dX-Q41"; */
+"Knm-dX-Q41.text" = "الاسم الكامل";
+
+/* Class = "UITextField"; placeholder = "Floor Number"; ObjectID = "Kty-cg-0mf"; */
+"Kty-cg-0mf.placeholder" = "رقم الطابق";
+
+/* Class = "UILabel"; text = "Region"; ObjectID = "kuo-iC-kZC"; */
+"kuo-iC-kZC.text" = "منطقة";
+
+/* Class = "UILabel"; text = "City"; ObjectID = "N80-xZ-tMe"; */
+"N80-xZ-tMe.text" = "مدينة";
+
+/* Class = "UILabel"; text = "Floor Number"; ObjectID = "OaK-kk-yQZ"; */
+"OaK-kk-yQZ.text" = "رقم الطابق";
+
+/* Class = "UIButton"; normalTitle = "Enter"; ObjectID = "oc8-GB-huM"; */
+"oc8-GB-huM.normalTitle" = "أدخل";
+
+/* Class = "UILabel"; text = "Delivery Type"; ObjectID = "OJP-CL-YB7"; */
+"OJP-CL-YB7.text" = "نوع التوصيل";
+
+/* Class = "UILabel"; text = "Phone"; ObjectID = "p0R-Yf-V7Y"; */
+"p0R-Yf-V7Y.text" = "هاتف";
+
+/* Class = "UITextField"; placeholder = "Delivery Type"; ObjectID = "P87-3i-c9j"; */
+"P87-3i-c9j.placeholder" = "نوع التوصيل";
+
+/* Class = "UILabel"; text = "Have Promo Code?"; ObjectID = "pdC-Ad-541"; */
+"pdC-Ad-541.text" = "هل لديك برمو كود؟";
+
+/* Class = "UITextField"; placeholder = "Home Number"; ObjectID = "U56-DA-hX0"; */
+"U56-DA-hX0.placeholder" = "رقم البيت";
+
+/* Class = "UITextField"; placeholder = "City"; ObjectID = "UBB-ak-BOC"; */
+"UBB-ak-BOC.placeholder" = "مدينة";
+
+/* Class = "UITextField"; placeholder = "Region"; ObjectID = "vPe-tk-lQq"; */
+"vPe-tk-lQq.placeholder" = "منطقة";
+
+/* Class = "UILabel"; text = "Address"; ObjectID = "VWh-ib-0Sw"; */
+"VWh-ib-0Sw.text" = "عنوان";
+
+/* Class = "UITextField"; placeholder = "Full Name"; ObjectID = "wvC-jY-N8s"; */
+"wvC-jY-N8s.placeholder" = "الاسم الكامل";
+
+/* Class = "UILabel"; text = "Home Number"; ObjectID = "ygM-BL-5yH"; */
+"ygM-BL-5yH.text" = "رقم البيت";
+
+"UBQ-Fb-Y5T.text" = "طريقه الدفع";
+"OMA-lc-EGd.placeholder" = "طريقه الدفع";

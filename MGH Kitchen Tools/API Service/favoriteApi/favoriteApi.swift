@@ -24,6 +24,7 @@ class favoriteApi: NSObject {
         
         let headers: HTTPHeaders = [
             "Authorization": "Bearer \(user_token)",
+            "X-localization": URLs.mainLang,
             "Content-Type": "application/json"
         ]
         
@@ -69,6 +70,7 @@ class favoriteApi: NSObject {
         
         let headers: HTTPHeaders = [
             "Authorization": "Bearer \(user_token)",
+            "X-localization": URLs.mainLang,
             "Content-Type": "application/json"
         ]
         

@@ -7,6 +7,7 @@
 //
 import UIKit
 import SideMenu
+import MOLH
 
 extension UIViewController {
     
@@ -64,7 +65,7 @@ extension UIViewController {
         navigationController?.navigationBar.titleTextAttributes = textAttributes
     }
     
-   
+    
 }
 
 extension AppDelegate {
@@ -76,3 +77,18 @@ extension AppDelegate {
     
 }
 
+
+extension UITextField {
+    open override func awakeFromNib() {
+        super.awakeFromNib()
+        if MOLHLanguage.currentAppleLanguage() == "ar" {
+            if textAlignment == .natural {
+                self.textAlignment = .right
+            }
+        }else {
+            if textAlignment == .natural {
+                self.textAlignment = .left
+            }
+        }
+    }
+}

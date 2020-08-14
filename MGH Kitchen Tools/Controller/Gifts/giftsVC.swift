@@ -42,8 +42,8 @@ class giftsVC: UIViewController {
         giftsApi.getGift(gift_id: gift_id) { (error, success, message) in
             if success == true {
                 if message?.success == true {
-                let alert = UIAlertController(title: "Congratulations", message: "You are get Gift \(giftType) \(giftValue)", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction) in
+                    let alert = UIAlertController(title: NSLocalizedString("Congratulations", comment: "profuct list lang"), message: "\(NSLocalizedString("You are get Gift", comment: "profuct list lang")) \(giftType) \(giftValue)", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: NSLocalizedString("Ok", comment: "profuct list lang"), style: .default, handler: { (action: UIAlertAction) in
                     self.dismiss(animated: true, completion: nil)
                 }))
                     self.present(alert, animated: true, completion: nil)

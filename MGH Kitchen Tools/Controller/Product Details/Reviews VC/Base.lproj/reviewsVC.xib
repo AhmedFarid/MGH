@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Cairo-Regular.ttf">
+            <string>Cairo-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="reviewsVC" customModule="MGH_Kitchen_Tools" customModuleProvider="target">
+            <connections>
+                <outlet property="reviewTabelVIew" destination="w2L-io-OYx" id="U2g-d7-9ql"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="w2L-io-OYx">
+                    <rect key="frame" x="0.0" y="112" width="414" height="750"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gUJ-ei-Aio">
+                    <rect key="frame" x="300" y="60" width="98" height="44"/>
+                    <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
+                    <state key="normal" title="Leave Review"/>
+                    <connections>
+                        <action selector="leaveReviewsBtnAction:" destination="-1" eventType="touchUpInside" id="xOg-Kb-Vew"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="w2L-io-OYx" secondAttribute="trailing" id="5wz-MR-VUj"/>
+                <constraint firstItem="gUJ-ei-Aio" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="DWO-gq-aEb"/>
+                <constraint firstItem="w2L-io-OYx" firstAttribute="top" secondItem="gUJ-ei-Aio" secondAttribute="bottom" constant="8" id="KF5-ow-I6T"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="w2L-io-OYx" secondAttribute="bottom" id="ban-TX-Vyu"/>
+                <constraint firstItem="w2L-io-OYx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="hRm-Im-xEa"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gUJ-ei-Aio" secondAttribute="trailing" constant="16" id="wh0-Vu-PFC"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="133" y="154"/>
+        </view>
+    </objects>
+</document>

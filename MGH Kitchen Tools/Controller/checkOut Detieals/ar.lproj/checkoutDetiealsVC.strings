@@ -1,0 +1,63 @@
+/* Class = "UILabel"; text = "City:"; ObjectID = "0Bn-t3-VEr"; */
+"0Bn-t3-VEr.text" = "مدينة:";
+
+/* Class = "UILabel"; text = "Region:"; ObjectID = "3w9-Yc-p8E"; */
+"3w9-Yc-p8E.text" = "منطقة:";
+
+/* Class = "UILabel"; text = "Street:"; ObjectID = "4hz-wT-kZQ"; */
+"4hz-wT-kZQ.text" = "شارع:";
+
+/* Class = "UILabel"; text = "Phone:"; ObjectID = "6Oe-yX-tVN"; */
+"6Oe-yX-tVN.text" = "هاتف:";
+
+/* Class = "UILabel"; text = "Phone"; ObjectID = "a0n-ZY-c8I"; */
+"a0n-ZY-c8I.text" = "هاتف";
+
+/* Class = "UILabel"; text = "Full Name"; ObjectID = "BBL-A1-bBZ"; */
+"BBL-A1-bBZ.text" = "الاسم الكامل";
+
+/* Class = "UILabel"; text = "Address"; ObjectID = "cjj-5R-VEm"; */
+"cjj-5R-VEm.text" = "عنوان";
+
+/* Class = "UILabel"; text = "Address:"; ObjectID = "d9y-F2-e5j"; */
+"d9y-F2-e5j.text" = "عنوان:";
+
+/* Class = "UILabel"; text = "Street"; ObjectID = "GxL-Wx-5mK"; */
+"GxL-Wx-5mK.text" = "شارع";
+
+/* Class = "UILabel"; text = "Address"; ObjectID = "hZX-iN-Fk1"; */
+"hZX-iN-Fk1.text" = "عنوان";
+
+/* Class = "UILabel"; text = "Region"; ObjectID = "OR0-mh-4kq"; */
+"OR0-mh-4kq.text" = "منطقة";
+
+/* Class = "UILabel"; text = "City"; ObjectID = "tQR-ml-Imp"; */
+"tQR-ml-Imp.text" = "مدينة";
+
+/* Class = "UILabel"; text = "Delivery Type"; ObjectID = "UfD-44-SRD"; */
+"UfD-44-SRD.text" = "نوع التوصيل";
+
+/* Class = "UILabel"; text = "Products"; ObjectID = "uUj-zn-H0M"; */
+"uUj-zn-H0M.text" = "منتجات";
+
+/* Class = "UILabel"; text = "Home Number:"; ObjectID = "uYK-wb-hba"; */
+"uYK-wb-hba.text" = "رقم البيت:";
+
+/* Class = "UILabel"; text = "Home Number"; ObjectID = "WYM-c3-7Fr"; */
+"WYM-c3-7Fr.text" = "رقم البيت";
+
+/* Class = "UIButton"; normalTitle = "Confirm Order"; ObjectID = "xq0-vZ-SeV"; */
+"xq0-vZ-SeV.normalTitle" = "أكد الطلب";
+
+/* Class = "UILabel"; text = "Floor Number"; ObjectID = "Y1y-Wt-kcK"; */
+"Y1y-Wt-kcK.text" = "رقم الطابق";
+
+/* Class = "UILabel"; text = "Full Name:"; ObjectID = "ysn-Lm-yFH"; */
+"ysn-Lm-yFH.text" = "الاسم الكامل:";
+
+/* Class = "UILabel"; text = "Floor Number:"; ObjectID = "yvL-3H-FBX"; */
+"yvL-3H-FBX.text" = "رقم الطابق:";
+
+/* Class = "UILabel"; text = "Delivery Type:"; ObjectID = "Z4F-5B-12m"; */
+"Z4F-5B-12m.text" = "نوع التوصيل:";
+

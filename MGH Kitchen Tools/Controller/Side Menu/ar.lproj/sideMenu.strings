@@ -1,0 +1,39 @@
+/* Class = "UIButton"; normalTitle = "My Wishlist"; ObjectID = "5a1-D3-KvZ"; */
+"5a1-D3-KvZ.normalTitle" = "My Wishlist";
+
+/* Class = "UIButton"; normalTitle = "My Orders"; ObjectID = "5Gf-BR-rgz"; */
+"5Gf-BR-rgz.normalTitle" = "طلباتي";
+
+/* Class = "UIButton"; normalTitle = "Promo code\n"; ObjectID = "AUP-Oa-mno"; */
+"AUP-Oa-mno.normalTitle" = "برومو كود\n";
+
+/* Class = "UIButton"; normalTitle = "About us\n"; ObjectID = "gIz-lQ-lcx"; */
+"gIz-lQ-lcx.normalTitle" = "معلومات عنا\n";
+
+/* Class = "UIButton"; normalTitle = "New Offers\n"; ObjectID = "grO-Nc-s8h"; */
+"grO-Nc-s8h.normalTitle" = "عروض جديدة\n";
+
+/* Class = "UIButton"; normalTitle = "Shop now\n"; ObjectID = "LVC-xZ-C2b"; */
+"LVC-xZ-C2b.normalTitle" = "تسوق الآن\n";
+
+/* Class = "UIButton"; normalTitle = "Cart"; ObjectID = "opC-Ea-LBt"; */
+"opC-Ea-LBt.normalTitle" = "عربة التسوق";
+
+/* Class = "UIButton"; normalTitle = "All Products \n"; ObjectID = "oU3-3l-W87"; */
+"oU3-3l-W87.normalTitle" = "جميع المنتجات\n";
+
+/* Class = "UIButton"; normalTitle = "Logout "; ObjectID = "q5k-TF-NyY"; */
+"q5k-TF-NyY.normalTitle" = "تسجيل خروج ";
+
+/* Class = "UIButton"; normalTitle = "Profile"; ObjectID = "SVf-R6-Rfd"; */
+"SVf-R6-Rfd.normalTitle" = "الملف الشخصي";
+
+/* Class = "UIButton"; normalTitle = "Contact us \n"; ObjectID = "uMu-bo-ehs"; */
+"uMu-bo-ehs.normalTitle" = "اتصل بنا\n";
+
+/* Class = "UIButton"; normalTitle = "Home"; ObjectID = "VbD-BC-JgY"; */
+"VbD-BC-JgY.normalTitle" = "الصفحة الرئيسية";
+
+/* Class = "UIButton"; normalTitle = "  Login/Sign up"; ObjectID = "XgE-Ab-caR"; */
+"XgE-Ab-caR.normalTitle" = "  الدخول او التسجيل";
+

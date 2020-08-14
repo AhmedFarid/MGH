@@ -38,6 +38,8 @@ class checkoutDetiealsVC: UIViewController,NVActivityIndicatorViewable {
     var giftId = ""
     var delivery_type = ""
     var cityName = ""
+    var payemtType = ""
+    var deliveryTypes = ""
     
     
     override func viewDidLoad() {
@@ -59,29 +61,28 @@ class checkoutDetiealsVC: UIViewController,NVActivityIndicatorViewable {
         homeNumberTF.text = "\(homeNumber)"
         streetTF.text = "\(street)"
         regionTF.text = "\(region)"
-        deliveryTF.text = "\(delivery_type) delivery"
+        deliveryTF.text = "\(deliveryTypes)"
         cityTF.text = "\(cityName)"
         phoneTF.text = "\(phone)"
         fullNameTF.text = "\(fullName)"
     }
 
     
-    func order() {
+    func order(payment_method: String) {
         loaderHelper()
         var type = ""
-        if delivery_type == "fast_price" {
+        if delivery_type == "Fast Price" {
             type = "fast"
         }else {
             type = "slow"
         }
          
-        
-        checkOutApi.makeOrderApi(delivery_type: type,city_id: cityId,gift_id:giftId, code: promoCode, customer_name: fullName, customer_phone: phone, customer_city: cityName, customer_region: region, customer_street: street, customer_home_number: homeNumber, customer_floor_number: floorNumber, customer_address: address, payment_method: "cacheOnDelivery"){ (error, success, message) in
+        checkOutApi.makeOrderApi(delivery_type: type,city_id: cityId,gift_id:giftId, code: promoCode, customer_name: fullName, customer_phone: phone, customer_city: cityName, customer_region: region, customer_street: street, customer_home_number: homeNumber, customer_floor_number: floorNumber, customer_address: address, payment_method: payment_method){ (error, success, message) in
                     if success {
                         if message?.success == true {
                             self.stopAnimating()
-                            let alert = UIAlertController(title: "Order", message: "Thanks For Your Order", preferredStyle: .alert)
-                            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction) in
+                            let alert = UIAlertController(title: NSLocalizedString("Order", comment: "profuct list lang"), message: NSLocalizedString("Thanks For Your Order", comment: "profuct list lang"), preferredStyle: .alert)
+                            alert.addAction(UIAlertAction(title: NSLocalizedString("Ok", comment: "profuct list lang"), style: .default, handler: { (action: UIAlertAction) in
                                 helperAuth.restartApp()
                             }))
                             self.present(alert, animated: true, completion: nil)
@@ -97,7 +98,15 @@ class checkoutDetiealsVC: UIViewController,NVActivityIndicatorViewable {
     }
 
     @IBAction func orderBtn(_ sender: Any) {
-        order()
+        if payemtType == "cacheOnDelivery" {
+            order(payment_method: "cacheOnDelivery")
+        }else if payemtType == "payOnline"  {
+            let vc = paymentVC(nibName: "paymentVC", bundle: nil)
+            vc.delegate = self
+            let navigationController = UINavigationController(rootViewController: vc)
+            navigationController.modalPresentationStyle = .pageSheet
+            self.present(navigationController, animated: true, completion: nil)
+        }
     }
     
 }
@@ -119,4 +128,15 @@ extension checkoutDetiealsVC: UITableViewDelegate,UITableViewDataSource {
             return cartCells()
         }
     }
+}
+
+
+extension checkoutDetiealsVC: paymentSceecss {
+    func makeOrder(Success: Bool) {
+        if Success == true {
+            order(payment_method: "payOnline")
+        }
+    }
+    
+    
 }

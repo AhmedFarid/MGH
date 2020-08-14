@@ -48,7 +48,9 @@ class cartVC: UIViewController,NVActivityIndicatorViewable {
                     self.toalPrice = self.toalPrice + (i.productInCartTotal ?? 0)
                     self.curancy = i.currency ?? ""
                 }
-                self.cartPrice.text = "\(self.products.count) Item / Total Cost \(self.toalPrice) \(self.curancy)"
+                let item = NSLocalizedString("Item", comment: "profuct list lang")
+                let totalCost = NSLocalizedString("Total Cost", comment: "profuct list lang")
+                self.cartPrice.text = "\(self.products.count) \(item) / \(totalCost) \(self.toalPrice) \(self.curancy)"
                 print(products)
 //                if self.products.count == 0{
 //                    let imgView = UIImageView(image: UIImage(named: "Group 437"))

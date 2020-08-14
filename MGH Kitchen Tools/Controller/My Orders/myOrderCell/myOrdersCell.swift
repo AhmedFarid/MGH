@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import MOLH
 
 class myOrdersCell: UICollectionViewCell {
-
+    
     @IBOutlet weak var orderIdLabel: UILabel!
     @IBOutlet weak var orderDateLabel: UILabel!
     @IBOutlet weak var orderTotalLabel: UILabel!
@@ -20,14 +21,41 @@ class myOrdersCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     
     func configureCell(products: myOrdersData){
-        orderIdLabel.text = "Order Id: \(products.id ?? 0)"
-        orderTotalLabel.text = "Total Price: \(products.total ?? 0) \(products.orderDetails?.first?.currency ?? "")"
-        orderQntyLabel.text = "Order Quantity: \(products.orderDetails?.count ?? 0)"
+        orderIdLabel.text = "\(NSLocalizedString("Order Id:", comment: "profuct list lang")) \(products.id ?? 0)"
+        orderTotalLabel.text = "\(NSLocalizedString("Total Price:", comment: "profuct list lang")) \(products.total ?? 0) \(products.orderDetails?.first?.currency ?? "")"
+        orderQntyLabel.text = "\(NSLocalizedString("Order Quantity:", comment: "profuct list lang")) \(products.orderDetails?.count ?? 0)"
         orderDateLabel.text = products.createdAt
         orderStatusLabel.text = products.status
+        
+        if products.status == "pendding"{
+            if MOLHLanguage.currentAppleLanguage() == "ar" {
+                orderStatusLabel.text = "قيد الانتظار"
+            }
+        }else if products.status == "inShipment" {
+            if MOLHLanguage.currentAppleLanguage() == "ar" {
+                orderStatusLabel.text = "في الطريق"
+            }
+        }else if products.status == "onDelivery" {
+            if MOLHLanguage.currentAppleLanguage() == "ar" {
+                orderStatusLabel.text = "قيد التحضير"
+            }
+        }else if products.status == "completed" {
+            if MOLHLanguage.currentAppleLanguage() == "ar" {
+                orderStatusLabel.text = "تم التواصل"
+            }
+        }else if products.status == "canceled" {
+            if MOLHLanguage.currentAppleLanguage() == "ar" {
+                orderStatusLabel.text = "ألغيت"
+            }
+        }else if products.status == "paymentDone" {
+            if MOLHLanguage.currentAppleLanguage() == "ar" {
+                orderStatusLabel.text = "تم الدفع"
+            }
+        }
+        
     }
     
 }

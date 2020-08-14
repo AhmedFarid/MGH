@@ -37,9 +37,9 @@ class flashSaleCell: UICollectionViewCell {
     func configureCell(products: productsDataArray){
         
         let date = getDate(toDate: products.expireDateHotDeal ?? "")
-        dayesLB.text = "\(date.Days ?? 0) Days"
-        hrLB.text = "\(date.Hrs ?? 0) Hrs"
-        minLb.text = "\(date.Min ?? 0) Mins"
+        dayesLB.text = "\(date.Days ?? 0) \(NSLocalizedString("Days", comment: "profuct list lang"))"
+        hrLB.text = "\(date.Hrs ?? 0) \(NSLocalizedString("Hrs", comment: "profuct list lang"))"
+        minLb.text = "\(date.Min ?? 0) \(NSLocalizedString("Mins", comment: "profuct list lang"))"
         
         discountPrcent.text = "\(products.discount ?? 0) \(products.currency ?? "")"
         reviews.rating = Double(products.totalRate ?? 0)

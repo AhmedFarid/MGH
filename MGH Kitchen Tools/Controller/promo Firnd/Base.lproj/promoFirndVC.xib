@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Cairo-Regular.ttf">
+            <string>Cairo-Regular</string>
+        </array>
+        <array key="Cairo-SemiBold.ttf">
+            <string>Cairo-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="promoFirndVC" customModule="MGH_Kitchen_Tools" customModuleProvider="target">
+            <connections>
+                <outlet property="promoCodeText" destination="48N-08-1eg" id="Dyz-Rz-Z3b"/>
+                <outlet property="promoText" destination="1L5-f2-nge" id="yKB-YK-L3B"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VaC-VA-TPb">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ck5-Fz-4dy">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="499"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MGH Logo copy" translatesAutoresizingMaskIntoConstraints="NO" id="92R-ml-cEi">
+                                    <rect key="frame" x="87" y="100" width="240" height="131"/>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Promo code " textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1L5-f2-nge">
+                                    <rect key="frame" x="16" y="295" width="382" height="32"/>
+                                    <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PAY-pX-7a8" customClass="buttonView" customModule="MGH_Kitchen_Tools" customModuleProvider="target">
+                                    <rect key="frame" x="64" y="417" width="286" height="50"/>
+                                    <color key="backgroundColor" red="0.98431372549999996" green="0.56470588239999997" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="i8G-B6-eeQ"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Cairo-SemiBold" family="Cairo" pointSize="17"/>
+                                    <color key="tintColor" red="0.0" green="0.0" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <state key="normal" title="Share Your Promo code"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiuscostom">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="shareBtn:" destination="-1" eventType="touchUpInside" id="4AX-Ce-tOS"/>
+                                    </connections>
+                                </button>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fqw-1x-Ria" customClass="viewCosttom" customModule="MGH_Kitchen_Tools" customModuleProvider="target">
+                                    <rect key="frame" x="16" y="335" width="382" height="50"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Promo code " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="48N-08-1eg">
+                                            <rect key="frame" x="8" y="9" width="308" height="32"/>
+                                            <fontDescription key="fontDescription" name="Cairo-SemiBold" family="Cairo" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ToI-8j-4gY">
+                                            <rect key="frame" x="324" y="3" width="50" height="44"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="50" id="nwu-tw-ApQ"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
+                                            <state key="normal" title="Copy">
+                                                <color key="titleColor" red="0.0" green="0.0" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="copyPromo:" destination="-1" eventType="touchUpInside" id="FKW-Ce-4tX"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="1Yk-qP-1YE"/>
+                                        <constraint firstItem="48N-08-1eg" firstAttribute="centerY" secondItem="fqw-1x-Ria" secondAttribute="centerY" id="5HT-TN-BB4"/>
+                                        <constraint firstItem="ToI-8j-4gY" firstAttribute="centerY" secondItem="fqw-1x-Ria" secondAttribute="centerY" id="Gw6-M6-Yni"/>
+                                        <constraint firstItem="ToI-8j-4gY" firstAttribute="leading" secondItem="48N-08-1eg" secondAttribute="trailing" constant="8" id="JRl-Mz-olV"/>
+                                        <constraint firstItem="48N-08-1eg" firstAttribute="leading" secondItem="fqw-1x-Ria" secondAttribute="leading" constant="8" id="YCQ-Ko-Zwu"/>
+                                        <constraint firstAttribute="trailing" secondItem="ToI-8j-4gY" secondAttribute="trailing" constant="8" id="oMc-Y7-B7k"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiuscostom">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" red="0.91372549020000005" green="0.92156862750000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstItem="1L5-f2-nge" firstAttribute="leading" secondItem="Ck5-Fz-4dy" secondAttribute="leading" constant="16" id="2Lb-mQ-KFO"/>
+                                <constraint firstAttribute="trailing" secondItem="PAY-pX-7a8" secondAttribute="trailing" constant="64" id="3Wg-f7-dbs"/>
+                                <constraint firstItem="PAY-pX-7a8" firstAttribute="leading" secondItem="Ck5-Fz-4dy" secondAttribute="leading" constant="64" id="3ak-3h-QyD"/>
+                                <constraint firstItem="1L5-f2-nge" firstAttribute="top" secondItem="92R-ml-cEi" secondAttribute="bottom" constant="64" id="HSY-ga-IGC"/>
+                                <constraint firstItem="92R-ml-cEi" firstAttribute="centerX" secondItem="Ck5-Fz-4dy" secondAttribute="centerX" id="QSe-zQ-Qcb"/>
+                                <constraint firstAttribute="trailing" secondItem="1L5-f2-nge" secondAttribute="trailing" constant="16" id="Rqd-X2-Ibh"/>
+                                <constraint firstItem="92R-ml-cEi" firstAttribute="top" secondItem="Ck5-Fz-4dy" secondAttribute="top" constant="100" id="YCa-Uk-5j2"/>
+                                <constraint firstItem="PAY-pX-7a8" firstAttribute="top" secondItem="fqw-1x-Ria" secondAttribute="bottom" constant="32" id="bPC-mt-AFo"/>
+                                <constraint firstItem="fqw-1x-Ria" firstAttribute="leading" secondItem="Ck5-Fz-4dy" secondAttribute="leading" constant="16" id="e4u-Nt-eoz"/>
+                                <constraint firstAttribute="bottom" secondItem="PAY-pX-7a8" secondAttribute="bottom" constant="32" id="gJG-X4-q5M"/>
+                                <constraint firstAttribute="trailing" secondItem="fqw-1x-Ria" secondAttribute="trailing" constant="16" id="wwH-Na-Dbe"/>
+                                <constraint firstItem="fqw-1x-Ria" firstAttribute="top" secondItem="1L5-f2-nge" secondAttribute="bottom" constant="8" id="x8V-no-7c8"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="4Zi-a3-nrt" firstAttribute="width" secondItem="Ck5-Fz-4dy" secondAttribute="width" id="4CJ-MA-j0C"/>
+                        <constraint firstItem="Ck5-Fz-4dy" firstAttribute="trailing" secondItem="PaW-xR-cWf" secondAttribute="trailing" id="7O6-xX-p6k"/>
+                        <constraint firstItem="Ck5-Fz-4dy" firstAttribute="bottom" secondItem="PaW-xR-cWf" secondAttribute="bottom" id="OZ2-Je-OxY"/>
+                        <constraint firstItem="Ck5-Fz-4dy" firstAttribute="top" secondItem="PaW-xR-cWf" secondAttribute="top" id="e5q-aI-Cn8"/>
+                        <constraint firstItem="Ck5-Fz-4dy" firstAttribute="leading" secondItem="PaW-xR-cWf" secondAttribute="leading" id="y1R-Nk-qQX"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="PaW-xR-cWf"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="4Zi-a3-nrt"/>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="0.91372549020000005" green="0.92156862750000001" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="VaC-VA-TPb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="08t-Wk-Hxt"/>
+                <constraint firstItem="VaC-VA-TPb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="0gF-6W-jPe"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="VaC-VA-TPb" secondAttribute="trailing" id="ncO-5v-Aur"/>
+                <constraint firstItem="92R-ml-cEi" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.57971" id="o7q-Xj-1aa"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="VaC-VA-TPb" secondAttribute="bottom" id="wpU-ha-qLR"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="102.89855072463769" y="130.58035714285714"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="MGH Logo copy" width="314" height="131"/>
+    </resources>
+</document>

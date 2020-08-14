@@ -30,8 +30,8 @@ class writeRewiewVC: UIViewController,NVActivityIndicatorViewable {
         favoriteApi.setReviewApi(product_id: "\(productId)", review: Int(reviewBtn.rating), comment: commentTV.text ?? "") { (error, success, message) in
             if success {
                 self.stopAnimating()
-                let alert = UIAlertController(title: "Rewiew", message: "Your Rewiew Is Success", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction) in
+                let alert = UIAlertController(title: NSLocalizedString("Rewiew", comment: "profuct list lang"), message: NSLocalizedString("Your Rewiew Is Success", comment: "profuct list lang"), preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: NSLocalizedString("Ok", comment: "profuct list lang"), style: .default, handler: { (action: UIAlertAction) in
                     helperAuth.restartApp()
                 }))
                 self.present(alert, animated: true, completion: nil)

@@ -38,6 +38,7 @@ class checkOutApi: NSObject {
         
         let headers: HTTPHeaders = [
             "Authorization": "Bearer \(user_token)",
+            "X-localization": URLs.mainLang,
             "Content-Type": "application/json"
         ]
         
@@ -79,6 +80,7 @@ class checkOutApi: NSObject {
         
         let headers: HTTPHeaders = [
             "Authorization": "Bearer \(user_token)",
+            "X-localization": URLs.mainLang,
             "Content-Type": "application/json"
         ]
         let url = URLs.getPromocodeDiscount
@@ -123,8 +125,12 @@ class checkOutApi: NSObject {
         
         let url = URLs.deliveries
         print(url)
+        let headers: HTTPHeaders = [
+            "X-localization": URLs.mainLang,
+            "Content-Type": "application/json"
+        ]
         
-        AF.request(url, method: .post, parameters: nil, encoding: URLEncoding.queryString, headers: nil).responseJSON{ (response) in
+        AF.request(url, method: .post, parameters: nil, encoding: URLEncoding.queryString, headers: headers).responseJSON{ (response) in
             switch response.result
             {
             case .failure(let error):
