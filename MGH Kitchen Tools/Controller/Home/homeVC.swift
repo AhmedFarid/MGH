@@ -68,15 +68,9 @@ class homeVC: UIViewController,NVActivityIndicatorViewable {
             if let giftsArry = giftsArry{
                 if giftsArry.success == true {
                     if helperAuth.getAPIToken() == nil {
-                        //                        let vc = loginVC(nibName: "loginVC", bundle: nil)
-                        //                        let navigationController = UINavigationController(rootViewController: vc)
-                        //                        navigationController.modalPresentationStyle = .fullScreen
-                        //                        self.present(navigationController, animated: true, completion: nil)
+                      
                     }else {
-//                        let vc = giftsVC(nibName: "giftsVC", bundle: nil)
-//                        vc.modalPresentationStyle = .fullScreen
 //
-//                        self.present(vc,animated: true)
                         let vc = giftsVC(nibName: "giftsVC", bundle: nil)
                         let navigationController = UINavigationController(rootViewController: vc)
                         navigationController.modalPresentationStyle = .overFullScreen
