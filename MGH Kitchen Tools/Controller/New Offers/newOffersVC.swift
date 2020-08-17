@@ -61,7 +61,8 @@ class newOffersVC: UIViewController,NVActivityIndicatorViewable {
         guard !isLoading else { return }
         isLoading = true
         loaderHelper()
-        homeApi.productsApi(url: url, pageName: 1,category_id: singleItme?.id ?? 0,name: name){ (error,success,products) in
+        
+        homeApi.productsApi(url: url, pageName: 1, product_id: 0,category_id: "\(singleItme?.id ?? 0)", subcategory_id: "",name: name){ (error,success,products) in
             self.isLoading = false
             if let products = products{
                 self.products = products.data?.data ?? []
@@ -138,7 +139,7 @@ class newOffersVC: UIViewController,NVActivityIndicatorViewable {
         guard !isLoading else {return}
         guard current_page < last_page else {return}
         isLoading = true
-        homeApi.productsApi(url: url, pageName: current_page+1,category_id: singleItme?.id ?? 0,name: name){ (error,success,products) in
+        homeApi.productsApi(url: url, pageName: 1, product_id: 0,category_id: "\(singleItme?.id ?? 0)", subcategory_id: "",name: name){ (error,success,products) in
             self.isLoading = false
             if let products = products{
                 self.products.append(contentsOf: products.data?.data ?? [])

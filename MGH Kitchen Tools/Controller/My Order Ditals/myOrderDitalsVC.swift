@@ -82,6 +82,17 @@ class myOrderDitalsVC: UIViewController {
         
         paymetMethodLabel.text = singelItem?.paymentMethod ?? ""
         
+        if singelItem?.paymentMethod == "cacheOnDelivery"{
+            if MOLHLanguage.currentAppleLanguage() == "ar" {
+                paymetMethodLabel.text = "الدفع عند الاستلام"
+            }
+        }else {
+            if MOLHLanguage.currentAppleLanguage() == "ar" {
+                paymetMethodLabel.text = "دفع ب الكرديت"
+            }
+        }
+        
+        
         if singelItem?.paymentStatus == "0" {
             paymedtStatus.text = NSLocalizedString("Not Paid", comment: "profuct list lang")
         }else {

@@ -13,6 +13,8 @@
 		6912B46024C4B522004889EA /* deliveries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6912B45F24C4B522004889EA /* deliveries.swift */; };
 		6912B46424C4F87F004889EA /* checkoutDetiealsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6912B46224C4F87F004889EA /* checkoutDetiealsVC.swift */; };
 		6912B46924C50068004889EA /* cartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6912B46724C50068004889EA /* cartCell.swift */; };
+		69165D7024E992E20019C77A /* subCategours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69165D6E24E992E20019C77A /* subCategours.swift */; };
+		69165D7124E992E20019C77A /* subCategours.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69165D6F24E992E20019C77A /* subCategours.xib */; };
 		691A543B24E2C5E900BB1042 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 691A543924E2C5E900BB1042 /* InfoPlist.strings */; };
 		691A543E24E2C5E900BB1042 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 691A543C24E2C5E900BB1042 /* Localizable.strings */; };
 		691A544224E2EB1A00BB1042 /* paymentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691A544024E2EB1A00BB1042 /* paymentVC.swift */; };
@@ -140,6 +142,8 @@
 		6912B45F24C4B522004889EA /* deliveries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = deliveries.swift; sourceTree = "<group>"; };
 		6912B46224C4F87F004889EA /* checkoutDetiealsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checkoutDetiealsVC.swift; sourceTree = "<group>"; };
 		6912B46724C50068004889EA /* cartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cartCell.swift; sourceTree = "<group>"; };
+		69165D6E24E992E20019C77A /* subCategours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = subCategours.swift; sourceTree = "<group>"; };
+		69165D6F24E992E20019C77A /* subCategours.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = subCategours.xib; sourceTree = "<group>"; };
 		691A543A24E2C5E900BB1042 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		691A543D24E2C5E900BB1042 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		691A544024E2EB1A00BB1042 /* paymentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = paymentVC.swift; sourceTree = "<group>"; };
@@ -367,6 +371,15 @@
 				691D2DA524E2AD97001C02CC /* cartCellCheckOut.xib */,
 			);
 			path = procuctCell;
+			sourceTree = "<group>";
+		};
+		69165D6D24E992B80019C77A /* subCategours */ = {
+			isa = PBXGroup;
+			children = (
+				69165D6E24E992E20019C77A /* subCategours.swift */,
+				69165D6F24E992E20019C77A /* subCategours.xib */,
+			);
+			path = subCategours;
 			sourceTree = "<group>";
 		};
 		691A543F24E2EACD00BB1042 /* Payment */ = {
@@ -835,6 +848,7 @@
 		69ECC68A24AB6B70003ACC70 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				69165D6D24E992B80019C77A /* subCategours */,
 				691A543F24E2EACD00BB1042 /* Payment */,
 				6912B46124C4F79A004889EA /* checkOut Detieals */,
 				6912B45924C4728C004889EA /* promo Firnd */,
@@ -1106,6 +1120,7 @@
 				691D2DA924E2ADA2001C02CC /* promoFirndVC.xib in Resources */,
 				691D2DB224E2ADE0001C02CC /* giftCell.xib in Resources */,
 				691D2DC424E2AE13001C02CC /* myOrdersCell.xib in Resources */,
+				69165D7124E992E20019C77A /* subCategours.xib in Resources */,
 				691D2DCA24E2AE1F001C02CC /* checkOutVC.xib in Resources */,
 				691D2DEB24E2AE92001C02CC /* reviewsVC.xib in Resources */,
 				691D2DFA24E2AEB3001C02CC /* flashSaleCell.xib in Resources */,
@@ -1192,6 +1207,7 @@
 				698964F324BE05BA001B9A6C /* reviewsCell.swift in Sources */,
 				6935440C24BF0B7800A245E8 /* gifts.swift in Sources */,
 				698964DC24BDE113001B9A6C /* aboutUsVC.swift in Sources */,
+				69165D7024E992E20019C77A /* subCategours.swift in Sources */,
 				696B1ED324B608AB00D609A5 /* imageCells.swift in Sources */,
 				6930270D24B5DB47006695B4 /* cartApi.swift in Sources */,
 				6999FCC524B3779D0040C249 /* homeApi.swift in Sources */,
@@ -1744,7 +1760,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "MGH Kitchen Tools/MGH Kitchen Tools.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4Z34DQ34UQ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1756,6 +1772,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.FaridEbakers.MGH-Kitchen-Tools";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1770,7 +1787,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "MGH Kitchen Tools/MGH Kitchen Tools.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4Z34DQ34UQ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1782,6 +1799,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.FaridEbakers.MGH-Kitchen-Tools";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

@@ -16,7 +16,7 @@ extension UIViewController {
         case true:
             let nvImageTitle = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
             nvImageTitle.contentMode = .scaleAspectFit
-            let imageName = UIImage(named: "MGH Logo copy-1")
+            let imageName = UIImage(named: "logonav-2")
             nvImageTitle.image = imageName
             navigationItem.titleView = nvImageTitle
         default:
@@ -31,7 +31,7 @@ extension UIViewController {
     }
     
     func refesHcart() {
-        homeApi.productsApi(url: URLs.carts, pageName: 1,category_id: 0,name: ""){ (error,success,products) in
+        homeApi.productsApi(url: URLs.carts, pageName: 1, product_id: 0,category_id: "", subcategory_id: "",name: ""){ (error,success,products) in
             if products?.success == true {
                 if products?.data?.data?.count == 0 {
                     if let tabItems = self.tabBarController?.tabBar.items {

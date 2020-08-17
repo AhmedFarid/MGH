@@ -38,7 +38,7 @@ class cartVC: UIViewController,NVActivityIndicatorViewable {
         cartCollectionView.delegate = self
         cartCollectionView.dataSource = self
         loaderHelper()
-        homeApi.productsApi(url: URLs.carts, pageName: 1,category_id: 0,name: ""){ (error,success,products) in
+        homeApi.productsApi(url: URLs.carts, pageName: 1, product_id: 0,category_id: "", subcategory_id: "",name: ""){ (error,success,products) in
             if let products = products{
                 self.products = products.data?.data ?? []
                 

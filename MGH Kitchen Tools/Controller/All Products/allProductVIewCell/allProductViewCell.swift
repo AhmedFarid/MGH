@@ -33,7 +33,7 @@ class allProductViewCell: UICollectionViewCell {
             reviews.rating = Double(products.totalRate ?? 0)
             reviews.text = "(\(products.totalNumberReview ?? 0))"
             
-            if products.salePrice == 0 {
+            if products.salePrice == products.total {
                 discountPrice.isHidden = true
             }else {
                 discountPrice.isHidden = false

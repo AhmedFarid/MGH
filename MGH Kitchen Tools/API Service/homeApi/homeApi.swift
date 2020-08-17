@@ -42,13 +42,15 @@ class homeApi: NSObject {
     }
     
     
-    class func productsApi(url: String,pageName: Int,category_id: Int,name: String,completion: @escaping(_ error: Error?,_ success: Bool,_ product: products?)-> Void){
+    class func productsApi(url: String,pageName: Int,product_id: Int,category_id: String,subcategory_id: String,name: String,completion: @escaping(_ error: Error?,_ success: Bool,_ product: products?)-> Void){
         print(url)
         let parameters = [
-            "page": pageName,
-            "name": name,
-            "category_id": category_id
-            ] as [String : Any]
+        "page": pageName,
+        "name": name,
+        "category_id": category_id,
+        "subcategory_id": subcategory_id,
+        "product_id": product_id
+        ] as [String : Any]
         
         let headers: HTTPHeaders = [
             "Content-Type": "application/json",

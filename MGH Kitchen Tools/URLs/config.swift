@@ -46,5 +46,6 @@ struct URLs {
     static let getOrderTaxes = main + "customer/getOrderTaxes"
     static let paymentMob = main + "customer/payment_mob"
     static let offers = main + "offers"
+    static let similarProducts = main + "similarProducts"
     
 }

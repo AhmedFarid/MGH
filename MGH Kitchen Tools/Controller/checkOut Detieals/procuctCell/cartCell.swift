@@ -14,6 +14,7 @@ class cartCells: UITableViewCell {
     @IBOutlet weak var qtnLB: UILabel!
     @IBOutlet weak var unitProduct: UILabel!
     @IBOutlet weak var totalPirce: UILabel!
+    @IBOutlet weak var productImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,6 +26,14 @@ class cartCells: UITableViewCell {
         qtnLB.text = "\(NSLocalizedString("Quantity", comment: "profuct list lang")) \(products.productInCartQty ?? 0)"
         totalPirce.text = "\(NSLocalizedString("Total Price", comment: "profuct list lang")) \(products.productInCartTotal ?? 0) \(products.currency ?? "")"
         unitProduct.text = "\(NSLocalizedString("Price", comment: "profuct list lang")) \(products.total ?? 0) \(products.currency ?? "")"
+        
+        let urlWithoutEncoding = (products.image)
+               let encodedLink = urlWithoutEncoding?.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)
+               let encodedURL = NSURL(string: encodedLink!)! as URL
+               productImage.kf.indicatorType = .activity
+               if let url = URL(string: "\(encodedURL)") {
+                   productImage.kf.setImage(with: url,placeholder: UIImage(named: "placeholder"))
+               }
     }
     
 }

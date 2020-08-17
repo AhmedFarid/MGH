@@ -17,9 +17,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="productDetailsVC" customModule="MGH_Kitchen_Tools" customModuleProvider="target">
             <connections>
+                <outlet property="bestSelingHight" destination="TTD-WI-co3" id="Qrm-4a-wdi"/>
+                <outlet property="bestSellingCollectionView" destination="7B9-BE-7sP" id="4Hf-JD-UzN"/>
                 <outlet property="bigCartBtn" destination="9YK-Hu-VcS" id="tTX-Tb-1iD"/>
                 <outlet property="bigDescText" destination="p4D-on-yge" id="njU-Nu-mGh"/>
                 <outlet property="cartBtn" destination="esE-E7-byN" id="0ta-df-5TS"/>
+                <outlet property="cartLb" destination="Kev-sL-hZf" id="5Xc-wz-qS5"/>
                 <outlet property="discountPrice" destination="L5i-VP-Qxr" id="2Hu-9M-Zgb"/>
                 <outlet property="favBtn" destination="IU6-zQ-dbV" id="54Y-rP-lYj"/>
                 <outlet property="genralPrice" destination="hqo-tD-XGF" id="0KH-FX-6wE"/>
@@ -33,6 +36,7 @@
                 <outlet property="rateProduct" destination="MRz-hl-apl" id="Wx8-do-zFP"/>
                 <outlet property="reviewsBtn" destination="GWW-4c-vEP" id="pwZ-TX-ejq"/>
                 <outlet property="smallDescText" destination="Tbu-4w-6wo" id="rB7-ks-yZL"/>
+                <outlet property="sockObtionLabel" destination="5pF-fC-Fof" id="ruj-fw-i29"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -45,7 +49,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ru9-cq-Ouh">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="934"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="1304"/>
                             <subviews>
                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="s85-ra-Yyg">
                                     <rect key="frame" x="0.0" y="44" width="414" height="445"/>
@@ -85,14 +89,14 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fHQ-HC-gNl">
-                                    <rect key="frame" x="8" y="610.5" width="398" height="1"/>
+                                    <rect key="frame" x="8" y="618.5" width="398" height="1"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="vsA-zO-J2o"/>
                                     </constraints>
                                 </view>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pbc-hF-OkC">
-                                    <rect key="frame" x="64" y="581.5" width="286" height="30"/>
+                                    <rect key="frame" x="64" y="589.5" width="286" height="30"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SFY-iX-KrB" customClass="buttonView" customModule="MGH_Kitchen_Tools" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="139" height="30"/>
@@ -128,20 +132,20 @@
                                     </subviews>
                                 </stackView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Neoflam Korean made" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p4D-on-yge">
-                                    <rect key="frame" x="8" y="619.5" width="398" height="26.5"/>
+                                    <rect key="frame" x="8" y="627.5" width="398" height="26.5"/>
                                     <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="14"/>
                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dGR-mw-hfz">
-                                    <rect key="frame" x="8" y="654" width="398" height="1"/>
+                                    <rect key="frame" x="8" y="662" width="398" height="1"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="6Ie-1e-i8I"/>
                                     </constraints>
                                 </view>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="LGw-s0-ht7">
-                                    <rect key="frame" x="8" y="669.5" width="155.5" height="30"/>
+                                    <rect key="frame" x="8" y="677.5" width="155.5" height="30"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prices:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0qg-y9-m4C">
                                             <rect key="frame" x="0.0" y="0.0" width="48.5" height="30"/>
@@ -164,20 +168,20 @@
                                     </subviews>
                                 </stackView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IU6-zQ-dbV">
-                                    <rect key="frame" x="363" y="663" width="43" height="43"/>
+                                    <rect key="frame" x="363" y="671" width="43" height="43"/>
                                     <state key="normal" image="Group 377-1"/>
                                     <connections>
                                         <action selector="addToFavouritsBTN:" destination="-1" eventType="touchUpInside" id="fFo-xq-KMc"/>
                                     </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantity" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oF4-DL-p8W">
-                                    <rect key="frame" x="8" y="723" width="398" height="30"/>
+                                    <rect key="frame" x="8" y="731" width="398" height="30"/>
                                     <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="16"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pyn-rs-q4d" customClass="viewCosttom" customModule="MGH_Kitchen_Tools" customModuleProvider="target">
-                                    <rect key="frame" x="8" y="761" width="398" height="50"/>
+                                    <rect key="frame" x="8" y="769" width="398" height="50"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pw0-4r-H3V">
                                             <rect key="frame" x="8" y="5" width="382" height="40"/>
@@ -233,13 +237,13 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cart" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kev-sL-hZf">
-                                    <rect key="frame" x="8" y="827" width="398" height="30"/>
+                                    <rect key="frame" x="8" y="835" width="398" height="30"/>
                                     <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="16"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9YK-Hu-VcS" customClass="buttonView" customModule="MGH_Kitchen_Tools" customModuleProvider="target">
-                                    <rect key="frame" x="8" y="873" width="398" height="45"/>
+                                    <rect key="frame" x="8" y="881" width="398" height="45"/>
                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="45" id="3Vb-mE-Aw8"/>
@@ -257,24 +261,49 @@
                                     </connections>
                                 </button>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ycA-K0-tlZ">
-                                    <rect key="frame" x="8" y="714" width="398" height="1"/>
+                                    <rect key="frame" x="8" y="722" width="398" height="1"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="V4J-Lr-1f9"/>
                                     </constraints>
                                 </view>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="esE-E7-byN">
-                                    <rect key="frame" x="313" y="663.5" width="42" height="42"/>
+                                    <rect key="frame" x="313" y="671.5" width="42" height="42"/>
                                     <state key="normal" image="Group 238"/>
                                     <connections>
                                         <action selector="smallAddCartAction:" destination="-1" eventType="touchUpInside" id="R4r-cc-sF4"/>
                                     </connections>
                                 </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Similar Products" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X3A-Ub-fL0">
+                                    <rect key="frame" x="8" y="934" width="398" height="30"/>
+                                    <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="16"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="7B9-BE-7sP">
+                                    <rect key="frame" x="0.0" y="964" width="414" height="340"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="340" id="TTD-WI-co3"/>
+                                    </constraints>
+                                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="E14-3t-yMn">
+                                        <size key="itemSize" width="128" height="128"/>
+                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    </collectionViewFlowLayout>
+                                </collectionView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5pF-fC-Fof">
+                                    <rect key="frame" x="8" y="573.5" width="398" height="0.0"/>
+                                    <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="14"/>
+                                    <color key="textColor" red="0.97647058819999999" green="0.50980392159999999" blue="0.062745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                             </subviews>
                             <color key="backgroundColor" red="0.91372549020000005" green="0.92156862750000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
-                                <constraint firstItem="pbc-hF-OkC" firstAttribute="top" secondItem="Tbu-4w-6wo" secondAttribute="bottom" constant="8" id="1Cp-HA-10M"/>
                                 <constraint firstItem="pyn-rs-q4d" firstAttribute="top" secondItem="oF4-DL-p8W" secondAttribute="bottom" constant="8" id="1tD-dq-kBY"/>
+                                <constraint firstItem="7B9-BE-7sP" firstAttribute="top" secondItem="X3A-Ub-fL0" secondAttribute="bottom" id="2qy-Qz-RiN"/>
                                 <constraint firstAttribute="trailing" secondItem="pbc-hF-OkC" secondAttribute="trailing" constant="64" id="3Qe-Vl-qHO"/>
                                 <constraint firstItem="fHQ-HC-gNl" firstAttribute="leading" secondItem="ru9-cq-Ouh" secondAttribute="leading" constant="8" id="46U-ar-7sc"/>
                                 <constraint firstItem="s85-ra-Yyg" firstAttribute="top" secondItem="ru9-cq-Ouh" secondAttribute="top" constant="44" id="6Ex-fD-6l7"/>
@@ -282,6 +311,7 @@
                                 <constraint firstAttribute="trailing" secondItem="3d3-dB-hWs" secondAttribute="trailing" constant="8" id="7wB-vj-ZhI"/>
                                 <constraint firstAttribute="trailing" secondItem="Kev-sL-hZf" secondAttribute="trailing" constant="8" id="8ne-xq-m9X"/>
                                 <constraint firstItem="FR0-F5-Vor" firstAttribute="bottom" secondItem="s85-ra-Yyg" secondAttribute="bottom" id="9C1-ot-fzN"/>
+                                <constraint firstItem="pbc-hF-OkC" firstAttribute="top" secondItem="5pF-fC-Fof" secondAttribute="bottom" constant="16" id="AFc-8q-iMR"/>
                                 <constraint firstItem="Tbu-4w-6wo" firstAttribute="leading" secondItem="ru9-cq-Ouh" secondAttribute="leading" constant="8" id="AnZ-zC-wmj"/>
                                 <constraint firstItem="Kev-sL-hZf" firstAttribute="leading" secondItem="ru9-cq-Ouh" secondAttribute="leading" constant="8" id="ENe-Va-LM7"/>
                                 <constraint firstItem="dGR-mw-hfz" firstAttribute="top" secondItem="p4D-on-yge" secondAttribute="bottom" constant="8" id="EeY-9q-sKo"/>
@@ -290,6 +320,8 @@
                                 <constraint firstItem="3d3-dB-hWs" firstAttribute="top" secondItem="s85-ra-Yyg" secondAttribute="bottom" constant="2" id="KQr-Ct-zlT"/>
                                 <constraint firstItem="IU6-zQ-dbV" firstAttribute="top" secondItem="dGR-mw-hfz" secondAttribute="bottom" constant="8" id="LPf-PR-rVo"/>
                                 <constraint firstItem="ycA-K0-tlZ" firstAttribute="leading" secondItem="ru9-cq-Ouh" secondAttribute="leading" constant="8" id="NuE-4T-IpR"/>
+                                <constraint firstAttribute="trailing" secondItem="5pF-fC-Fof" secondAttribute="trailing" constant="8" id="OLK-p3-hdv"/>
+                                <constraint firstItem="X3A-Ub-fL0" firstAttribute="leading" secondItem="ru9-cq-Ouh" secondAttribute="leading" constant="8" id="Pde-sx-jKT"/>
                                 <constraint firstItem="fHQ-HC-gNl" firstAttribute="top" secondItem="pbc-hF-OkC" secondAttribute="bottom" constant="-1" id="Poy-UL-Tzx"/>
                                 <constraint firstItem="LGw-s0-ht7" firstAttribute="centerY" secondItem="IU6-zQ-dbV" secondAttribute="centerY" id="RyM-AL-oBG"/>
                                 <constraint firstItem="p4D-on-yge" firstAttribute="top" secondItem="fHQ-HC-gNl" secondAttribute="bottom" constant="8" id="UvW-Jo-ftY"/>
@@ -300,20 +332,26 @@
                                 <constraint firstItem="IU6-zQ-dbV" firstAttribute="leading" secondItem="esE-E7-byN" secondAttribute="trailing" constant="8" id="YP6-9c-9VO"/>
                                 <constraint firstItem="3d3-dB-hWs" firstAttribute="leading" secondItem="ru9-cq-Ouh" secondAttribute="leading" constant="8" id="ZVo-2G-zPt"/>
                                 <constraint firstItem="9YK-Hu-VcS" firstAttribute="leading" secondItem="ru9-cq-Ouh" secondAttribute="leading" constant="8" id="ZzY-4S-hxc"/>
+                                <constraint firstAttribute="trailing" secondItem="7B9-BE-7sP" secondAttribute="trailing" id="aI3-JT-XNF"/>
+                                <constraint firstAttribute="trailing" secondItem="X3A-Ub-fL0" secondAttribute="trailing" constant="8" id="ajf-J1-AeC"/>
                                 <constraint firstItem="LGw-s0-ht7" firstAttribute="leading" secondItem="ru9-cq-Ouh" secondAttribute="leading" constant="8" id="dXx-gO-MaM"/>
                                 <constraint firstItem="pbc-hF-OkC" firstAttribute="leading" secondItem="ru9-cq-Ouh" secondAttribute="leading" constant="64" id="e0W-oy-efk"/>
                                 <constraint firstAttribute="trailing" secondItem="pyn-rs-q4d" secondAttribute="trailing" constant="8" id="e8X-ci-Cx9"/>
-                                <constraint firstAttribute="bottom" secondItem="9YK-Hu-VcS" secondAttribute="bottom" constant="16" id="iAE-zo-Vsg"/>
                                 <constraint firstItem="FR0-F5-Vor" firstAttribute="centerX" secondItem="s85-ra-Yyg" secondAttribute="centerX" id="iZi-IF-8bf"/>
+                                <constraint firstItem="5pF-fC-Fof" firstAttribute="leading" secondItem="ru9-cq-Ouh" secondAttribute="leading" constant="8" id="ijB-nO-KUS"/>
                                 <constraint firstItem="9YK-Hu-VcS" firstAttribute="top" secondItem="Kev-sL-hZf" secondAttribute="bottom" constant="16" id="kwD-hf-SVk"/>
                                 <constraint firstItem="Kev-sL-hZf" firstAttribute="top" secondItem="pyn-rs-q4d" secondAttribute="bottom" constant="16" id="lIV-tF-i4S"/>
                                 <constraint firstAttribute="trailing" secondItem="oF4-DL-p8W" secondAttribute="trailing" constant="8" id="mXq-ib-wny"/>
                                 <constraint firstItem="oF4-DL-p8W" firstAttribute="top" secondItem="ycA-K0-tlZ" secondAttribute="bottom" constant="8" id="osh-v1-Wb7"/>
                                 <constraint firstAttribute="trailing" secondItem="9YK-Hu-VcS" secondAttribute="trailing" constant="8" id="ryR-Iy-waM"/>
+                                <constraint firstItem="X3A-Ub-fL0" firstAttribute="top" secondItem="9YK-Hu-VcS" secondAttribute="bottom" constant="8" id="sZA-ZT-kYu"/>
+                                <constraint firstItem="5pF-fC-Fof" firstAttribute="top" secondItem="Tbu-4w-6wo" secondAttribute="bottom" id="tQV-Z9-cB1"/>
                                 <constraint firstAttribute="trailing" secondItem="dGR-mw-hfz" secondAttribute="trailing" constant="8" id="uPB-hV-l07"/>
                                 <constraint firstAttribute="trailing" secondItem="p4D-on-yge" secondAttribute="trailing" constant="8" id="uT2-xM-JeJ"/>
                                 <constraint firstItem="pyn-rs-q4d" firstAttribute="leading" secondItem="ru9-cq-Ouh" secondAttribute="leading" constant="8" id="v10-ai-NEN"/>
                                 <constraint firstItem="esE-E7-byN" firstAttribute="centerY" secondItem="IU6-zQ-dbV" secondAttribute="centerY" id="wgj-cK-c0T"/>
+                                <constraint firstAttribute="bottom" secondItem="7B9-BE-7sP" secondAttribute="bottom" id="wpp-SI-Uib"/>
+                                <constraint firstItem="7B9-BE-7sP" firstAttribute="leading" secondItem="ru9-cq-Ouh" secondAttribute="leading" id="xQz-rl-SC0"/>
                                 <constraint firstItem="dGR-mw-hfz" firstAttribute="leading" secondItem="ru9-cq-Ouh" secondAttribute="leading" constant="8" id="xSm-er-XgN"/>
                                 <constraint firstItem="s85-ra-Yyg" firstAttribute="leading" secondItem="ru9-cq-Ouh" secondAttribute="leading" id="y76-jR-EaH"/>
                                 <constraint firstItem="MRz-hl-apl" firstAttribute="centerX" secondItem="ru9-cq-Ouh" secondAttribute="centerX" id="yyd-YW-30m"/>

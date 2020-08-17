@@ -113,7 +113,7 @@ class homeVC: UIViewController,NVActivityIndicatorViewable {
         bestSellingCollectionView.dataSource = self
         
         loaderHelper()
-        homeApi.productsApi(url: URLs.bestSelling, pageName: 1,category_id: 0,name: ""){ (error,success,products) in
+        homeApi.productsApi(url: URLs.bestSelling, pageName: 1, product_id: 0,category_id: "", subcategory_id: "",name: ""){ (error,success,products) in
             if let products = products{
                 self.products = products.data?.data ?? []
                 print(products)
@@ -131,7 +131,7 @@ class homeVC: UIViewController,NVActivityIndicatorViewable {
         flashSellCollecetion.dataSource = self
         
         loaderHelper()
-        homeApi.productsApi(url: URLs.hotDeal, pageName: 1,category_id: 0,name: ""){ (error,success,hotDeal) in
+         homeApi.productsApi(url: URLs.hotDeal, pageName: 1, product_id: 0,category_id: "", subcategory_id: "",name: ""){ (error,success,hotDeal) in
             if hotDeal?.success == true {
                 if let hotDeal = hotDeal{
                     self.hotDeal = hotDeal.data?.data ?? []
@@ -280,10 +280,17 @@ extension homeVC: UICollectionViewDelegate,UICollectionViewDataSource,UICollecti
             vc.images = products[indexPath.row].productImages ?? []
             self.navigationController!.pushViewController(vc, animated: true)
         }else if collectionView == categoryCollectionView {
-            let vc = allProductVC(nibName: "allProductVC", bundle: nil)
-            vc.singleItme = categorie[indexPath.row]
-            vc.url = URLs.searchProduct
-            self.navigationController!.pushViewController(vc, animated: true)
+            if categorie[indexPath.row].subcategories?.count == 0 {
+                let vc = allProductVC(nibName: "allProductVC", bundle: nil)
+                vc.singleItme = categorie[indexPath.row]
+                vc.url = URLs.searchProduct
+                self.navigationController!.pushViewController(vc, animated: true)
+                
+            }else {
+                let vc = subCategours(nibName: "subCategours", bundle: nil)
+                vc.categorie = categorie[indexPath.row].subcategories ?? []
+                self.navigationController!.pushViewController(vc, animated: true)
+            }
         }
     }
     
