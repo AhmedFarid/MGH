@@ -207,6 +207,20 @@
 
 "stock" = "مخزون";
 
+"No Product Found" = "لا يوجد منتجات";
 
+"No Orders Found" = "لم يتم العثور على أية طلبات";
+
+"Delivery Type:" = "نوع التوصيل:";
+
+"Delivery Price:" = "سعر التوصيل:";
+
+"Ready for used" = "جاهز للاستخدام";
+
+"Used" = "مستخدم";
+
+"Colors:" = "الالوان:";
+
+"Colors: No Colors" = "الالوان: لايوجد";
 
 

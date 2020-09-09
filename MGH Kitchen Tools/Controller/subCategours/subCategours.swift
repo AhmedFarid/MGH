@@ -28,8 +28,10 @@ class subCategours: UIViewController,NVActivityIndicatorViewable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setUpNavColore(false, singleCat?.name ?? "")
+        setUpNavColore(false, "")
+               setUpNav(logo: true, cart: true)
+               
+        //setUpNavColore(false, singleCat?.name ?? "")
         categoryCollectionView.addSubview(refresher)
         handelApiCategory()
     }

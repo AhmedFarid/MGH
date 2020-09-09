@@ -86,10 +86,21 @@ extension allCategoursVC: UICollectionViewDelegate,UICollectionViewDataSource,UI
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         
-        let vc = allProductVC(nibName: "allProductVC", bundle: nil)
-        vc.singleItme = categorie[indexPath.row]
-        vc.url = URLs.searchProduct
-        self.navigationController!.pushViewController(vc, animated: true)
+        //        let vc = allProductVC(nibName: "allProductVC", bundle: nil)
+        //        vc.singleItme = categorie[indexPath.row]
+        //        vc.url = URLs.searchProduct
+        //        self.navigationController!.pushViewController(vc, animated: true)
+        if categorie[indexPath.row].subcategories?.count == 0 {
+            let vc = allProductVC(nibName: "allProductVC", bundle: nil)
+            vc.singleItme = categorie[indexPath.row]
+            vc.url = URLs.searchProduct
+            self.navigationController!.pushViewController(vc, animated: true)
+            
+        }else {
+            let vc = subCategours(nibName: "subCategours", bundle: nil)
+            vc.categorie = categorie[indexPath.row].subcategories ?? []
+            self.navigationController!.pushViewController(vc, animated: true)
+        }
     }
     
     

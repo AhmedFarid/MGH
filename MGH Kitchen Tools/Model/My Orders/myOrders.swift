@@ -23,9 +23,9 @@ struct myOrdersData: Codable {
     let customerName, customerAddress, customerPhone, customerCity: String?
     let customerRegion, customerStreet, customerHomeNumber, customerFloorNumber: String?
     let paymentMethod, paymentStatus, promocode: String?
-    let promocodeValue: Int?
+    let promocodeValue,deliveryFees: Int?
     let orderDetails: [productsDataArray]?
-    let createdAt, updatedAt: String?
+    let createdAt, updatedAt,deliveryType: String?
 
     enum CodingKeys: String, CodingKey {
        case id, status, total
@@ -44,5 +44,7 @@ struct myOrdersData: Codable {
         case orderDetails
         case createdAt = "created_at"
         case updatedAt = "updated_at"
+        case deliveryType = "delivery_type"
+        case deliveryFees = "delivery_fees"
     }
 }

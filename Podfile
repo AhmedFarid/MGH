@@ -16,6 +16,10 @@ target 'MGH Kitchen Tools' do
   pod 'FacebookCore'
   pod 'FacebookLogin'
   pod 'GoogleSignIn'
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Core'
+  pod 'Firebase/Database'
+  pod 'Firebase/Messaging'
   
   
 end

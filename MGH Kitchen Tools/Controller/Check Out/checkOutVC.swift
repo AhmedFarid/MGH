@@ -44,6 +44,8 @@ class checkOutVC: UIViewController,NVActivityIndicatorViewable {
     var promoNext = ""
     var paymetType = ""
     var deliveryType = ""
+    var giftType = ""
+    var giftValue = ""
     
     var paymentMethods = [NSLocalizedString("Cache On Delivery", comment: "profuct list lang"),NSLocalizedString("Pay Online", comment: "profuct list lang")]
     
@@ -57,10 +59,13 @@ class checkOutVC: UIViewController,NVActivityIndicatorViewable {
         setUpNav(logo: true, cart: true)
         cityTF.isEnabled = false
         delviryType.isEnabled = false
-        
         cityPikerFunc()
-        getText()
         paymentMethodPickerFunc()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        getProfileGifts()
+        
     }
     
     func cityPikerFunc() {
@@ -102,11 +107,42 @@ class checkOutVC: UIViewController,NVActivityIndicatorViewable {
                 let subTotal = NSLocalizedString("Sub Total", comment: "profuct list lang")
                 let taxes = NSLocalizedString("Taxes", comment: "profuct list lang")
                 let totalCost = NSLocalizedString("Total Cost", comment: "profuct list lang")
-                self.totalPrice.text = "\(self.countCart) \(item) / \(subTotal) \(self.totlaPrice) \(self.curancy) \n \(taxes) \(self.tex) \(self.curancy) \n \(totalCost) \(self.totlaPrice + self.tex) \(self.curancy)"
+                self.totalPrice.text = "\(self.countCart) \(item) / \(subTotal) \(self.totlaPrice) \(self.curancy) \n \(taxes) \(self.tex) \(self.curancy) \n \(totalCost) \(self.totlaPrice + self.tex) \(self.curancy) \n\(self.giftType) \(self.giftValue)"
             }
         }
     }
     
+    
+    func getProfileGifts() {
+        profileApi.getProfileApi { (error, success, profile) in
+            if success {
+                
+                if profile?.data?.isGiftUsed == "0" {
+                    self.giftType = profile?.data?.giftType ?? ""
+                    self.giftValue = profile?.data?.giftValue ?? ""
+                    
+                    
+                    if MOLHLanguage.currentAppleLanguage() == "ar" {
+                        if profile?.data?.giftType == "gift" {
+                            self.giftType = "هدية"
+                            if profile?.data?.giftValue == "freeDelivery"{
+                                self.giftValue = "توصيل مجاني"
+                            }else if profile?.data?.giftValue == "someGifts" {
+                                self.giftValue = " من التطبيق"
+                            }else {
+                                self.giftType = ""
+                                self.giftValue = ""
+                            }
+                        }else {
+                            self.giftType = "برمو كود"
+                            self.giftValue = profile?.data?.giftValue ?? ""
+                        }
+                    }
+                }
+                self.getText()
+            }
+        }
+    }
     
     func promoCodeCheck() {
         loaderHelper()
@@ -122,7 +158,7 @@ class checkOutVC: UIViewController,NVActivityIndicatorViewable {
                         let taxes = NSLocalizedString("Taxes", comment: "profuct list lang")
                         let totalCost = NSLocalizedString("Total Cost", comment: "profuct list lang")
                         let youHavePromo = NSLocalizedString("You have promo", comment: "profuct list lang")
-                        self.totalPrice.text = "\(self.countCart) \(item) / \(subTotal) \(self.totlaPrice) \(self.curancy) \n\(youHavePromo) \(self.promo) \(self.curancy) \n \(taxes) \(self.tex) \(self.curancy) \n \(totalCost) \(self.totlaPrice - self.promo + self.delveryTotal + self.tex) \(self.curancy)"
+                        self.totalPrice.text = "\(self.countCart) \(item) / \(subTotal) \(self.totlaPrice) \(self.curancy) \n\(youHavePromo) \(self.promo) \(self.curancy) \n \(taxes) \(self.tex) \(self.curancy) \n \(totalCost) \(self.totlaPrice - self.promo + self.delveryTotal + self.tex) \(self.curancy) \n\(self.giftType) \(self.giftValue)"
                     }else {
                         let item = NSLocalizedString("Item", comment: "profuct list lang")
                         let subTotal = NSLocalizedString("Sub Total", comment: "profuct list lang")
@@ -130,7 +166,7 @@ class checkOutVC: UIViewController,NVActivityIndicatorViewable {
                         let totalCost = NSLocalizedString("Total Cost", comment: "profuct list lang")
                         let youHavePromo = NSLocalizedString("You have promo", comment: "profuct list lang")
                         let deliveryFees = NSLocalizedString("Delivery fees", comment: "profuct list lang")
-                        self.totalPrice.text = "\(self.countCart) \(item) / \(subTotal) \(self.totlaPrice) \(self.curancy) \n \(self.delvertyTypes) \(deliveryFees) \(self.delveryTotal) \n\(youHavePromo) \(self.promo) \(self.curancy) \n \(taxes) \(self.tex) \(self.curancy) \n \(totalCost) \(self.totlaPrice - self.promo + self.delveryTotal + self.tex) \(self.curancy)"
+                        self.totalPrice.text = "\(self.countCart) \(item) / \(subTotal) \(self.totlaPrice) \(self.curancy) \n \(self.delvertyTypes) \(deliveryFees) \(self.delveryTotal) \n\(youHavePromo) \(self.promo) \(self.curancy) \n \(taxes) \(self.tex) \(self.curancy) \n \(totalCost) \(self.totlaPrice - self.promo + self.delveryTotal + self.tex) \(self.curancy) \n\(self.giftType):\(self.giftValue)"
                     }
                     self.stopAnimating()
                 }else {
@@ -315,7 +351,7 @@ extension checkOutVC: UIPickerViewDataSource, UIPickerViewDelegate{
                 let taxes = NSLocalizedString("Taxes", comment: "profuct list lang")
                 let totalCost = NSLocalizedString("Total Cost", comment: "profuct list lang")
                 let deliveryFees = NSLocalizedString("Delivery fees", comment: "profuct list lang")
-                self.totalPrice.text = "\(self.countCart) \(item) / \(subTotal) \(self.totlaPrice) \(self.curancy) \n \(x[row].vlaue ?? "") \(deliveryFees) \(self.delveryTotal) \n \(taxes) \(self.tex) \(self.curancy) \n \(totalCost) \(self.totlaPrice - self.promo + self.delveryTotal + self.tex) \(self.curancy)"
+                self.totalPrice.text = "\(self.countCart) \(item) / \(subTotal) \(self.totlaPrice) \(self.curancy) \n \(x[row].vlaue ?? "") \(deliveryFees) \(self.delveryTotal) \n \(taxes) \(self.tex) \(self.curancy) \n \(totalCost) \(self.totlaPrice - self.promo + self.delveryTotal + self.tex) \(self.curancy) \n\(self.giftType) \(self.giftValue)"
             }else {
                 let item = NSLocalizedString("Item", comment: "profuct list lang")
                 let subTotal = NSLocalizedString("Sub Total", comment: "profuct list lang")
@@ -323,7 +359,7 @@ extension checkOutVC: UIPickerViewDataSource, UIPickerViewDelegate{
                 let totalCost = NSLocalizedString("Total Cost", comment: "profuct list lang")
                 let deliveryFees = NSLocalizedString("Delivery fees", comment: "profuct list lang")
                 let youHavePromo = NSLocalizedString("You have promo", comment: "profuct list lang")
-                self.totalPrice.text = "\(self.countCart) \(item) / \(subTotal) \(self.totlaPrice) \(self.curancy) \n \(x[row].vlaue ?? "") \(deliveryFees) \(self.delveryTotal) \n\(youHavePromo) \(self.promo) \(self.curancy) \n \(taxes) \(self.tex) \(self.curancy) \n \(totalCost) \(self.totlaPrice - self.promo + self.delveryTotal + self.tex) \(self.curancy)"
+                self.totalPrice.text = "\(self.countCart) \(item) / \(subTotal) \(self.totlaPrice) \(self.curancy) \n \(x[row].vlaue ?? "") \(deliveryFees) \(self.delveryTotal) \n\(youHavePromo) \(self.promo) \(self.curancy) \n \(taxes) \(self.tex) \(self.curancy) \n \(totalCost) \(self.totlaPrice - self.promo + self.delveryTotal + self.tex) \(self.curancy) \n\(self.giftType) \(self.giftValue)"
             }
             
         }

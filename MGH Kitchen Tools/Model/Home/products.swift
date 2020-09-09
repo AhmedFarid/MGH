@@ -42,9 +42,10 @@ struct productsDataArray: Codable {
     let productInCart, productInCartQty, productInCartTotal, isProductFavoirte: Int?
     let currency: String?
     let totalRate: Double?
+    let ProductInCartColor: String?
     
     enum CodingKeys: String, CodingKey {
-        case id, status, featured, trending
+        case id, status, featured, trending,ProductInCartColor
         case isNew = "is_new"
         case bestSeller = "best_seller"
         case off50 = "off_50"

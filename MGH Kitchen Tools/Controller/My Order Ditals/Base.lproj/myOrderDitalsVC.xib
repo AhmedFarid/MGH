@@ -15,6 +15,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="myOrderDitalsVC" customModule="MGH_Kitchen_Tools" customModuleProvider="target">
             <connections>
                 <outlet property="addressLabel" destination="XAD-kM-WUX" id="qUg-wx-bGP"/>
+                <outlet property="deleveryPrice" destination="VVV-gz-kgM" id="WZf-QS-Non"/>
+                <outlet property="deleveryType" destination="wMx-Iu-B0H" id="dpf-I2-7dD"/>
                 <outlet property="hightConst" destination="qfv-c1-ruf" id="Hlm-lV-hw3"/>
                 <outlet property="name" destination="2mu-UM-7r4" id="4Y8-u7-9HK"/>
                 <outlet property="orderDateLabel" destination="dCc-Tj-D5j" id="5Wi-j4-IYT"/>
@@ -40,21 +42,21 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H9L-gM-eAT">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="852"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="878.5"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="frG-0K-fiI" customClass="viewCosttom" customModule="MGH_Kitchen_Tools" customModuleProvider="target">
-                                    <rect key="frame" x="8" y="16" width="398" height="218"/>
+                                    <rect key="frame" x="8" y="16" width="398" height="244.5"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ae6-DF-qO4">
                                             <rect key="frame" x="8" y="8" width="382" height="26.5"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order Id" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iDv-k9-utC">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order Id" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iDv-k9-utC">
                                                     <rect key="frame" x="0.0" y="0.0" width="183" height="26.5"/>
                                                     <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="14"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order Date" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dCc-Tj-D5j">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order Date" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dCc-Tj-D5j">
                                                     <rect key="frame" x="199" y="0.0" width="183" height="26.5"/>
                                                     <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="14"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -65,13 +67,13 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="uGd-a9-nqG">
                                             <rect key="frame" x="8" y="34.5" width="382" height="26.5"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order Total" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GCB-pO-3nC">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order Total" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GCB-pO-3nC">
                                                     <rect key="frame" x="0.0" y="0.0" width="183" height="26.5"/>
                                                     <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="14"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order Quntaty" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wI2-2D-vWQ">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order Quntaty" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wI2-2D-vWQ">
                                                     <rect key="frame" x="199" y="0.0" width="183" height="26.5"/>
                                                     <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="14"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -82,13 +84,13 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="9sO-3g-VqI">
                                             <rect key="frame" x="8" y="61" width="382" height="26.5"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payment Method" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QRr-Pq-Cfg">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payment Method" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QRr-Pq-Cfg">
                                                     <rect key="frame" x="0.0" y="0.0" width="183" height="26.5"/>
                                                     <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="14"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payment Status" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5uB-tt-aLm">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payment Status" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5uB-tt-aLm">
                                                     <rect key="frame" x="199" y="0.0" width="183" height="26.5"/>
                                                     <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="14"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -97,15 +99,15 @@
                                             </subviews>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Z4Q-ss-caD">
-                                            <rect key="frame" x="8" y="87.5" width="382" height="26.5"/>
+                                            <rect key="frame" x="8" y="114" width="382" height="26.5"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Promo Code" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HeW-Ww-Qvu">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Promo Code" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HeW-Ww-Qvu">
                                                     <rect key="frame" x="0.0" y="0.0" width="183" height="26.5"/>
                                                     <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="14"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Promo Value" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EVB-96-OBz">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Promo Value" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EVB-96-OBz">
                                                     <rect key="frame" x="199" y="0.0" width="183" height="26.5"/>
                                                     <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="14"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -114,15 +116,15 @@
                                             </subviews>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="GuT-7a-yIa">
-                                            <rect key="frame" x="8" y="114" width="382" height="26.5"/>
+                                            <rect key="frame" x="8" y="140.5" width="382" height="26.5"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2mu-UM-7r4">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2mu-UM-7r4">
                                                     <rect key="frame" x="0.0" y="0.0" width="183" height="26.5"/>
                                                     <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="14"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="phone" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vvU-aK-nce">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="phone" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vvU-aK-nce">
                                                     <rect key="frame" x="199" y="0.0" width="183" height="26.5"/>
                                                     <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="14"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -130,14 +132,14 @@
                                                 </label>
                                             </subviews>
                                         </stackView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XAD-kM-WUX">
-                                            <rect key="frame" x="8" y="140.5" width="382" height="26.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XAD-kM-WUX">
+                                            <rect key="frame" x="8" y="167" width="382" height="26.5"/>
                                             <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="14"/>
                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Gp-aZ-NSc" customClass="viewCosttom" customModule="MGH_Kitchen_Tools" customModuleProvider="target">
-                                            <rect key="frame" x="240" y="175" width="150" height="35"/>
+                                            <rect key="frame" x="240" y="201.5" width="150" height="35"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DGF-Wt-VEL">
                                                     <rect key="frame" x="1" y="1" width="148" height="33"/>
@@ -164,6 +166,23 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </view>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="7x1-4H-G9H">
+                                            <rect key="frame" x="8" y="87.5" width="382" height="26.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="delvery Type" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wMx-Iu-B0H">
+                                                    <rect key="frame" x="0.0" y="0.0" width="183" height="26.5"/>
+                                                    <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="14"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delvery Price" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VVV-gz-kgM">
+                                                    <rect key="frame" x="199" y="0.0" width="183" height="26.5"/>
+                                                    <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="14"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
@@ -171,22 +190,27 @@
                                         <constraint firstItem="9sO-3g-VqI" firstAttribute="leading" secondItem="frG-0K-fiI" secondAttribute="leading" constant="8" id="0vI-Jr-Ct6"/>
                                         <constraint firstAttribute="trailing" secondItem="9sO-3g-VqI" secondAttribute="trailing" constant="8" id="BI4-iv-xZd"/>
                                         <constraint firstAttribute="trailing" secondItem="uGd-a9-nqG" secondAttribute="trailing" constant="8" id="EXz-R8-nDE"/>
+                                        <constraint firstItem="7x1-4H-G9H" firstAttribute="leading" secondItem="frG-0K-fiI" secondAttribute="leading" constant="8" id="Fon-r4-HSy"/>
                                         <constraint firstItem="XAD-kM-WUX" firstAttribute="leading" secondItem="frG-0K-fiI" secondAttribute="leading" constant="8" id="Hq0-Gj-waB"/>
                                         <constraint firstAttribute="trailing" secondItem="9Gp-aZ-NSc" secondAttribute="trailing" constant="8" id="I6V-Bg-zWt"/>
+                                        <constraint firstItem="Z4Q-ss-caD" firstAttribute="leading" secondItem="frG-0K-fiI" secondAttribute="leading" constant="8" id="Izd-zV-Xqh"/>
                                         <constraint firstItem="uGd-a9-nqG" firstAttribute="top" secondItem="ae6-DF-qO4" secondAttribute="bottom" id="KGR-D8-H5f"/>
                                         <constraint firstAttribute="bottom" secondItem="9Gp-aZ-NSc" secondAttribute="bottom" constant="8" id="MeP-1i-xRe"/>
                                         <constraint firstAttribute="trailing" secondItem="Z4Q-ss-caD" secondAttribute="trailing" constant="8" id="THf-fs-3wA"/>
+                                        <constraint firstItem="7x1-4H-G9H" firstAttribute="top" secondItem="9sO-3g-VqI" secondAttribute="bottom" id="Tgk-G8-qvL"/>
                                         <constraint firstItem="9Gp-aZ-NSc" firstAttribute="top" secondItem="XAD-kM-WUX" secondAttribute="bottom" constant="8" id="W0P-xp-5ZE"/>
                                         <constraint firstItem="9sO-3g-VqI" firstAttribute="top" secondItem="uGd-a9-nqG" secondAttribute="bottom" id="XKx-YW-lDN"/>
                                         <constraint firstItem="ae6-DF-qO4" firstAttribute="top" secondItem="frG-0K-fiI" secondAttribute="top" constant="8" id="a0h-5y-bNN"/>
                                         <constraint firstAttribute="trailing" secondItem="XAD-kM-WUX" secondAttribute="trailing" constant="8" id="awO-Ei-tOI"/>
-                                        <constraint firstItem="Z4Q-ss-caD" firstAttribute="top" secondItem="9sO-3g-VqI" secondAttribute="bottom" id="cWT-Dl-JM5"/>
                                         <constraint firstItem="XAD-kM-WUX" firstAttribute="top" secondItem="GuT-7a-yIa" secondAttribute="bottom" id="eRf-aC-wrL"/>
                                         <constraint firstItem="uGd-a9-nqG" firstAttribute="leading" secondItem="frG-0K-fiI" secondAttribute="leading" constant="8" id="heh-lc-SI1"/>
                                         <constraint firstItem="GuT-7a-yIa" firstAttribute="top" secondItem="Z4Q-ss-caD" secondAttribute="bottom" id="jPy-nl-3wp"/>
+                                        <constraint firstAttribute="trailing" secondItem="Z4Q-ss-caD" secondAttribute="trailing" constant="8" id="jy6-Ea-D0m"/>
                                         <constraint firstItem="Z4Q-ss-caD" firstAttribute="leading" secondItem="frG-0K-fiI" secondAttribute="leading" constant="8" id="kgT-Jc-jGE"/>
+                                        <constraint firstAttribute="trailing" secondItem="7x1-4H-G9H" secondAttribute="trailing" constant="8" id="lyA-6I-u56"/>
                                         <constraint firstItem="ae6-DF-qO4" firstAttribute="leading" secondItem="frG-0K-fiI" secondAttribute="leading" constant="8" id="mMD-NV-SlS"/>
                                         <constraint firstItem="GuT-7a-yIa" firstAttribute="leading" secondItem="frG-0K-fiI" secondAttribute="leading" constant="8" id="n7h-Jv-Sau"/>
+                                        <constraint firstItem="Z4Q-ss-caD" firstAttribute="top" secondItem="7x1-4H-G9H" secondAttribute="bottom" id="ngg-dc-7SK"/>
                                         <constraint firstAttribute="trailing" secondItem="GuT-7a-yIa" secondAttribute="trailing" constant="8" id="rxO-ir-HFu"/>
                                     </constraints>
                                     <userDefinedRuntimeAttributes>
@@ -202,13 +226,13 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Products" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5hK-QE-hQv">
-                                    <rect key="frame" x="8" y="242" width="398" height="34"/>
+                                    <rect key="frame" x="8" y="268.5" width="398" height="34"/>
                                     <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="18"/>
                                     <color key="textColor" red="0.0" green="0.0" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="M5F-wZ-Ro4">
-                                    <rect key="frame" x="8" y="284" width="398" height="560"/>
+                                    <rect key="frame" x="8" y="310.5" width="398" height="560"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="560" id="qfv-c1-ruf"/>

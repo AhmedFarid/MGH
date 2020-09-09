@@ -80,12 +80,16 @@ class checkoutDetiealsVC: UIViewController,NVActivityIndicatorViewable {
         checkOutApi.makeOrderApi(delivery_type: type,city_id: cityId,gift_id:giftId, code: promoCode, customer_name: fullName, customer_phone: phone, customer_city: cityName, customer_region: region, customer_street: street, customer_home_number: homeNumber, customer_floor_number: floorNumber, customer_address: address, payment_method: payment_method){ (error, success, message) in
                     if success {
                         if message?.success == true {
-                            self.stopAnimating()
-                            let alert = UIAlertController(title: NSLocalizedString("Order", comment: "profuct list lang"), message: NSLocalizedString("Thanks For Your Order", comment: "profuct list lang"), preferredStyle: .alert)
-                            alert.addAction(UIAlertAction(title: NSLocalizedString("Ok", comment: "profuct list lang"), style: .default, handler: { (action: UIAlertAction) in
-                                helperAuth.restartApp()
-                            }))
-                            self.present(alert, animated: true, completion: nil)
+                            let vc = orderVC(nibName: "orderVC", bundle: nil)
+                            vc.modalPresentationStyle = .custom
+                            vc.orderMessage = message?.data?.msg ?? ""
+                            self.present(vc,animated: true)
+//                            self.stopAnimating()
+//                            let alert = UIAlertController(title: NSLocalizedString("Order", comment: "profuct list lang"), message: NSLocalizedString("Thanks For Your Order", comment: "profuct list lang"), preferredStyle: .alert)
+//                            alert.addAction(UIAlertAction(title: NSLocalizedString("Ok", comment: "profuct list lang"), style: .default, handler: { (action: UIAlertAction) in
+//                                helperAuth.restartApp()
+//                            }))
+//                            self.present(alert, animated: true, completion: nil)
                         }else {
                             self.showAlert(title: "Oreder", message: message?.message ?? "")
                             self.stopAnimating()
@@ -103,6 +107,22 @@ class checkoutDetiealsVC: UIViewController,NVActivityIndicatorViewable {
         }else if payemtType == "payOnline"  {
             let vc = paymentVC(nibName: "paymentVC", bundle: nil)
             vc.delegate = self
+            vc.address = address
+            vc.type = type
+            vc.floorNumber = floorNumber
+            vc.homeNumber = homeNumber
+            vc.street = street
+            vc.region = region
+            vc.cityId = cityId
+            vc.phone = phone
+            vc.fullName = fullName
+            vc.promoCode = promoCode
+            vc.giftId = giftId
+            vc.delivery_type = delivery_type
+            vc.cityName = cityName
+            vc.payemtType = payemtType
+            vc.deliveryTypes = deliveryTypes
+            
             let navigationController = UINavigationController(rootViewController: vc)
             navigationController.modalPresentationStyle = .pageSheet
             self.present(navigationController, animated: true, completion: nil)

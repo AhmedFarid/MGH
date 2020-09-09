@@ -5,7 +5,6 @@
 //  Created by Ahmed farid on 7/19/20.
 //  Copyright © 2020 E-bakers. All rights reserved.
 //
-
 import UIKit
 import NVActivityIndicatorView
 
@@ -78,7 +77,7 @@ class newOffersVC: UIViewController,NVActivityIndicatorViewable {
     
     func cart(url: String,id: String) {
         loaderHelper()
-        cartApi.cartOption(url: url, product_id: id, qty: "\(1)") { (error, success, message,errorStoke,x) in
+        cartApi.cartOption(url: url, product_id: id, qty: "\(1)", color: "") { (error, success, message,errorStoke,x) in
             if success {
                 if message?.success == true {
                     if url == URLs.addToCart {

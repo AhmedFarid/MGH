@@ -33,6 +33,7 @@ class productDetailsVC: UIViewController, NVActivityIndicatorViewable {
     @IBOutlet weak var bestSellingCollectionView: UICollectionView!
     @IBOutlet weak var bestSelingHight: NSLayoutConstraint!
     @IBOutlet weak var sockObtionLabel: UILabel!
+    @IBOutlet weak var cololerTF: UITextField!
     
     var timer : Timer?
     var currentIndex = 0
@@ -124,6 +125,8 @@ class productDetailsVC: UIViewController, NVActivityIndicatorViewable {
                 self.discountPrice.text = "\((singleItem?.salePrice ?? 0) * self.qty) \(singleItem?.currency ?? "")"
                 self.genralPrice.text = "\((Int((singleItem?.total ?? 0))) * self.qty) \(singleItem?.currency ?? "")"
                 plusBTN.isHidden = true
+                self.cololerTF.isEnabled = false
+                self.cololerTF.text = singleItem?.ProductInCartColor ?? ""
             }else {
                 cartBtn.setImage(UIImage(named: "noCart"), for: .normal)
                 bigCartBtn.setTitle(NSLocalizedString("Add Cart", comment: "profuct list lang"), for: .normal)
@@ -192,7 +195,7 @@ class productDetailsVC: UIViewController, NVActivityIndicatorViewable {
     
     func cart(url: String,id: String) {
         loaderHelper()
-        cartApi.cartOption(url: url, product_id: id, qty: "\(1)") { (error, success, message,errorStoke,x) in
+        cartApi.cartOption(url: url, product_id: id, qty: "\(1)", color: cololerTF.text ?? "") { (error, success, message,errorStoke,x) in
             if success {
                 if message?.success == true {
                     if url == URLs.addToCart {
@@ -250,7 +253,7 @@ class productDetailsVC: UIViewController, NVActivityIndicatorViewable {
     
     func cart(url: String) {
         loaderHelper()
-        cartApi.cartOption(url: url, product_id: "\(singleItem?.id ?? 0)", qty: "\(qty)") { (error, success, message,errorStoke,x) in
+        cartApi.cartOption(url: url, product_id: "\(singleItem?.id ?? 0)", qty: "\(qty)",color: cololerTF.text ?? "") { (error, success, message,errorStoke,x) in
             if success {
                 if message?.success == true {
                     if url == URLs.addToCart {
@@ -259,6 +262,7 @@ class productDetailsVC: UIViewController, NVActivityIndicatorViewable {
                         self.bigCartBtn.setTitle(NSLocalizedString("Remove from cart", comment: "profuct list lang"), for: .normal)
                         self.plusBTN.isHidden = true
                         self.minBtm.isHidden = true
+                        self.cololerTF.isEnabled = false
                         self.showAlert(title: "Cart", message: "Added To Cart")
                     }else if url == URLs.removeFromCart {
                         self.isCart = 0
@@ -269,6 +273,8 @@ class productDetailsVC: UIViewController, NVActivityIndicatorViewable {
                         self.genralPrice.text = "\((self.singleItem?.total  ?? 0) * self.qty) \(self.singleItem?.currency ?? "")"
                         self.qtnText.text = "1"
                         self.plusBTN.isHidden = false
+                        self.cololerTF.isEnabled = true
+                        self.cololerTF.text = ""
                         self.showAlert(title: "Cart", message: "Removed From Cart")
                     }
                     self.stopAnimating()

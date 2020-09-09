@@ -25,6 +25,8 @@ class myOrderDitalsVC: UIViewController {
     @IBOutlet weak var orderStatus: UILabel!
     @IBOutlet weak var procutesCollectionView: UICollectionView!
     @IBOutlet weak var hightConst: NSLayoutConstraint!
+    @IBOutlet weak var deleveryType: UILabel!
+    @IBOutlet weak var deleveryPrice: UILabel!
     
     var singelItem: myOrdersData?
     var products = [productsDataArray]()
@@ -36,13 +38,26 @@ class myOrderDitalsVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         setUpNavColore(false, "")
         setUpNav(logo: true,  cart: true)
-        self.hightConst.constant = CGFloat(self.products.count * 208)
+        self.hightConst.constant = CGFloat(self.products.count * 210)
         setUpData()
     }
     
     
     
     func setUpData() {
+        
+        deleveryType.text = "\(NSLocalizedString("Delivery Type:", comment: "profuct list lang"))  \(singelItem?.deliveryType ?? "")"
+        deleveryPrice.text = "\(NSLocalizedString("Delivery Price:", comment: "profuct list lang")) \(singelItem?.deliveryFees ?? 0) \(singelItem?.orderDetails?.first?.currency ?? "")"
+        if singelItem?.deliveryType == "fast"{
+            if MOLHLanguage.currentAppleLanguage() == "ar" {
+                deleveryType.text = "توصيل سريع"
+            }
+        }else {
+           if MOLHLanguage.currentAppleLanguage() == "ar" {
+            deleveryType.text = "توصيل عادي"
+            }
+        }
+        
         self.procutesCollectionView.register(UINib.init(nibName: "allProductViewCell", bundle: nil), forCellWithReuseIdentifier: "cell")
         procutesCollectionView.delegate = self
         procutesCollectionView.dataSource = self
@@ -155,7 +170,7 @@ extension myOrderDitalsVC: UICollectionViewDelegate,UICollectionViewDataSource,U
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize{
         
         
-        return CGSize(width: procutesCollectionView.frame.size.width, height: 198)
+        return CGSize(width: procutesCollectionView.frame.size.width, height: 210)
         
     }
 }

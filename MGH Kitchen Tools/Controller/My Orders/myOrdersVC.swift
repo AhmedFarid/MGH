@@ -12,7 +12,7 @@ import NVActivityIndicatorView
 class myOrdersVC: UIViewController,NVActivityIndicatorViewable {
 
     @IBOutlet weak var myOrdersCollectionVIew: UICollectionView!
-    
+    let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
     var products = [myOrdersData]()
     
     override func viewDidLoad() {
@@ -20,8 +20,13 @@ class myOrdersVC: UIViewController,NVActivityIndicatorViewable {
         
         setUpNavColore(false, "")
         setUpNav(logo: true,  cart: true)
-        handelApiflashSale()
+        
        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        handelApiflashSale()
+        label.text = NSLocalizedString("", comment: "profuct list lang")
     }
     
     @objc func handelApiflashSale() {
@@ -32,9 +37,21 @@ class myOrdersVC: UIViewController,NVActivityIndicatorViewable {
         myOrdersApi.myOrderDetealisApi{ (error,success,products) in
             if let products = products{
                 self.products = products.data ?? []
-                print(products)
-                self.myOrdersCollectionVIew.reloadData()
-                self.stopAnimating()
+                
+                    self.label.font = UIFont.preferredFont(forTextStyle: .title1)
+                    self.label.textColor = .black
+                    self.label.center = CGPoint(x: self.view.frame.width / 2, y: self.view.frame.height / 2)
+                    self.label.textAlignment = .center
+                    if self.products.count == 0 {
+                        self.label.text = NSLocalizedString("No Orders Found", comment: "profuct list lang")
+                        self.view.addSubview(self.label)
+                    }else {
+                        self.label.text = NSLocalizedString("", comment: "profuct list lang")
+                        self.view.addSubview(self.label)
+                    }
+                    print(products)
+                    self.myOrdersCollectionVIew.reloadData()
+                    self.stopAnimating()
             }
         }
     }

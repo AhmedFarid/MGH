@@ -118,7 +118,7 @@ class homeVC: UIViewController,NVActivityIndicatorViewable {
                 self.products = products.data?.data ?? []
                 print(products)
                 self.bestSellingCollectionView.reloadData()
-                self.bestSelingHight.constant = CGFloat(self.products.count * 198)
+                self.bestSelingHight.constant = CGFloat(self.products.count * 210)
                 self.stopAnimating()
             }
             self.stopAnimating()
@@ -208,7 +208,7 @@ class homeVC: UIViewController,NVActivityIndicatorViewable {
     
     func cart(url: String,id: String) {
         loaderHelper()
-        cartApi.cartOption(url: url, product_id: id, qty: "\(1)") { (error, success, message,errorStoke,x) in
+        cartApi.cartOption(url: url, product_id: id, qty: "\(1)", color: "") { (error, success, message,errorStoke,x) in
             if success {
                 if message?.success == true {
                     if url == URLs.addToCart {
@@ -387,7 +387,7 @@ extension homeVC: UICollectionViewDelegate,UICollectionViewDataSource,UICollecti
         }else if collectionView == flashSellCollecetion{
             return CGSize(width: flashSellCollecetion.frame.size.width, height: flashSellCollecetion.frame.size.height - 10)
         }else if collectionView == bestSellingCollectionView{
-            return CGSize(width: bestSellingCollectionView.frame.size.width, height: 198)
+            return CGSize(width: bestSellingCollectionView.frame.size.width, height: 210)
         }else {
             return CGSize(width: categoryCollectionView.frame.size.width / 1.6, height: categoryCollectionView.frame.size.height - 10)
         }

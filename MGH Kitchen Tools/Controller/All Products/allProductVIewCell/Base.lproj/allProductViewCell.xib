@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -14,18 +14,18 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="tNt-SY-505" customClass="allProductViewCell" customModule="MGH_Kitchen_Tools" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="559" height="210"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="tNt-SY-505" customClass="allProductViewCell" customModule="MGH4KT" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="559" height="235"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="559" height="210"/>
+                <rect key="frame" x="0.0" y="0.0" width="559" height="235"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2wa-fN-fl4" customClass="viewCosttom" customModule="MGH_Kitchen_Tools" customModuleProvider="target">
-                        <rect key="frame" x="8" y="8" width="543" height="194"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2wa-fN-fl4" customClass="viewCosttom" customModule="MGH4KT" customModuleProvider="target">
+                        <rect key="frame" x="8" y="8" width="543" height="219"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image 12" translatesAutoresizingMaskIntoConstraints="NO" id="Hmb-Kl-rBo" customClass="imageViewCostom" customModule="MGH_Kitchen_Tools" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="190" height="194"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image 12" translatesAutoresizingMaskIntoConstraints="NO" id="Hmb-Kl-rBo" customClass="imageViewCostom" customModule="MGH4KT" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="190" height="219"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiuscostom">
                                         <real key="value" value="10"/>
@@ -47,7 +47,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="ufk-zs-N9b">
-                                <rect key="frame" x="198" y="77.5" width="99" height="32"/>
+                                <rect key="frame" x="198" y="104" width="99" height="32"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$65.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="enk-Ii-9e6">
                                         <rect key="frame" x="0.0" y="0.0" width="51.5" height="32"/>
@@ -63,15 +63,15 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dy4-Lw-oAp">
-                                <rect key="frame" x="493" y="132" width="42" height="42"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dy4-Lw-oAp">
+                                <rect key="frame" x="493" y="158.5" width="42" height="42"/>
                                 <state key="normal" image="Group 238"/>
                                 <connections>
                                     <action selector="cartBtnAction:" destination="tNt-SY-505" eventType="touchUpInside" id="Sxd-6H-cAO"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rod-uq-Rb4" customClass="CosmosView" customModule="Cosmos">
-                                <rect key="frame" x="198" y="109.5" width="144.5" height="15"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rod-uq-Rb4" customClass="CosmosView" customModule="Cosmos">
+                                <rect key="frame" x="198" y="136" width="144.5" height="15"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="image" keyPath="filledImage" value="star-1"/>
@@ -83,28 +83,37 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="updateOnTouch" value="NO"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ut5-yR-w8d">
-                                <rect key="frame" x="198" y="132" width="42" height="42"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ut5-yR-w8d">
+                                <rect key="frame" x="198" y="158.5" width="42" height="42"/>
                                 <state key="normal" image="fav"/>
                                 <connections>
                                     <action selector="favBtnAction:" destination="tNt-SY-505" eventType="touchUpInside" id="KGP-Ac-ne6"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Out Of Stoke" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IrD-fc-6Q3">
+                                <rect key="frame" x="198" y="77.5" width="337" height="26.5"/>
+                                <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Hmb-Kl-rBo" firstAttribute="top" secondItem="2wa-fN-fl4" secondAttribute="top" id="0IB-ij-qDZ"/>
+                            <constraint firstItem="ufk-zs-N9b" firstAttribute="top" secondItem="IrD-fc-6Q3" secondAttribute="bottom" id="5lq-cR-eJM"/>
                             <constraint firstItem="Ut5-yR-w8d" firstAttribute="leading" secondItem="Hmb-Kl-rBo" secondAttribute="trailing" constant="8" id="6KV-fp-9bP"/>
                             <constraint firstItem="Hmb-Kl-rBo" firstAttribute="width" secondItem="2wa-fN-fl4" secondAttribute="width" multiplier="0.35" id="6OS-ct-ziO"/>
+                            <constraint firstItem="IrD-fc-6Q3" firstAttribute="leading" secondItem="Hmb-Kl-rBo" secondAttribute="trailing" constant="8" id="7jS-EN-lxG"/>
                             <constraint firstItem="Rod-uq-Rb4" firstAttribute="leading" secondItem="Hmb-Kl-rBo" secondAttribute="trailing" constant="8" id="A9o-6P-yeB"/>
                             <constraint firstAttribute="bottom" secondItem="Hmb-Kl-rBo" secondAttribute="bottom" id="AdH-GV-Iq6"/>
                             <constraint firstItem="GnM-0O-q2u" firstAttribute="leading" secondItem="Hmb-Kl-rBo" secondAttribute="trailing" constant="8" id="Aly-2C-j0i"/>
                             <constraint firstAttribute="trailing" secondItem="dy4-Lw-oAp" secondAttribute="trailing" constant="8" id="EKm-ZL-jxc"/>
+                            <constraint firstAttribute="trailing" secondItem="IrD-fc-6Q3" secondAttribute="trailing" constant="8" id="EQl-sR-7So"/>
+                            <constraint firstItem="IrD-fc-6Q3" firstAttribute="top" secondItem="GnM-0O-q2u" secondAttribute="bottom" id="GtA-ge-pNF"/>
                             <constraint firstItem="Dhe-2c-8u0" firstAttribute="top" secondItem="2wa-fN-fl4" secondAttribute="top" constant="8" id="K1G-6H-7ez"/>
                             <constraint firstItem="Ut5-yR-w8d" firstAttribute="top" secondItem="Rod-uq-Rb4" secondAttribute="bottom" constant="7.5" id="MvK-ih-eBV"/>
                             <constraint firstAttribute="trailing" secondItem="GnM-0O-q2u" secondAttribute="trailing" constant="8" id="b7F-1G-zd7"/>
                             <constraint firstItem="Rod-uq-Rb4" firstAttribute="top" secondItem="ufk-zs-N9b" secondAttribute="bottom" id="bzg-gg-qwg"/>
-                            <constraint firstItem="ufk-zs-N9b" firstAttribute="top" secondItem="GnM-0O-q2u" secondAttribute="bottom" id="nrD-Uy-QnG"/>
                             <constraint firstItem="Dhe-2c-8u0" firstAttribute="leading" secondItem="Hmb-Kl-rBo" secondAttribute="trailing" constant="8" id="qmc-VZ-HdR"/>
                             <constraint firstAttribute="trailing" secondItem="Dhe-2c-8u0" secondAttribute="trailing" constant="8" id="tCW-Q5-Def"/>
                             <constraint firstItem="GnM-0O-q2u" firstAttribute="top" secondItem="Dhe-2c-8u0" secondAttribute="bottom" id="tWD-dD-Iyn"/>
@@ -136,18 +145,19 @@
                 <constraint firstItem="2wa-fN-fl4" firstAttribute="top" secondItem="tNt-SY-505" secondAttribute="top" constant="8" id="omS-MX-gYj"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="dpV-bm-glk"/>
-            <size key="customSize" width="559" height="210"/>
+            <size key="customSize" width="559" height="235"/>
             <connections>
                 <outlet property="cartBtn" destination="dy4-Lw-oAp" id="YXf-ZY-b4z"/>
                 <outlet property="discountPrice" destination="aLp-1R-AQy" id="haI-o8-71Z"/>
                 <outlet property="favBtn" destination="Ut5-yR-w8d" id="LOA-pp-nUM"/>
                 <outlet property="nameProduct" destination="Dhe-2c-8u0" id="0be-1e-Dvm"/>
                 <outlet property="newPrice" destination="enk-Ii-9e6" id="5bf-be-NOz"/>
+                <outlet property="outSokeLb" destination="IrD-fc-6Q3" id="gGr-bT-pPF"/>
                 <outlet property="productImage" destination="Hmb-Kl-rBo" id="zai-fX-05F"/>
                 <outlet property="reviews" destination="Rod-uq-Rb4" id="0fc-GT-mFk"/>
                 <outlet property="shortDec" destination="GnM-0O-q2u" id="0VU-aN-F3y"/>
             </connections>
-            <point key="canvasLocation" x="502.17391304347831" y="205.58035714285714"/>
+            <point key="canvasLocation" x="502.17391304347831" y="213.95089285714286"/>
         </collectionViewCell>
     </objects>
     <resources>

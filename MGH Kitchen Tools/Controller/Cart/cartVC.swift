@@ -19,7 +19,7 @@ class cartVC: UIViewController,NVActivityIndicatorViewable {
     var products = [productsDataArray]()
     var toalPrice = 0
     var curancy = ""
-    
+    let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +30,7 @@ class cartVC: UIViewController,NVActivityIndicatorViewable {
         setUpNavColore(false, "")
         setUpNav(logo: true,  cart: true)
         handelApiflashSale()
+        self.label.text = NSLocalizedString("", comment: "profuct list lang")
     }
     
     @objc func handelApiflashSale() {
@@ -48,6 +49,20 @@ class cartVC: UIViewController,NVActivityIndicatorViewable {
                     self.toalPrice = self.toalPrice + (i.productInCartTotal ?? 0)
                     self.curancy = i.currency ?? ""
                 }
+                
+                
+                self.label.font = UIFont.preferredFont(forTextStyle: .title1)
+                self.label.textColor = .black
+                self.label.center = CGPoint(x: self.view.frame.width / 2, y: self.view.frame.height / 2)
+                self.label.textAlignment = .center
+                if self.products.count == 0 {
+                    self.label.text = NSLocalizedString("No Product Found", comment: "profuct list lang")
+                    self.view.addSubview(self.label)
+                }else {
+                    self.label.text = NSLocalizedString("", comment: "profuct list lang")
+                    self.view.addSubview(self.label)
+                }
+                
                 let item = NSLocalizedString("Item", comment: "profuct list lang")
                 let totalCost = NSLocalizedString("Total Cost", comment: "profuct list lang")
                 self.cartPrice.text = "\(self.products.count) \(item) / \(totalCost) \(self.toalPrice) \(self.curancy)"
@@ -76,7 +91,7 @@ class cartVC: UIViewController,NVActivityIndicatorViewable {
     
     func cart(url: String,product_id: Int,qty: Int) {
         loaderHelper()
-        cartApi.cartOption(url: url, product_id: "\(product_id)", qty: "\(qty)") { (error, success, message,errorStoke,x)  in
+        cartApi.cartOption(url: url, product_id: "\(product_id)", qty: "\(qty)", color: "") { (error, success, message,errorStoke,x)  in
             if success == true {
                 if message?.success == true {
                     if url == URLs.addToCart {
@@ -173,7 +188,7 @@ extension cartVC: UICollectionViewDelegate,UICollectionViewDataSource,UICollecti
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize{
         
-        return CGSize(width: cartCollectionView.frame.size.width, height: 178)
+        return CGSize(width: cartCollectionView.frame.size.width, height: 198)
         
     }
     

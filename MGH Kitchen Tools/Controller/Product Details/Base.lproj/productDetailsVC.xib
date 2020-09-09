@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -15,7 +15,7 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="productDetailsVC" customModule="MGH_Kitchen_Tools" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="productDetailsVC" customModule="MGH4KT" customModuleProvider="target">
             <connections>
                 <outlet property="bestSelingHight" destination="TTD-WI-co3" id="Qrm-4a-wdi"/>
                 <outlet property="bestSellingCollectionView" destination="7B9-BE-7sP" id="4Hf-JD-UzN"/>
@@ -23,6 +23,7 @@
                 <outlet property="bigDescText" destination="p4D-on-yge" id="njU-Nu-mGh"/>
                 <outlet property="cartBtn" destination="esE-E7-byN" id="0ta-df-5TS"/>
                 <outlet property="cartLb" destination="Kev-sL-hZf" id="5Xc-wz-qS5"/>
+                <outlet property="cololerTF" destination="cEN-jW-hOR" id="6Rl-MM-ST3"/>
                 <outlet property="discountPrice" destination="L5i-VP-Qxr" id="2Hu-9M-Zgb"/>
                 <outlet property="favBtn" destination="IU6-zQ-dbV" id="54Y-rP-lYj"/>
                 <outlet property="genralPrice" destination="hqo-tD-XGF" id="0KH-FX-6wE"/>
@@ -45,11 +46,11 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dbu-Zi-ZaA">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dbu-Zi-ZaA">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ru9-cq-Ouh">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="1304"/>
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ru9-cq-Ouh">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="1406"/>
                             <subviews>
                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="s85-ra-Yyg">
                                     <rect key="frame" x="0.0" y="44" width="414" height="445"/>
@@ -72,7 +73,7 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MRz-hl-apl" customClass="CosmosView" customModule="Cosmos">
+                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MRz-hl-apl" customClass="CosmosView" customModule="Cosmos">
                                     <rect key="frame" x="100" y="525" width="214" height="20"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <userDefinedRuntimeAttributes>
@@ -82,23 +83,23 @@
                                         <userDefinedRuntimeAttribute type="boolean" keyPath="updateOnTouch" value="NO"/>
                                     </userDefinedRuntimeAttributes>
                                 </view>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Neoflam Korean made" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tbu-4w-6wo">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Neoflam Korean made" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tbu-4w-6wo">
                                     <rect key="frame" x="8" y="547" width="398" height="26.5"/>
                                     <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="14"/>
                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fHQ-HC-gNl">
+                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fHQ-HC-gNl">
                                     <rect key="frame" x="8" y="618.5" width="398" height="1"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="vsA-zO-J2o"/>
                                     </constraints>
                                 </view>
-                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pbc-hF-OkC">
+                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pbc-hF-OkC">
                                     <rect key="frame" x="64" y="589.5" width="286" height="30"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SFY-iX-KrB" customClass="buttonView" customModule="MGH_Kitchen_Tools" customModuleProvider="target">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SFY-iX-KrB" customClass="buttonView" customModule="MGH4KT" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="139" height="30"/>
                                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
@@ -114,7 +115,7 @@
                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="cornerCostomTopLeftTopRight" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GWW-4c-vEP" customClass="buttonView" customModule="MGH_Kitchen_Tools" customModuleProvider="target">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GWW-4c-vEP" customClass="buttonView" customModule="MGH4KT" customModuleProvider="target">
                                             <rect key="frame" x="147" y="0.0" width="139" height="30"/>
                                             <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="14"/>
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -131,20 +132,20 @@
                                         </button>
                                     </subviews>
                                 </stackView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Neoflam Korean made" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p4D-on-yge">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Neoflam Korean made" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p4D-on-yge">
                                     <rect key="frame" x="8" y="627.5" width="398" height="26.5"/>
                                     <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="14"/>
                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dGR-mw-hfz">
+                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dGR-mw-hfz">
                                     <rect key="frame" x="8" y="662" width="398" height="1"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="6Ie-1e-i8I"/>
                                     </constraints>
                                 </view>
-                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="LGw-s0-ht7">
+                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="LGw-s0-ht7">
                                     <rect key="frame" x="8" y="677.5" width="155.5" height="30"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prices:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0qg-y9-m4C">
@@ -167,20 +168,20 @@
                                         </label>
                                     </subviews>
                                 </stackView>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IU6-zQ-dbV">
+                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IU6-zQ-dbV">
                                     <rect key="frame" x="363" y="671" width="43" height="43"/>
                                     <state key="normal" image="Group 377-1"/>
                                     <connections>
                                         <action selector="addToFavouritsBTN:" destination="-1" eventType="touchUpInside" id="fFo-xq-KMc"/>
                                     </connections>
                                 </button>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantity" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oF4-DL-p8W">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Quantity" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oF4-DL-p8W">
                                     <rect key="frame" x="8" y="731" width="398" height="30"/>
                                     <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="16"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pyn-rs-q4d" customClass="viewCosttom" customModule="MGH_Kitchen_Tools" customModuleProvider="target">
+                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pyn-rs-q4d" customClass="viewCosttom" customModule="MGH4KT" customModuleProvider="target">
                                     <rect key="frame" x="8" y="769" width="398" height="50"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pw0-4r-H3V">
@@ -236,14 +237,14 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cart" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kev-sL-hZf">
-                                    <rect key="frame" x="8" y="835" width="398" height="30"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Cart" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kev-sL-hZf">
+                                    <rect key="frame" x="8" y="937" width="398" height="30"/>
                                     <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="16"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9YK-Hu-VcS" customClass="buttonView" customModule="MGH_Kitchen_Tools" customModuleProvider="target">
-                                    <rect key="frame" x="8" y="881" width="398" height="45"/>
+                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9YK-Hu-VcS" customClass="buttonView" customModule="MGH4KT" customModuleProvider="target">
+                                    <rect key="frame" x="8" y="983" width="398" height="45"/>
                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="45" id="3Vb-mE-Aw8"/>
@@ -260,28 +261,28 @@
                                         <action selector="addToCartAction:" destination="-1" eventType="touchUpInside" id="tIo-ZW-eYK"/>
                                     </connections>
                                 </button>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ycA-K0-tlZ">
+                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ycA-K0-tlZ">
                                     <rect key="frame" x="8" y="722" width="398" height="1"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="V4J-Lr-1f9"/>
                                     </constraints>
                                 </view>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="esE-E7-byN">
+                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="esE-E7-byN">
                                     <rect key="frame" x="313" y="671.5" width="42" height="42"/>
                                     <state key="normal" image="Group 238"/>
                                     <connections>
                                         <action selector="smallAddCartAction:" destination="-1" eventType="touchUpInside" id="R4r-cc-sF4"/>
                                     </connections>
                                 </button>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Similar Products" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X3A-Ub-fL0">
-                                    <rect key="frame" x="8" y="934" width="398" height="30"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Similar Products" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X3A-Ub-fL0">
+                                    <rect key="frame" x="8" y="1036" width="398" height="30"/>
                                     <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="16"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="7B9-BE-7sP">
-                                    <rect key="frame" x="0.0" y="964" width="414" height="340"/>
+                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="7B9-BE-7sP">
+                                    <rect key="frame" x="0.0" y="1066" width="414" height="340"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="340" id="TTD-WI-co3"/>
@@ -293,16 +294,53 @@
                                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     </collectionViewFlowLayout>
                                 </collectionView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5pF-fC-Fof">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5pF-fC-Fof">
                                     <rect key="frame" x="8" y="573.5" width="398" height="0.0"/>
                                     <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="14"/>
                                     <color key="textColor" red="0.97647058819999999" green="0.50980392159999999" blue="0.062745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Color" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vkf-EB-obY">
+                                    <rect key="frame" x="8" y="827" width="398" height="30"/>
+                                    <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="16"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Choose Colors OF Your Products" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cEN-jW-hOR" customClass="textFieldView" customModule="MGH4KT" customModuleProvider="target">
+                                    <rect key="frame" x="8" y="865" width="398" height="56"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="56" id="QfT-0P-aDX"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiuscostom">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                            <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.27429027290000002" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                            <real key="value" value="0.5"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                            <size key="value" width="0.0" height="3"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="leftPaddingPointss">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rightPaddingPointss">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
                             </subviews>
                             <color key="backgroundColor" red="0.91372549020000005" green="0.92156862750000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
+                                <constraint firstItem="cEN-jW-hOR" firstAttribute="top" secondItem="vkf-EB-obY" secondAttribute="bottom" constant="8" id="0za-JT-kXk"/>
                                 <constraint firstItem="pyn-rs-q4d" firstAttribute="top" secondItem="oF4-DL-p8W" secondAttribute="bottom" constant="8" id="1tD-dq-kBY"/>
+                                <constraint firstItem="cEN-jW-hOR" firstAttribute="leading" secondItem="ru9-cq-Ouh" secondAttribute="leading" constant="8" id="2I5-dQ-1Rp"/>
                                 <constraint firstItem="7B9-BE-7sP" firstAttribute="top" secondItem="X3A-Ub-fL0" secondAttribute="bottom" id="2qy-Qz-RiN"/>
                                 <constraint firstAttribute="trailing" secondItem="pbc-hF-OkC" secondAttribute="trailing" constant="64" id="3Qe-Vl-qHO"/>
                                 <constraint firstItem="fHQ-HC-gNl" firstAttribute="leading" secondItem="ru9-cq-Ouh" secondAttribute="leading" constant="8" id="46U-ar-7sc"/>
@@ -318,7 +356,9 @@
                                 <constraint firstItem="p4D-on-yge" firstAttribute="leading" secondItem="ru9-cq-Ouh" secondAttribute="leading" constant="8" id="GMh-i6-WFd"/>
                                 <constraint firstItem="oF4-DL-p8W" firstAttribute="leading" secondItem="ru9-cq-Ouh" secondAttribute="leading" constant="8" id="GPB-Mn-iUJ"/>
                                 <constraint firstItem="3d3-dB-hWs" firstAttribute="top" secondItem="s85-ra-Yyg" secondAttribute="bottom" constant="2" id="KQr-Ct-zlT"/>
+                                <constraint firstItem="vkf-EB-obY" firstAttribute="leading" secondItem="ru9-cq-Ouh" secondAttribute="leading" constant="8" id="LNc-18-QxJ"/>
                                 <constraint firstItem="IU6-zQ-dbV" firstAttribute="top" secondItem="dGR-mw-hfz" secondAttribute="bottom" constant="8" id="LPf-PR-rVo"/>
+                                <constraint firstAttribute="trailing" secondItem="cEN-jW-hOR" secondAttribute="trailing" constant="8" id="MEj-aN-cY0"/>
                                 <constraint firstItem="ycA-K0-tlZ" firstAttribute="leading" secondItem="ru9-cq-Ouh" secondAttribute="leading" constant="8" id="NuE-4T-IpR"/>
                                 <constraint firstAttribute="trailing" secondItem="5pF-fC-Fof" secondAttribute="trailing" constant="8" id="OLK-p3-hdv"/>
                                 <constraint firstItem="X3A-Ub-fL0" firstAttribute="leading" secondItem="ru9-cq-Ouh" secondAttribute="leading" constant="8" id="Pde-sx-jKT"/>
@@ -333,6 +373,7 @@
                                 <constraint firstItem="3d3-dB-hWs" firstAttribute="leading" secondItem="ru9-cq-Ouh" secondAttribute="leading" constant="8" id="ZVo-2G-zPt"/>
                                 <constraint firstItem="9YK-Hu-VcS" firstAttribute="leading" secondItem="ru9-cq-Ouh" secondAttribute="leading" constant="8" id="ZzY-4S-hxc"/>
                                 <constraint firstAttribute="trailing" secondItem="7B9-BE-7sP" secondAttribute="trailing" id="aI3-JT-XNF"/>
+                                <constraint firstItem="vkf-EB-obY" firstAttribute="top" secondItem="pyn-rs-q4d" secondAttribute="bottom" constant="8" id="aWD-jy-hkJ"/>
                                 <constraint firstAttribute="trailing" secondItem="X3A-Ub-fL0" secondAttribute="trailing" constant="8" id="ajf-J1-AeC"/>
                                 <constraint firstItem="LGw-s0-ht7" firstAttribute="leading" secondItem="ru9-cq-Ouh" secondAttribute="leading" constant="8" id="dXx-gO-MaM"/>
                                 <constraint firstItem="pbc-hF-OkC" firstAttribute="leading" secondItem="ru9-cq-Ouh" secondAttribute="leading" constant="64" id="e0W-oy-efk"/>
@@ -340,9 +381,10 @@
                                 <constraint firstItem="FR0-F5-Vor" firstAttribute="centerX" secondItem="s85-ra-Yyg" secondAttribute="centerX" id="iZi-IF-8bf"/>
                                 <constraint firstItem="5pF-fC-Fof" firstAttribute="leading" secondItem="ru9-cq-Ouh" secondAttribute="leading" constant="8" id="ijB-nO-KUS"/>
                                 <constraint firstItem="9YK-Hu-VcS" firstAttribute="top" secondItem="Kev-sL-hZf" secondAttribute="bottom" constant="16" id="kwD-hf-SVk"/>
-                                <constraint firstItem="Kev-sL-hZf" firstAttribute="top" secondItem="pyn-rs-q4d" secondAttribute="bottom" constant="16" id="lIV-tF-i4S"/>
                                 <constraint firstAttribute="trailing" secondItem="oF4-DL-p8W" secondAttribute="trailing" constant="8" id="mXq-ib-wny"/>
+                                <constraint firstItem="Kev-sL-hZf" firstAttribute="top" secondItem="cEN-jW-hOR" secondAttribute="bottom" constant="16" id="mfE-am-cpV"/>
                                 <constraint firstItem="oF4-DL-p8W" firstAttribute="top" secondItem="ycA-K0-tlZ" secondAttribute="bottom" constant="8" id="osh-v1-Wb7"/>
+                                <constraint firstAttribute="trailing" secondItem="vkf-EB-obY" secondAttribute="trailing" constant="8" id="qtJ-Jf-q0G"/>
                                 <constraint firstAttribute="trailing" secondItem="9YK-Hu-VcS" secondAttribute="trailing" constant="8" id="ryR-Iy-waM"/>
                                 <constraint firstItem="X3A-Ub-fL0" firstAttribute="top" secondItem="9YK-Hu-VcS" secondAttribute="bottom" constant="8" id="sZA-ZT-kYu"/>
                                 <constraint firstItem="5pF-fC-Fof" firstAttribute="top" secondItem="Tbu-4w-6wo" secondAttribute="bottom" id="tQV-Z9-cB1"/>

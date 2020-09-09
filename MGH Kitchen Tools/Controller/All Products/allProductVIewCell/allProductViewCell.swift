@@ -11,14 +11,15 @@ import Cosmos
 
 class allProductViewCell: UICollectionViewCell {
 
-   @IBOutlet weak var reviews: CosmosView!
-        @IBOutlet weak var newPrice: UILabel!
-        @IBOutlet weak var productImage: imageViewCostom!
-        @IBOutlet weak var discountPrice: UILabel!
-        @IBOutlet weak var cartBtn: UIButton!
-        @IBOutlet weak var favBtn: UIButton!
-        @IBOutlet weak var nameProduct: UILabel!
-        @IBOutlet weak var shortDec: UILabel!
+    @IBOutlet weak var reviews: CosmosView!
+    @IBOutlet weak var newPrice: UILabel!
+    @IBOutlet weak var productImage: imageViewCostom!
+    @IBOutlet weak var discountPrice: UILabel!
+    @IBOutlet weak var cartBtn: UIButton!
+    @IBOutlet weak var favBtn: UIButton!
+    @IBOutlet weak var nameProduct: UILabel!
+    @IBOutlet weak var shortDec: UILabel!
+    @IBOutlet weak var outSokeLb: UILabel!
     
         var addFav: (()->())?
     var addCart: (()->())?
@@ -28,6 +29,15 @@ class allProductViewCell: UICollectionViewCell {
         }
         
         func configureCell(products: productsDataArray){
+            
+            if products.stock ?? 0 <= 0 {
+                outSokeLb.text = NSLocalizedString("Out Of Stock", comment: "profuct list lang")
+                outSokeLb.textColor = #colorLiteral(red: 0.8509803922, green: 0.1176470588, blue: 0.1490196078, alpha: 1)
+                cartBtn.isHidden = true
+            }else {
+                outSokeLb.text = ""
+                cartBtn.isHidden = false
+            }
             nameProduct.text = products.name
             shortDec.text = products.shortDescription
             reviews.rating = Double(products.totalRate ?? 0)
@@ -45,7 +55,11 @@ class allProductViewCell: UICollectionViewCell {
                 cartBtn.isHidden = true
                 favBtn.isHidden = true
             }else {
-                cartBtn.isHidden = false
+                if products.stock ?? 0 <= 0 {
+                    cartBtn.isHidden = true
+                }else {
+                    cartBtn.isHidden = false
+                }
                 favBtn.isHidden = false
                 if products.productInCart == 1 {
                     cartBtn.setImage(UIImage(named: "cart"), for: .normal)

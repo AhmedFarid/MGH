@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="loginVC" customModule="MGH_Kitchen_Tools" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="loginVC" customModule="MGH4KT" customModuleProvider="target">
             <connections>
                 <outlet property="email" destination="Vag-my-tOw" id="52W-7f-Khf"/>
                 <outlet property="password" destination="TTC-Vc-aTn" id="gny-Ap-H3K"/>
@@ -27,10 +27,10 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UTg-Ti-Qhg">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="794.5"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MGH Logo copy" translatesAutoresizingMaskIntoConstraints="NO" id="tC2-cS-JML">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logonav" translatesAutoresizingMaskIntoConstraints="NO" id="tC2-cS-JML">
                                     <rect key="frame" x="87" y="84" width="240" height="131"/>
                                 </imageView>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vag-my-tOw" customClass="textFieldView" customModule="MGH_Kitchen_Tools" customModuleProvider="target">
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vag-my-tOw" customClass="textFieldView" customModule="MGH4KT" customModuleProvider="target">
                                     <rect key="frame" x="16" y="315.5" width="382" height="56"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
@@ -65,7 +65,7 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TTC-Vc-aTn" customClass="textFieldView" customModule="MGH_Kitchen_Tools" customModuleProvider="target">
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TTC-Vc-aTn" customClass="textFieldView" customModule="MGH4KT" customModuleProvider="target">
                                     <rect key="frame" x="16" y="424" width="382" height="56"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
@@ -109,7 +109,7 @@
                                         <action selector="forgetPasswordBTNAction:" destination="-1" eventType="touchUpInside" id="1Kp-EI-XvB"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oi2-MX-BFP" customClass="buttonView" customModule="MGH_Kitchen_Tools" customModuleProvider="target">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oi2-MX-BFP" customClass="buttonView" customModule="MGH4KT" customModuleProvider="target">
                                     <rect key="frame" x="63" y="558" width="288" height="52"/>
                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
@@ -257,6 +257,6 @@
         <image name="Group 269" width="54" height="54"/>
         <image name="Group 270" width="54" height="54"/>
         <image name="Group 375" width="54" height="54"/>
-        <image name="MGH Logo copy" width="314" height="131"/>
+        <image name="logonav" width="1043" height="423"/>
     </resources>
 </document>

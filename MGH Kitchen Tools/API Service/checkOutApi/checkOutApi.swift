@@ -11,7 +11,7 @@ import Alamofire
 
 class checkOutApi: NSObject {
     
-    class func makeOrderApi(delivery_type:String,city_id: String,gift_id: String,code:String,customer_name: String,customer_phone: String,customer_city: String,customer_region: String,customer_street: String,customer_home_number: String,customer_floor_number: String,customer_address: String,payment_method: String,completion: @escaping(_ error: Error?,_ success: Bool,_ fav: Messages?)-> Void){
+    class func makeOrderApi(delivery_type:String,city_id: String,gift_id: String,code:String,customer_name: String,customer_phone: String,customer_city: String,customer_region: String,customer_street: String,customer_home_number: String,customer_floor_number: String,customer_address: String,payment_method: String,completion: @escaping(_ error: Error?,_ success: Bool,_ fav: orderMessage?)-> Void){
         
         guard let user_token = helperAuth.getAPIToken() else {
             completion(nil, false,nil)
@@ -54,7 +54,7 @@ class checkOutApi: NSObject {
             case .success:
                 do{
                     print(response)
-                    let addFov = try JSONDecoder().decode(Messages.self, from: response.data!)
+                    let addFov = try JSONDecoder().decode(orderMessage.self, from: response.data!)
                     if addFov.success == true {
                         completion(nil,true,addFov)
                     }else {

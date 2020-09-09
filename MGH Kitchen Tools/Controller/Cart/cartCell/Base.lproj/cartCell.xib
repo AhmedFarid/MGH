@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -14,18 +14,18 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="nti-2y-spR" customClass="cartCollectionCell" customModule="MGH_Kitchen_Tools" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="559" height="178"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="nti-2y-spR" customClass="cartCollectionCell" customModule="MGH4KT" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="559" height="194"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="559" height="178"/>
+                <rect key="frame" x="0.0" y="0.0" width="559" height="194"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ed7-nE-CNp" customClass="viewCosttom" customModule="MGH_Kitchen_Tools" customModuleProvider="target">
-                        <rect key="frame" x="8" y="8" width="543" height="162"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ed7-nE-CNp" customClass="viewCosttom" customModule="MGH4KT" customModuleProvider="target">
+                        <rect key="frame" x="8" y="8" width="543" height="178"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image 12" translatesAutoresizingMaskIntoConstraints="NO" id="89z-Us-52y" customClass="imageViewCostom" customModule="MGH_Kitchen_Tools" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="190" height="162"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image 12" translatesAutoresizingMaskIntoConstraints="NO" id="89z-Us-52y" customClass="imageViewCostom" customModule="MGH4KT" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="190" height="178"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiuscostom">
                                         <real key="value" value="10"/>
@@ -58,7 +58,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="YW3-ip-OeR">
-                                <rect key="frame" x="414.5" y="124" width="120.5" height="30"/>
+                                <rect key="frame" x="414.5" y="140" width="120.5" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wcJ-Oy-Xow">
                                         <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -91,7 +91,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="lDI-Rl-OMi">
-                                <rect key="frame" x="198" y="81.5" width="42.5" height="53"/>
+                                <rect key="frame" x="198" y="102.5" width="42.5" height="53"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$65.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kqV-8i-W7y">
                                         <rect key="frame" x="0.0" y="0.0" width="42.5" height="26.5"/>
@@ -107,15 +107,24 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="color" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="4" translatesAutoresizingMaskIntoConstraints="NO" id="Euc-cd-GIj">
+                                <rect key="frame" x="198" y="81.5" width="337" height="21"/>
+                                <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Bye-BV-54F" firstAttribute="leading" secondItem="690-PZ-oQf" secondAttribute="trailing" constant="8" id="0CG-hr-7JZ"/>
                             <constraint firstItem="89z-Us-52y" firstAttribute="leading" secondItem="Ed7-nE-CNp" secondAttribute="leading" id="3GH-hZ-Ax9"/>
+                            <constraint firstItem="lDI-Rl-OMi" firstAttribute="top" secondItem="Euc-cd-GIj" secondAttribute="bottom" id="3mL-Bw-oX0"/>
+                            <constraint firstAttribute="trailing" secondItem="Euc-cd-GIj" secondAttribute="trailing" constant="8" id="952-O4-Twg"/>
                             <constraint firstItem="gae-Rg-0qv" firstAttribute="leading" secondItem="89z-Us-52y" secondAttribute="trailing" constant="8" id="BBW-jh-gbl"/>
                             <constraint firstAttribute="trailing" secondItem="YW3-ip-OeR" secondAttribute="trailing" constant="8" id="Bcv-PP-F8l"/>
                             <constraint firstItem="89z-Us-52y" firstAttribute="width" secondItem="Ed7-nE-CNp" secondAttribute="width" multiplier="0.35" id="CVJ-Pt-8OD"/>
                             <constraint firstAttribute="bottom" secondItem="YW3-ip-OeR" secondAttribute="bottom" constant="8" id="Cob-n4-D0h"/>
+                            <constraint firstItem="Euc-cd-GIj" firstAttribute="top" secondItem="gae-Rg-0qv" secondAttribute="bottom" id="QeC-Y2-Szr"/>
                             <constraint firstItem="690-PZ-oQf" firstAttribute="top" secondItem="Ed7-nE-CNp" secondAttribute="top" constant="8" id="WzY-Mk-Wk4"/>
                             <constraint firstAttribute="trailing" secondItem="Bye-BV-54F" secondAttribute="trailing" constant="8" id="YQg-K5-ul5"/>
                             <constraint firstItem="Bye-BV-54F" firstAttribute="top" secondItem="Ed7-nE-CNp" secondAttribute="top" constant="8" id="YZG-79-FUb"/>
@@ -123,10 +132,10 @@
                             <constraint firstAttribute="trailing" secondItem="gae-Rg-0qv" secondAttribute="trailing" constant="8" id="iJ0-b0-M64"/>
                             <constraint firstAttribute="bottom" secondItem="89z-Us-52y" secondAttribute="bottom" id="iNW-NX-pH5"/>
                             <constraint firstItem="690-PZ-oQf" firstAttribute="leading" secondItem="89z-Us-52y" secondAttribute="trailing" constant="8" id="iq2-HZ-X82"/>
-                            <constraint firstItem="lDI-Rl-OMi" firstAttribute="top" secondItem="gae-Rg-0qv" secondAttribute="bottom" id="jhC-Gt-NBh"/>
                             <constraint firstItem="lDI-Rl-OMi" firstAttribute="leading" secondItem="89z-Us-52y" secondAttribute="trailing" constant="8" id="lLO-zh-CyG"/>
                             <constraint firstItem="690-PZ-oQf" firstAttribute="leading" secondItem="89z-Us-52y" secondAttribute="trailing" constant="8" id="qyc-eI-pWN"/>
                             <constraint firstItem="89z-Us-52y" firstAttribute="top" secondItem="Ed7-nE-CNp" secondAttribute="top" id="trj-oC-d0W"/>
+                            <constraint firstItem="Euc-cd-GIj" firstAttribute="leading" secondItem="89z-Us-52y" secondAttribute="trailing" constant="8" id="udT-i1-93i"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
@@ -152,8 +161,9 @@
                 <constraint firstItem="Ed7-nE-CNp" firstAttribute="top" secondItem="nti-2y-spR" secondAttribute="top" constant="8" id="f3r-D3-qJr"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Kaj-mP-Vep"/>
-            <size key="customSize" width="559" height="174"/>
+            <size key="customSize" width="559" height="190"/>
             <connections>
+                <outlet property="coloerLB" destination="Euc-cd-GIj" id="zec-G9-Xce"/>
                 <outlet property="mainBtn" destination="euq-lP-eec" id="77y-yH-0Zk"/>
                 <outlet property="nameProduct" destination="690-PZ-oQf" id="fJG-2U-tdx"/>
                 <outlet property="newPrice" destination="kqV-8i-W7y" id="64e-ep-sRC"/>
@@ -162,7 +172,7 @@
                 <outlet property="shortDec" destination="gae-Rg-0qv" id="Z27-7o-Q1l"/>
                 <outlet property="totelCartPrice" destination="oca-CY-PWa" id="k2f-xd-OaK"/>
             </connections>
-            <point key="canvasLocation" x="502.17391304347831" y="193.52678571428569"/>
+            <point key="canvasLocation" x="502.17391304347831" y="198.88392857142856"/>
         </collectionViewCell>
     </objects>
     <resources>

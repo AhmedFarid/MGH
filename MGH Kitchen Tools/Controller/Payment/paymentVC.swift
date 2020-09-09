@@ -17,6 +17,22 @@ class paymentVC: UIViewController,WKNavigationDelegate, WKUIDelegate  {
     
     @IBOutlet weak var paymentWeb: WKWebView!
     
+    var address = ""
+    var type = ""
+    var floorNumber = ""
+    var homeNumber = ""
+    var street = ""
+    var region = ""
+    var cityId = ""
+    var phone = ""
+    var fullName = ""
+    var promoCode = ""
+    var giftId = ""
+    var delivery_type = ""
+    var cityName = ""
+    var payemtType = ""
+    var deliveryTypes = ""
+    
     var delegate: paymentSceecss?
     var currentURL = String()
     
@@ -54,7 +70,13 @@ class paymentVC: UIViewController,WKNavigationDelegate, WKUIDelegate  {
     }
     
     func getPaymentUrl() {
-        paymentApi.getPaymentApi { (error, success, payment) in
+        if delivery_type == "Fast Price" {
+            type = "fast"
+        }else {
+            type = "slow"
+        }
+
+        paymentApi.getPaymentApi(delivery_type: type,city_id: cityId,gift_id:giftId, code: promoCode, customer_name: fullName, customer_phone: phone, customer_city: cityName, customer_region: region, customer_street: street, customer_home_number: homeNumber, customer_floor_number: floorNumber, customer_address: address, payment_method: "payOnline") { (error, success, payment) in
             if success {
                 if payment?.success == true {
                     print(payment?.data?.link ?? "")

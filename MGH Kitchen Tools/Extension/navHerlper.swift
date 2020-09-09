@@ -16,7 +16,7 @@ extension UIViewController {
         case true:
             let nvImageTitle = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
             nvImageTitle.contentMode = .scaleAspectFit
-            let imageName = UIImage(named: "logonav-2")
+            let imageName = UIImage(named: "logonavnew")
             nvImageTitle.image = imageName
             navigationItem.titleView = nvImageTitle
         default:
@@ -72,7 +72,7 @@ extension AppDelegate {
     func hideBackButton() {
         let BarButtonItemAppearance = UIBarButtonItem.appearance()
         BarButtonItemAppearance.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.clear], for: .normal)
-        BarButtonItemAppearance.setBackButtonTitlePositionAdjustment(UIOffset(horizontal: -200, vertical: -5), for:UIBarMetrics.default)
+        BarButtonItemAppearance.setBackButtonTitlePositionAdjustment(UIOffset(horizontal: -200, vertical: 0), for:UIBarMetrics.default)
     }
     
 }
@@ -92,3 +92,4 @@ extension UITextField {
         }
     }
 }
+

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -15,8 +15,9 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="promoFirndVC" customModule="MGH_Kitchen_Tools" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="promoFirndVC" customModule="MGH4KT" customModuleProvider="target">
             <connections>
+                <outlet property="promoAV" destination="24w-gR-9GO" id="jAB-UP-YYo"/>
                 <outlet property="promoCodeText" destination="48N-08-1eg" id="Dyz-Rz-Z3b"/>
                 <outlet property="promoText" destination="1L5-f2-nge" id="yKB-YK-L3B"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -31,19 +32,19 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ck5-Fz-4dy">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="499"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="559"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MGH Logo copy" translatesAutoresizingMaskIntoConstraints="NO" id="92R-ml-cEi">
-                                    <rect key="frame" x="87" y="100" width="240" height="131"/>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logonav" translatesAutoresizingMaskIntoConstraints="NO" id="92R-ml-cEi">
+                                    <rect key="frame" x="87" y="100" width="240" height="231"/>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Promo code " textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1L5-f2-nge">
-                                    <rect key="frame" x="16" y="295" width="382" height="32"/>
+                                    <rect key="frame" x="16" y="363" width="382" height="32"/>
                                     <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
-                                    <nil key="textColor"/>
+                                    <color key="textColor" red="0.1333333333" green="0.80000000000000004" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PAY-pX-7a8" customClass="buttonView" customModule="MGH_Kitchen_Tools" customModuleProvider="target">
-                                    <rect key="frame" x="64" y="417" width="286" height="50"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PAY-pX-7a8" customClass="buttonView" customModule="MGH4KT" customModuleProvider="target">
+                                    <rect key="frame" x="64" y="477" width="286" height="50"/>
                                     <color key="backgroundColor" red="0.98431372549999996" green="0.56470588239999997" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="50" id="i8G-B6-eeQ"/>
@@ -60,8 +61,8 @@
                                         <action selector="shareBtn:" destination="-1" eventType="touchUpInside" id="4AX-Ce-tOS"/>
                                     </connections>
                                 </button>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fqw-1x-Ria" customClass="viewCosttom" customModule="MGH_Kitchen_Tools" customModuleProvider="target">
-                                    <rect key="frame" x="16" y="335" width="382" height="50"/>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fqw-1x-Ria" customClass="viewCosttom" customModule="MGH4KT" customModuleProvider="target">
+                                    <rect key="frame" x="16" y="403" width="382" height="50"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Promo code " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="48N-08-1eg">
                                             <rect key="frame" x="8" y="9" width="308" height="32"/>
@@ -104,19 +105,28 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="24w-gR-9GO">
+                                    <rect key="frame" x="8" y="461" width="398" height="0.0"/>
+                                    <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                             </subviews>
                             <color key="backgroundColor" red="0.91372549020000005" green="0.92156862750000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstItem="1L5-f2-nge" firstAttribute="leading" secondItem="Ck5-Fz-4dy" secondAttribute="leading" constant="16" id="2Lb-mQ-KFO"/>
                                 <constraint firstAttribute="trailing" secondItem="PAY-pX-7a8" secondAttribute="trailing" constant="64" id="3Wg-f7-dbs"/>
                                 <constraint firstItem="PAY-pX-7a8" firstAttribute="leading" secondItem="Ck5-Fz-4dy" secondAttribute="leading" constant="64" id="3ak-3h-QyD"/>
-                                <constraint firstItem="1L5-f2-nge" firstAttribute="top" secondItem="92R-ml-cEi" secondAttribute="bottom" constant="64" id="HSY-ga-IGC"/>
+                                <constraint firstAttribute="trailing" secondItem="24w-gR-9GO" secondAttribute="trailing" constant="8" id="M8q-yN-AkD"/>
+                                <constraint firstItem="PAY-pX-7a8" firstAttribute="top" secondItem="24w-gR-9GO" secondAttribute="bottom" constant="16" id="OhA-HG-6nb"/>
                                 <constraint firstItem="92R-ml-cEi" firstAttribute="centerX" secondItem="Ck5-Fz-4dy" secondAttribute="centerX" id="QSe-zQ-Qcb"/>
                                 <constraint firstAttribute="trailing" secondItem="1L5-f2-nge" secondAttribute="trailing" constant="16" id="Rqd-X2-Ibh"/>
+                                <constraint firstItem="24w-gR-9GO" firstAttribute="leading" secondItem="Ck5-Fz-4dy" secondAttribute="leading" constant="8" id="TDL-Ua-dch"/>
                                 <constraint firstItem="92R-ml-cEi" firstAttribute="top" secondItem="Ck5-Fz-4dy" secondAttribute="top" constant="100" id="YCa-Uk-5j2"/>
-                                <constraint firstItem="PAY-pX-7a8" firstAttribute="top" secondItem="fqw-1x-Ria" secondAttribute="bottom" constant="32" id="bPC-mt-AFo"/>
                                 <constraint firstItem="fqw-1x-Ria" firstAttribute="leading" secondItem="Ck5-Fz-4dy" secondAttribute="leading" constant="16" id="e4u-Nt-eoz"/>
                                 <constraint firstAttribute="bottom" secondItem="PAY-pX-7a8" secondAttribute="bottom" constant="32" id="gJG-X4-q5M"/>
+                                <constraint firstItem="1L5-f2-nge" firstAttribute="top" secondItem="92R-ml-cEi" secondAttribute="bottom" constant="32" id="o7A-e0-ZDX"/>
+                                <constraint firstItem="24w-gR-9GO" firstAttribute="top" secondItem="fqw-1x-Ria" secondAttribute="bottom" constant="8" id="qQF-Bb-qaD"/>
                                 <constraint firstAttribute="trailing" secondItem="fqw-1x-Ria" secondAttribute="trailing" constant="16" id="wwH-Na-Dbe"/>
                                 <constraint firstItem="fqw-1x-Ria" firstAttribute="top" secondItem="1L5-f2-nge" secondAttribute="bottom" constant="8" id="x8V-no-7c8"/>
                             </constraints>
@@ -137,6 +147,7 @@
             <constraints>
                 <constraint firstItem="VaC-VA-TPb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="08t-Wk-Hxt"/>
                 <constraint firstItem="VaC-VA-TPb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="0gF-6W-jPe"/>
+                <constraint firstItem="92R-ml-cEi" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.257812" id="OJb-Ny-HKA"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="VaC-VA-TPb" secondAttribute="trailing" id="ncO-5v-Aur"/>
                 <constraint firstItem="92R-ml-cEi" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.57971" id="o7q-Xj-1aa"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="VaC-VA-TPb" secondAttribute="bottom" id="wpU-ha-qLR"/>
@@ -146,6 +157,6 @@
         </view>
     </objects>
     <resources>
-        <image name="MGH Logo copy" width="314" height="131"/>
+        <image name="logonav" width="1043" height="423"/>
     </resources>
 </document>

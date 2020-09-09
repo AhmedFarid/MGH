@@ -46,8 +46,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate,MOLHResetable  {
             UINavigationController(rootViewController: $0)
             
         }
-        tabBarController.tabBar.tintColor = #colorLiteral(red: 0, green: 0, blue: 0.5019607843, alpha: 1)
-        tabBarController.tabBar.barTintColor = #colorLiteral(red: 0.9137254902, green: 0.9215686275, blue: 0.9333333333, alpha: 1)
+        tabBarController.tabBar.tintColor = #colorLiteral(red: 0.9882352941, green: 0.568627451, blue: 0.2274509804, alpha: 1)
+        tabBarController.tabBar.barTintColor = #colorLiteral(red: 0.4784313725, green: 0.8039215686, blue: 0.8392156863, alpha: 1)
+        tabBarController.tabBar.unselectedItemTintColor = #colorLiteral(red: 0.9844431281, green: 0.9844661355, blue: 0.9844536185, alpha: 1)
         tabBarController.viewControllers = controllers
         
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Cairo-Regular", size: 10)!], for: .normal)
@@ -82,8 +83,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate,MOLHResetable  {
             UINavigationController(rootViewController: $0)
             
         }
-        tabBarController.tabBar.tintColor = #colorLiteral(red: 0, green: 0, blue: 0.5019607843, alpha: 1)
-        tabBarController.tabBar.barTintColor = #colorLiteral(red: 0.9137254902, green: 0.9215686275, blue: 0.9333333333, alpha: 1)
+        tabBarController.tabBar.tintColor = #colorLiteral(red: 0.9882352941, green: 0.568627451, blue: 0.2274509804, alpha: 1)
+        tabBarController.tabBar.barTintColor = #colorLiteral(red: 0.4784313725, green: 0.8039215686, blue: 0.8392156863, alpha: 1)
+        tabBarController.tabBar.unselectedItemTintColor = #colorLiteral(red: 0.9844431281, green: 0.9844661355, blue: 0.9844536185, alpha: 1)
         tabBarController.viewControllers = controllers
         
         window?.rootViewController = tabBarController

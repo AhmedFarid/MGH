@@ -17,6 +17,7 @@ class cartCollectionCell: UICollectionViewCell {
     @IBOutlet weak var qtn: UILabel!
     @IBOutlet weak var mainBtn: UIButton!
     @IBOutlet weak var totelCartPrice: UILabel!
+    @IBOutlet weak var coloerLB: UILabel!
     
     
     var add: (()->())?
@@ -28,6 +29,11 @@ class cartCollectionCell: UICollectionViewCell {
     }
     
     func configureCell(products: productsDataArray){
+        if products.ProductInCartColor == "" || products.ProductInCartColor == nil {
+            coloerLB.text = "\(NSLocalizedString("Colors: No Colors", comment: "profuct list lang")) \(products.ProductInCartColor ?? "")"
+        }else {
+            coloerLB.text = "\(NSLocalizedString("Colors:", comment: "profuct list lang")) \(products.ProductInCartColor ?? "")"
+        }
         newPrice.text = "\(NSLocalizedString("Unit Price:", comment: "profuct list lang")) \(products.total ?? 0) \(products.currency ?? "")"
         nameProduct.text = products.name
         shortDec.text = products.shortDescription

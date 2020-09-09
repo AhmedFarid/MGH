@@ -1,15 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-    <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
-    "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-    <plist version="1.0">
-    <dict>
-      <key>CLIENT_ID</key>
-      <string>517555787591-6ee803du1lhbk4kh0qo3cu4dalu2jdbp.apps.googleusercontent.com</string>
-      <key>REVERSED_CLIENT_ID</key>
-      <string>com.googleusercontent.apps.517555787591-6ee803du1lhbk4kh0qo3cu4dalu2jdbp</string>
-      <key>PLIST_VERSION</key>
-      <string>1</string>
-      <key>BUNDLE_ID</key>
-      <string>com.FaridEbakers.MGH-Kitchen-Tools</string>
-    </dict>
-    </plist>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>473141445578-58s7ivb6h57ipd9s0lulb0l5sgj0c65d.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.473141445578-58s7ivb6h57ipd9s0lulb0l5sgj0c65d</string>
+	<key>API_KEY</key>
+	<string>AIzaSyChYulGbL4w4i9fb3rxU9fI9dMTElpi4So</string>
+	<key>GCM_SENDER_ID</key>
+	<string>473141445578</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.FaridEbakers.MGH-Kitchen-Tools</string>
+	<key>PROJECT_ID</key>
+	<string>mgh4kt-cf084</string>
+	<key>STORAGE_BUCKET</key>
+	<string>mgh4kt-cf084.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:473141445578:ios:82061a69cc91b3acc10533</string>
+	<key>DATABASE_URL</key>
+	<string>https://mgh4kt-cf084.firebaseio.com</string>
+</dict>
+</plist>

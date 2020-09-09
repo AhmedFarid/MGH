@@ -72,8 +72,9 @@
 		69246B3224B76A540061F52A /* myOrdersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69246B3024B76A540061F52A /* myOrdersVC.swift */; };
 		69246B3724B76B2A0061F52A /* myOrdersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69246B3524B76B2A0061F52A /* myOrdersCell.swift */; };
 		69246B3C24B77B090061F52A /* myOrderDitalsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69246B3A24B77B090061F52A /* myOrderDitalsVC.swift */; };
-		6930270D24B5DB47006695B4 /* cartApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6930270C24B5DB47006695B4 /* cartApi.swift */; };
 		6930271124B5FF0E006695B4 /* productViewImagesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6930270F24B5FF0E006695B4 /* productViewImagesVC.swift */; };
+		6930ECD224F3F4840073DB97 /* myPointsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6930ECD024F3F4840073DB97 /* myPointsVC.swift */; };
+		6930ECD424F3F5BF0073DB97 /* myPointsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6930ECD624F3F5BF0073DB97 /* myPointsVC.xib */; };
 		6931B43C24B1CEC8008934BD /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6931B43A24B1CEC8008934BD /* CategoryCell.swift */; };
 		6931B44124B1ECE7008934BD /* allProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6931B43F24B1ECE7008934BD /* allProductCell.swift */; };
 		6931B44424B1F386008934BD /* strikethroughLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6931B44324B1F386008934BD /* strikethroughLabel.swift */; };
@@ -100,7 +101,8 @@
 		696B1ED824B610AB00D609A5 /* allCategoursVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696B1ED624B610AB00D609A5 /* allCategoursVC.swift */; };
 		696B1EDF24B626C000D609A5 /* cartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696B1EDD24B626C000D609A5 /* cartVC.swift */; };
 		696B1EE824B629C200D609A5 /* cartCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696B1EE624B629C200D609A5 /* cartCollectionCell.swift */; };
-		698964CE24BDC75C001B9A6C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 698964CD24BDC75C001B9A6C /* GoogleService-Info.plist */; };
+		696CA40F24F3C6C600697FD0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 696CA40E24F3C6C600697FD0 /* GoogleService-Info.plist */; };
+		698964CE24BDC75C001B9A6C /* GoogleService-Info1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 698964CD24BDC75C001B9A6C /* GoogleService-Info1.plist */; };
 		698964D224BDCEE4001B9A6C /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698964D124BDCEE4001B9A6C /* user.swift */; };
 		698964D524BDDFDA001B9A6C /* aboutUs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698964D424BDDFDA001B9A6C /* aboutUs.swift */; };
 		698964D824BDE03B001B9A6C /* aboutUsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698964D724BDE03B001B9A6C /* aboutUsApi.swift */; };
@@ -132,6 +134,10 @@
 		69ECC6A124AB8CBF003ACC70 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69ECC69F24AB8CBE003ACC70 /* SignupVC.swift */; };
 		69ECC6A624AB9550003ACC70 /* homeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69ECC6A424AB9550003ACC70 /* homeVC.swift */; };
 		69ECC6AB24AB9B27003ACC70 /* bannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69ECC6A924AB9B27003ACC70 /* bannerCell.swift */; };
+		69F161BF24F2D34D003BC422 /* orderMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F161BE24F2D34D003BC422 /* orderMessage.swift */; };
+		69F161C324F2DAAA003BC422 /* orderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F161C124F2DAAA003BC422 /* orderVC.swift */; };
+		69F161C424F2DAAA003BC422 /* orderVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69F161C224F2DAAA003BC422 /* orderVC.xib */; };
+		69F7EBD1250928FF00C24648 /* cartApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F7EBD0250928FF00C24648 /* cartApi.swift */; };
 		7F7DEEF5C186E0A6D28F2AB7 /* Pods_MGH_Kitchen_Tools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB80792E48A3C45EFFC5D663 /* Pods_MGH_Kitchen_Tools.framework */; };
 /* End PBXBuildFile section */
 
@@ -238,8 +244,9 @@
 		69246B3024B76A540061F52A /* myOrdersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myOrdersVC.swift; sourceTree = "<group>"; };
 		69246B3524B76B2A0061F52A /* myOrdersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myOrdersCell.swift; sourceTree = "<group>"; };
 		69246B3A24B77B090061F52A /* myOrderDitalsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myOrderDitalsVC.swift; sourceTree = "<group>"; };
-		6930270C24B5DB47006695B4 /* cartApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cartApi.swift; sourceTree = "<group>"; };
 		6930270F24B5FF0E006695B4 /* productViewImagesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = productViewImagesVC.swift; sourceTree = "<group>"; };
+		6930ECD024F3F4840073DB97 /* myPointsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myPointsVC.swift; sourceTree = "<group>"; };
+		6930ECD524F3F5BF0073DB97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/myPointsVC.xib; sourceTree = "<group>"; };
 		6931B43A24B1CEC8008934BD /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		6931B43F24B1ECE7008934BD /* allProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = allProductCell.swift; sourceTree = "<group>"; };
 		6931B44324B1F386008934BD /* strikethroughLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = strikethroughLabel.swift; sourceTree = "<group>"; };
@@ -249,7 +256,7 @@
 		6935441624BF108500A245E8 /* giftCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = giftCell.swift; sourceTree = "<group>"; };
 		69365EC024B21CD500F09B9C /* productDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = productDetailsVC.swift; sourceTree = "<group>"; };
 		69365EC524B2359500F09B9C /* productImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = productImageCell.swift; sourceTree = "<group>"; };
-		6936862224AB4E9000C0DF31 /* MGH Kitchen Tools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MGH Kitchen Tools.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6936862224AB4E9000C0DF31 /* MGH4KT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MGH4KT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6936862524AB4E9000C0DF31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6936862724AB4E9000C0DF31 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		6936862924AB4E9000C0DF31 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -268,7 +275,8 @@
 		696B1ED624B610AB00D609A5 /* allCategoursVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = allCategoursVC.swift; sourceTree = "<group>"; };
 		696B1EDD24B626C000D609A5 /* cartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cartVC.swift; sourceTree = "<group>"; };
 		696B1EE624B629C200D609A5 /* cartCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cartCollectionCell.swift; sourceTree = "<group>"; };
-		698964CD24BDC75C001B9A6C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		696CA40E24F3C6C600697FD0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		698964CD24BDC75C001B9A6C /* GoogleService-Info1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info1.plist"; sourceTree = "<group>"; };
 		698964CF24BDCDAD001B9A6C /* MGH Kitchen Tools.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MGH Kitchen Tools.entitlements"; sourceTree = "<group>"; };
 		698964D124BDCEE4001B9A6C /* user.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
 		698964D424BDDFDA001B9A6C /* aboutUs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aboutUs.swift; sourceTree = "<group>"; };
@@ -301,6 +309,10 @@
 		69ECC69F24AB8CBE003ACC70 /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		69ECC6A424AB9550003ACC70 /* homeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeVC.swift; sourceTree = "<group>"; };
 		69ECC6A924AB9B27003ACC70 /* bannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bannerCell.swift; sourceTree = "<group>"; };
+		69F161BE24F2D34D003BC422 /* orderMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orderMessage.swift; sourceTree = "<group>"; };
+		69F161C124F2DAAA003BC422 /* orderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orderVC.swift; sourceTree = "<group>"; };
+		69F161C224F2DAAA003BC422 /* orderVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = orderVC.xib; sourceTree = "<group>"; };
+		69F7EBD0250928FF00C24648 /* cartApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cartApi.swift; sourceTree = "<group>"; };
 		79F74D385303D194F58DD7C6 /* Pods-MGH Kitchen Tools.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MGH Kitchen Tools.release.xcconfig"; path = "Target Support Files/Pods-MGH Kitchen Tools/Pods-MGH Kitchen Tools.release.xcconfig"; sourceTree = "<group>"; };
 		AB80792E48A3C45EFFC5D663 /* Pods_MGH_Kitchen_Tools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MGH_Kitchen_Tools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCFAD8F6600C882E012252FA /* Pods-MGH Kitchen Tools.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MGH Kitchen Tools.debug.xcconfig"; path = "Target Support Files/Pods-MGH Kitchen Tools/Pods-MGH Kitchen Tools.debug.xcconfig"; sourceTree = "<group>"; };
@@ -506,7 +518,7 @@
 		6930270B24B5DB27006695B4 /* cartApi */ = {
 			isa = PBXGroup;
 			children = (
-				6930270C24B5DB47006695B4 /* cartApi.swift */,
+				69F7EBD0250928FF00C24648 /* cartApi.swift */,
 			);
 			path = cartApi;
 			sourceTree = "<group>";
@@ -519,6 +531,15 @@
 				691D2DDB24E2AE6D001C02CC /* productViewImagesVC.xib */,
 			);
 			path = "Product View Images";
+			sourceTree = "<group>";
+		};
+		6930ECCF24F3F4620073DB97 /* My Points */ = {
+			isa = PBXGroup;
+			children = (
+				6930ECD024F3F4840073DB97 /* myPointsVC.swift */,
+				6930ECD624F3F5BF0073DB97 /* myPointsVC.xib */,
+			);
+			path = "My Points";
 			sourceTree = "<group>";
 		};
 		6931B43924B1CE86008934BD /* CategorySselectionCell */ = {
@@ -607,7 +628,7 @@
 		6936862324AB4E9000C0DF31 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6936862224AB4E9000C0DF31 /* MGH Kitchen Tools.app */,
+				6936862224AB4E9000C0DF31 /* MGH4KT.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -627,8 +648,9 @@
 				69ECC68A24AB6B70003ACC70 /* Controller */,
 				6936863324AB4E9400C0DF31 /* Info.plist */,
 				691A543C24E2C5E900BB1042 /* Localizable.strings */,
+				696CA40E24F3C6C600697FD0 /* GoogleService-Info.plist */,
 				691A543924E2C5E900BB1042 /* InfoPlist.strings */,
-				698964CD24BDC75C001B9A6C /* GoogleService-Info.plist */,
+				698964CD24BDC75C001B9A6C /* GoogleService-Info1.plist */,
 			);
 			path = "MGH Kitchen Tools";
 			sourceTree = "<group>";
@@ -848,6 +870,8 @@
 		69ECC68A24AB6B70003ACC70 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				6930ECCF24F3F4620073DB97 /* My Points */,
+				69F161C024F2DA80003BC422 /* Order View */,
 				69165D6D24E992B80019C77A /* subCategours */,
 				691A543F24E2EACD00BB1042 /* Payment */,
 				6912B46124C4F79A004889EA /* checkOut Detieals */,
@@ -902,6 +926,7 @@
 		69ECC68D24AB6BA2003ACC70 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				69F161BD24F2D336003BC422 /* Order Message */,
 				691A544424E2EC8D00BB1042 /* paymet */,
 				6912B45E24C4B4FB004889EA /* Deliveries */,
 				6935440A24BF0B5E00A245E8 /* Gifts */,
@@ -1006,6 +1031,23 @@
 			path = BannerCell;
 			sourceTree = "<group>";
 		};
+		69F161BD24F2D336003BC422 /* Order Message */ = {
+			isa = PBXGroup;
+			children = (
+				69F161BE24F2D34D003BC422 /* orderMessage.swift */,
+			);
+			path = "Order Message";
+			sourceTree = "<group>";
+		};
+		69F161C024F2DA80003BC422 /* Order View */ = {
+			isa = PBXGroup;
+			children = (
+				69F161C124F2DAAA003BC422 /* orderVC.swift */,
+				69F161C224F2DAAA003BC422 /* orderVC.xib */,
+			);
+			path = "Order View";
+			sourceTree = "<group>";
+		};
 		BE0FC42A981A40F3DBA68BC5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1044,7 +1086,7 @@
 			);
 			name = "MGH Kitchen Tools";
 			productName = "MGH Kitchen Tools";
-			productReference = 6936862224AB4E9000C0DF31 /* MGH Kitchen Tools.app */;
+			productReference = 6936862224AB4E9000C0DF31 /* MGH4KT.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1091,7 +1133,7 @@
 				691D2DAF24E2ADDB001C02CC /* newOffersVC.xib in Resources */,
 				6936862F24AB4E9400C0DF31 /* Assets.xcassets in Resources */,
 				691D2DF724E2AEAB001C02CC /* allProductCell.xib in Resources */,
-				698964CE24BDC75C001B9A6C /* GoogleService-Info.plist in Resources */,
+				698964CE24BDC75C001B9A6C /* GoogleService-Info1.plist in Resources */,
 				691D2DE224E2AE7E001C02CC /* sideMenu.storyboard in Resources */,
 				691D2E0924E2AED0001C02CC /* loginVC.xib in Resources */,
 				691D2DA624E2AD9D001C02CC /* checkoutDetiealsVC.xib in Resources */,
@@ -1118,14 +1160,17 @@
 				691D2DD024E2AE5B001C02CC /* cartVC.xib in Resources */,
 				691D2E0324E2AEC3001C02CC /* forgetPasswordVC.xib in Resources */,
 				691D2DA924E2ADA2001C02CC /* promoFirndVC.xib in Resources */,
+				69F161C424F2DAAA003BC422 /* orderVC.xib in Resources */,
 				691D2DB224E2ADE0001C02CC /* giftCell.xib in Resources */,
 				691D2DC424E2AE13001C02CC /* myOrdersCell.xib in Resources */,
 				69165D7124E992E20019C77A /* subCategours.xib in Resources */,
 				691D2DCA24E2AE1F001C02CC /* checkOutVC.xib in Resources */,
 				691D2DEB24E2AE92001C02CC /* reviewsVC.xib in Resources */,
+				6930ECD424F3F5BF0073DB97 /* myPointsVC.xib in Resources */,
 				691D2DFA24E2AEB3001C02CC /* flashSaleCell.xib in Resources */,
 				691D2DDF24E2AE77001C02CC /* allProductVC.xib in Resources */,
 				691D2DE824E2AE8D001C02CC /* reviewsCell.xib in Resources */,
+				696CA40F24F3C6C600697FD0 /* GoogleService-Info.plist in Resources */,
 				6936862D24AB4E9000C0DF31 /* Main.storyboard in Resources */,
 				6937C81824ACE68300723A2A /* Cairo-Bold.ttf in Resources */,
 				691D2DBB24E2AE02001C02CC /* contactUsVC.xib in Resources */,
@@ -1209,7 +1254,6 @@
 				698964DC24BDE113001B9A6C /* aboutUsVC.swift in Sources */,
 				69165D7024E992E20019C77A /* subCategours.swift in Sources */,
 				696B1ED324B608AB00D609A5 /* imageCells.swift in Sources */,
-				6930270D24B5DB47006695B4 /* cartApi.swift in Sources */,
 				6999FCC524B3779D0040C249 /* homeApi.swift in Sources */,
 				6999FCC724B379F80040C249 /* products.swift in Sources */,
 				69205B5624B4D2CA00CC3F3A /* favoriteHelper.swift in Sources */,
@@ -1217,6 +1261,7 @@
 				69246B3224B76A540061F52A /* myOrdersVC.swift in Sources */,
 				6912B46424C4F87F004889EA /* checkoutDetiealsVC.swift in Sources */,
 				69ECC6A124AB8CBF003ACC70 /* SignupVC.swift in Sources */,
+				6930ECD224F3F4840073DB97 /* myPointsVC.swift in Sources */,
 				69ECC6AB24AB9B27003ACC70 /* bannerCell.swift in Sources */,
 				6936862A24AB4E9000C0DF31 /* ViewController.swift in Sources */,
 				69365EC724B2359500F09B9C /* productImageCell.swift in Sources */,
@@ -1250,6 +1295,7 @@
 				696B1EE824B629C200D609A5 /* cartCollectionCell.swift in Sources */,
 				6999FCAA24B327220040C249 /* sideMenuVC.swift in Sources */,
 				691A544224E2EB1A00BB1042 /* paymentVC.swift in Sources */,
+				69F161BF24F2D34D003BC422 /* orderMessage.swift in Sources */,
 				6937C81424ACE24400723A2A /* imageViewCostom.swift in Sources */,
 				6999FCAC24B353E40040C249 /* config.swift in Sources */,
 				69ECC69624AB75B0003ACC70 /* loginVC.swift in Sources */,
@@ -1261,10 +1307,12 @@
 				698964EF24BDEEA8001B9A6C /* profileApi.swift in Sources */,
 				698964E324BDE5C3001B9A6C /* contactUsVC.swift in Sources */,
 				6912B45C24C472A6004889EA /* promoFirndVC.swift in Sources */,
+				69F161C324F2DAAA003BC422 /* orderVC.swift in Sources */,
 				6937C80D24ACB59700723A2A /* viewCosttom.swift in Sources */,
 				691D2DA224E29F46001C02CC /* localizedHelper.swift in Sources */,
 				6912B45224C44A13004889EA /* newOffersVC.swift in Sources */,
 				6931B44124B1ECE7008934BD /* allProductCell.swift in Sources */,
+				69F7EBD1250928FF00C24648 /* cartApi.swift in Sources */,
 				6912B46924C50068004889EA /* cartCell.swift in Sources */,
 				6912B46024C4B522004889EA /* deliveries.swift in Sources */,
 				69ECC6A624AB9550003ACC70 /* homeVC.swift in Sources */,
@@ -1616,6 +1664,14 @@
 			name = loginVC.xib;
 			sourceTree = "<group>";
 		};
+		6930ECD624F3F5BF0073DB97 /* myPointsVC.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6930ECD524F3F5BF0073DB97 /* Base */,
+			);
+			name = myPointsVC.xib;
+			sourceTree = "<group>";
+		};
 		6936862B24AB4E9000C0DF31 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1772,9 +1828,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.0;
+				MARKETING_VERSION = 8.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.FaridEbakers.MGH-Kitchen-Tools";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MGH4KT;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1799,9 +1855,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.0;
+				MARKETING_VERSION = 8.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.FaridEbakers.MGH-Kitchen-Tools";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MGH4KT;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

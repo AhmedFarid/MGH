@@ -25,6 +25,9 @@ class myAccountVC: UIViewController,NVActivityIndicatorViewable {
     @IBOutlet weak var lgoOutBtn: UIStackView!
     
     var promo = ""
+    var isAve = ""
+    var pints = ""
+    var profileNots = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -61,6 +64,9 @@ class myAccountVC: UIViewController,NVActivityIndicatorViewable {
                     self.topTitleLabel.text = "\(NSLocalizedString("Ahlan", comment: "profuct list lang")) \(profile?.data?.fullName ?? "")"
                     self.secondeTitleLabel.text = "\(profile?.data?.email ?? "")"
                     self.promo = profile?.data?.promocode ?? ""
+                    self.isAve = profile?.data?.PromocodeAvailability ?? ""
+                    self.pints = profile?.data?.points ?? ""
+                    self.profileNots = profile?.data?.notes ?? ""
                     self.stopAnimating()
                 }
                 self.stopAnimating()
@@ -68,6 +74,19 @@ class myAccountVC: UIViewController,NVActivityIndicatorViewable {
         }
     }
     
+    @IBAction func myPinttsBTN(_ sender: Any) {
+        if helperAuth.getAPIToken() == nil {
+            let vc = loginVC(nibName: "loginVC", bundle: nil)
+            let navigationController = UINavigationController(rootViewController: vc)
+            navigationController.modalPresentationStyle = .fullScreen
+            self.present(navigationController, animated: true, completion: nil)
+        }else {
+            let vc = myPointsVC(nibName: "myPointsVC", bundle: nil)
+            vc.points = pints
+            vc.profielNote = profileNots
+            self.navigationController!.pushViewController(vc, animated: true)
+        }
+    }
     @IBAction func ordersBtn(_ sender: Any) {
         if helperAuth.getAPIToken() == nil {
             let vc = loginVC(nibName: "loginVC", bundle: nil)
@@ -102,6 +121,7 @@ class myAccountVC: UIViewController,NVActivityIndicatorViewable {
         }else {
             let vc = promoFirndVC(nibName: "promoFirndVC", bundle: nil)
             vc.Promo = promo
+            vc.isAve = isAve
             self.navigationController!.pushViewController(vc, animated: true)
         }
     }

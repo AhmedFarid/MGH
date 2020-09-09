@@ -17,10 +17,12 @@ struct profile: Codable {
 
 struct profileData: Codable {
     let fullName, email, phone: String?
-    let image: String?
+    let image,giftType,giftValue: String?
     let firebaseToken, status, gender, promocode: String?
     let isGiftUsed, createdAt: String?
     let giftId: Int?
+    let PromocodeAvailability: String?
+    let points,notes: String?
     
     enum CodingKeys: String, CodingKey {
         case fullName = "full_name"
@@ -28,5 +30,10 @@ struct profileData: Codable {
         case isGiftUsed = "is_gift_used"
         case createdAt = "created_at"
         case giftId = "gift_id"
+        case giftType = "gift_type"
+        case giftValue = "gift_value"
+        case PromocodeAvailability = "Promocode_availability"
+        case points
+        case notes
     }
 }
